@@ -1,0 +1,2497 @@
+[
+ {
+  "slug": "Electric_Utility",
+  "name": "Electric Utilities",
+  "icon": "⚡",
+  "blurb": "Customer insight, grid management, billing quality assurance, rate modeling, and demand forecasting solutions.",
+  "title": "AI Solutions for Electric Utilities",
+  "sub": "18 production-proven solutions for billing, metering, grid management, and customer intelligence — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Billing_Quality_Assurance",
+    "name": "Billing Quality Assurance",
+    "short": "Billing Quality Assurance",
+    "summary": "Reconcile All Bills · Improve Quality · Easily Update Rates",
+    "problem": [
+     "Billing system complexity makes billing errors likely",
+     "Changes in rate structures and rate plan assignments require additional quality assurance checks",
+     "Need to quickly check bills before sending",
+     "Need to reconcile billing input values against source meter data"
+    ],
+    "solution": [
+     "Delivered parallel billing system to check system-of-record billing system",
+     "Reconciled every line item of every bill before being sent to customer",
+     "Rate editor enables real-time changes to rate structures and rate plans",
+     "Billing inputs reconciled against source meter data and any discrepancies flagged",
+     "Rate assignments on every account checked to insure that account qualifies for that rate"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Utility is able to update rate models in minutes",
+     "Utility now has an independent way of checking billing and meter data"
+    ]
+   },
+   {
+    "id": "Metering_Quality_Assurance",
+    "name": "Metering Quality Assurance",
+    "short": "Metering Quality Assurance",
+    "summary": "Reconcile All Meter Data · Improve Quality · Pattern Detection",
+    "problem": [
+     "Multiple sources of meter data can lead to inconsistencies",
+     "Customers need to see a consistent data view",
+     "Billing calculations must produce matching results regardless of meter data source",
+     "Meter communication issues create data issues"
+    ],
+    "solution": [
+     "Delivered parallel meter data management system to check system-of-record",
+     "Reconciled all interval data against all daily data",
+     "Reconciled all daily and interval data against billing system data",
+     "Machine learning module to identify unusual consumption patterns"
+    ],
+    "impact": [
+     "Eliminated need for $10 million meter data management system re-write"
+    ],
+    "why": [
+     "Delivered parallel meter data management system to check system-of-record",
+     "Parallel application run over 1,000 times faster, reduced storage 90%, and eliminated meter data errors",
+     "Utility is able to bill with confidence that meter data is correct",
+     "Utility now has an independent way of checking billing and meter data"
+    ]
+   },
+   {
+    "id": "Transformer_Monitoring_And_Analysis",
+    "name": "Transformer Monitoring & Analysis",
+    "short": "Transformer Monitoring & Analysis",
+    "summary": "Aggregate Transformer Loads · Detect Capacity Issues",
+    "problem": [
+     "Large intermittent loads such as EV charging can cause distribution transformer overload",
+     "Variable distributed generation can cause distribution transformer overload",
+     "Installing interval meters on all transformers would be prohibitively expensive"
+    ],
+    "solution": [
+     "Virtual meters defined for every transformer that aggregate all of the transformer's end point loads",
+     "Aggregation performed on both 15-minute interval and daily data",
+     "Alerting and alarming based on transformer rated capacity",
+     "Identify problems and take corrective action before transformer failure"
+    ],
+    "impact": [
+     "Enables proactive action to prevent transformer failure and associated liability",
+     "More reliable delivery of power to customers"
+    ],
+    "why": [
+     "Fractal Computing enables virtual meters that aggregate millions of individual meters",
+     "Virtual meter definitions are easy to create and edit",
+     "Fractal Computing performance enables real-time analysis",
+     "Utility can now detect when transformers are being operated at or over rated capacity and take proactive action"
+    ]
+   },
+   {
+    "id": "Electric_Vehicle_Identification",
+    "name": "EV Identification",
+    "short": "EV Identification",
+    "summary": "Identify Customer EV Charger Locations",
+    "problem": [
+     "Electric vehicle (EV) charging impacts the grid causing potentially dangerous transformer overloads",
+     "There is no easy way for utilities to identify these locations",
+     "Need to know who has electric vehicles so that customer programs can be more targeted"
+    ],
+    "solution": [
+     "Electric meter data evaluated for back years and current months to identify load profiles indicative of EV charging",
+     "Utility was able to make much more accurate forecasts of electric demand for EVs",
+     "Distribution grid hot spots identified and distribution transformer failures avoided"
+    ],
+    "impact": [
+     "Prevented transformer failures by identifying distribution hot spots and proactively upgrading transformers",
+     "Utility was able to more aggressively roll out EV and distributed generation programs"
+    ],
+    "why": [
+     "Fractal Programming delivered identification application in a single business quarter",
+     "Machine learning used to analyze utility electric meter data and create statistically significant “EV identifiers”",
+     "Fractal Programming performance enables application to run in real-time and identify charging events as they occur"
+    ]
+   },
+   {
+    "id": "Meter_Aggregation_And_Analysis",
+    "name": "Meter Aggregation & Analysis",
+    "short": "Meter Aggregation & Analysis",
+    "summary": "Analyze by Rate · Demographic · Program Participation · Equipment",
+    "problem": [
+     "Need to analyze aggregate behavior by customer groups",
+     "Need a flexible/easy way to define customer groups",
+     "Need to correlate behavior with weather, program participation, and other non-billing attributes",
+     "Need to aggregate at the scale of entire customer base"
+    ],
+    "solution": [
+     "Virtual meter capability enables easy definition of customer groups",
+     "Aggregation performed on both daily and interval data",
+     "Aggregation by rate class, demographics, consumption patterns, program participation, on premise equipment, and building type",
+     "Analyze group response to events such as demand response, weather changes, etc."
+    ],
+    "impact": [
+     "Deeper insight into customer behavior",
+     "Deeper insight into customer program results"
+    ],
+    "why": [
+     "Fractal Programming enables virtual meters that aggregate millions of individual meters",
+     "Virtual meter definitions are easy to create and edit",
+     "Fractal Programming performance enables real-time analysis",
+     "Utility can now do more sophisticated analysis by grouping / aggregating customer base many different ways"
+    ]
+   },
+   {
+    "id": "PV_Management",
+    "name": "PV Management",
+    "short": "PV Management",
+    "summary": "Detect & Alert · Equipment Problems · Production Shortfalls",
+    "problem": [
+     "Need to monitor PV arrays across entire distribution grid",
+     "Need detect equipment problems (especially invertor failures)",
+     "Need to check output against equipment ratings",
+     "Need to correlate output over all PV arrays to account for cloud cover and weather patterns"
+    ],
+    "solution": [
+     "Virtual meter capability enables easy definition of PV groups",
+     "Analysis performed on both daily and interval data",
+     "Analysis by equipment type and program participation",
+     "Automated alerting when equipment issues detected"
+    ],
+    "impact": [
+     "Increased customer satisfaction due to identification and alerting of equipment issues",
+     "Increased and more predictable PV output"
+    ],
+    "why": [
+     "Fractal Programming performance enables real-time monitoring and alerting of all PV meters",
+     "Machine learning on generation patterns to detect and categorize equipment issues",
+     "Automated alerting and alarming at scale of entire customer base",
+     "Analysis includes equipment type and correlation with other similar PV arrays"
+    ]
+   },
+   {
+    "id": "Program_Measurement_And_Verification",
+    "name": "Program Measurement & Verification",
+    "short": "Program Measurement & Verification",
+    "summary": "Measure Aggregate Response · Verify Individual Response",
+    "problem": [
+     "Effectiveness of utility program difficult to measure and analyze",
+     "The scale of large programs make data processing difficult",
+     "Need to analyze sub-groups within programs",
+     "Need to adjust group definitions based on changing conditions"
+    ],
+    "solution": [
+     "Virtual meters defined for program participants to analyze aggregate behavior",
+     "Each individual customer's behavior also analyzed",
+     "Virtual meters defined for each sub-group within the program",
+     "Virtual meters also defined for reference groups that do not participate in the program"
+    ],
+    "impact": [
+     "Programs can be analyzed at overall program level and sub-groups to identify where program is most effective",
+     "Program resources can be allocated based on effectiveness to maximize program impact and results"
+    ],
+    "why": [
+     "Fractal Programming enables virtual meters that aggregate millions of individual meters",
+     "Virtual meter definitions are easy to create and edit",
+     "Fractal Programming performance enables real-time analysis",
+     "Can now accurately measure and analyze program participation and effectiveness"
+    ]
+   },
+   {
+    "id": "Demand_Forecasting",
+    "name": "Demand Forecasting",
+    "short": "Demand Forecasting",
+    "summary": "Forecast With Tight Time Constraints",
+    "problem": [
+     "Forecasting system must run within time constraints",
+     "Using major data center, legacy system did not always finish in time",
+     "Utility also needed to increase system size and capacity",
+     "Utility needed to accurately bid in futures market"
+    ],
+    "solution": [
+     "Fractal Programming enabled new demand forecasting system to be written and deployed in a single business quarter",
+     "Dramatically increased accuracy and number of scenarios that can be run",
+     "Uses full customer data set instead of just a data sub-set",
+     "System runs in minutes instead of hours"
+    ],
+    "impact": [
+     "Added accuracy of forecasting 100% of the data, not samples, impacts millions of dollars of futures contracts each year"
+    ],
+    "why": [
+     "Fractal Programming enabled the development of a demand forecasting application that runs over 1,000 times faster than the legacy application",
+     "Forecasting system was delivered in a single business quarter and is more accurate than legacy system"
+    ]
+   },
+   {
+    "id": "Key_Customer_Identification",
+    "name": "Key Customer Identification",
+    "short": "Key Customer Identification",
+    "summary": "Identify By · Behavior Patterns · Rules-Based Metrics",
+    "problem": [
+     "Key customer relationship are not always obvious – especially when customers have a portfolio of locations and multiple billable entities",
+     "Ownership of commercial properties frequently via special purpose vehicles, making it unclear who the portfolio customer relationship is with",
+     "Qualification for key account status based on spending levels and program participation can be complicated to identify and track"
+    ],
+    "solution": [
+     "Implement qualification rules for key accounts",
+     "Implement aggregation rules to identify portfolio relationships",
+     "Classify every customer at both individual account and aggregate customer portfolio level",
+     "Enable utility profitability analysis by key account relationship"
+    ],
+    "impact": [
+     "Identify key account customers by evaluating total portfolio consumption and behavior",
+     "Enables more focused programs by identifying impactful portfolio level decision makers in customer base"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for assigning accounts to a customer based on multiple attributes",
+     "Application performance enables rule sets to be applied to entire customer base to identify key account relationships",
+     "Automatic assignment of key account status based on qualification rules",
+     "Both metered and non-metered attributes incorporated into rules"
+    ]
+   },
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Rate_Assignment_And_Validation",
+    "name": "Rate Assignment & Validation",
+    "short": "Rate Assignment & Validation",
+    "summary": "Validate Rate Class Qualification · Auto Assign Rates",
+    "problem": [
+     "Assigning rates to accounts can be time consuming and error prone",
+     "Rate assignment complicated due to wind, solar, EV and other green energy and distributed generation initiatives",
+     "Qualification requirements for rates change over time requiring reassessment of all customer accounts"
+    ],
+    "solution": [
+     "Implement qualification rules for each rate class",
+     "Test every rate on every customer account",
+     "Enable “what if” scenario analysis for key account customers for qualification for different rate",
+     "Forecast customer budget impact and utility revenue changes for new rate assignments",
+     "Enable utility profitability analysis by rate plan"
+    ],
+    "impact": [
+     "Saved half a million dollars in consulting fees for validating rate assignments",
+     "100% of customers on correct rate plans"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for checking rate assignments",
+     "Application performance enables 100% of customer accounts to be validated for correct rate assignment",
+     "Automatic assignment of correct rates",
+     "Automated customer notification of new rate assignments along with explanation"
+    ]
+   },
+   {
+    "id": "Rate_Design_And_Simulation",
+    "name": "Rate Design & Simulation",
+    "short": "Rate Design & Simulation",
+    "summary": "Real Time Planning · All Customers · 100% Accuracy",
+    "problem": [
+     "Need to plan different rates across millions of customers every year",
+     "Rates complicated due to wind, solar and other green energy and distributed generation initiatives",
+     "Costs millions of dollars to simulate rates, create financial forecasts, and estimate customer impact",
+     "Customers may get billing surprises when rates structures change"
+    ],
+    "solution": [
+     "Implement real time rate planning engine",
+     "Test every rate, across every customer, using previous bills",
+     "Forecast annual revenue to the penny",
+     "Eliminate all new rate surprises",
+     "Enable utility profitability analysis by rate plan"
+    ],
+    "impact": [
+     "Saved $2 million paid to rate consultants for single rate plan",
+     "Saved $8 million for subsequent rate planning"
+    ],
+    "why": [
+     "Fractal Programming enables flexible real-time creation of rate plans",
+     "Application performance enables rate plans to be run against 100% of customers for dozens (multiple years) of billing cycles in minutes",
+     "Utility eliminates all new rate surprises for customers",
+     "Utility has highly accurate financial forecasts for itself and its customers"
+    ]
+   },
+   {
+    "id": "Service_Level_Agreement_Monitoring",
+    "name": "Service Level Agreement Monitoring",
+    "short": "Service Level Agreement Monitoring",
+    "summary": "Exception Detection · Analysis · Alarming",
+    "problem": [
+     "Data provider service level agreements can be challenging to monitor, analyze and manage",
+     "Data service level shortfalls can lead to billing problems with customers",
+     "Quick early detection of data provider problems is needed to prevent downstream issues"
+    ],
+    "solution": [
+     "Parallel meter data management system",
+     "Analyze all interval and daily data to locate any missing data elements and test against service level agreement metrics",
+     "Reconcile all interval data against all daily data to check for consistency",
+     "Machine learning module to identify unusual consumption patterns that can indicate meter reading issues"
+    ],
+    "impact": [
+     "Increase in bill quality",
+     "Reduction is customer billing complaints and issues"
+    ],
+    "why": [
+     "Delivered parallel meter data management system (MDMS) with Fractal Programming",
+     "Parallel MDMS application identifies all missing data and meter reading errors",
+     "Automatic alerting and alarming of failures to meet data service level agreement metrics",
+     "Utility is able to bill with confidence that meter data is correct"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Customer Contact Management",
+    "summary": "Critical Loads · Priority Loads · Key Contact Management",
+    "problem": [
+     "Contact information for notification of outages or other problems can be different than billing contact",
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information",
+     "Identification and classification of critical, priority, and key accounts loads for real-time detection of site-specific outages and other issues"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking critical, priority and key accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Customer Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to energy and billing data on digital devices",
+     "Customers want to do scenario analysis for rate plans",
+     "Customers want budget forecasts",
+     "Customers want visibility to solar and wind energy usage metrics",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customer can test different rate plans in real time",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, green energy metrics, and enables customer to enter supplemental information about efficiency projects",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Metering · Billing · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API's are exposed as components of parallel systems for managing meter data, billing, and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make metering, billing, weather, and other customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   },
+   {
+    "id": "Weather_Data",
+    "name": "Weather Data",
+    "short": "Weather Data",
+    "summary": "Data For · Demand & Financial Forecasting · Scenario Analysis",
+    "problem": [
+     "Weather data is required for many business functions and applications",
+     "Consistent weather assumptions must be made across multiple business processes and applications",
+     "Required weather data may need to be integrated from multiple data sources"
+    ],
+    "solution": [
+     "Weather data management system",
+     "Integrates data from multiple data sources",
+     "Provides data at multiple levels of time granularity (5-minute, hourly, daily, weekly, monthly)",
+     "Data accessible via interactive graphical user interface(s) as well as application programming interface(s) API"
+    ],
+    "impact": [
+     "Increased consistency across business processes",
+     "Increased quality and consistency in analysis and forecasting processes and applications"
+    ],
+    "why": [
+     "Delivered weather data management system with Fractal Programming",
+     "Integrates data from multiple data sources and reconciles the sources for a consistent data view",
+     "Data accessible both interactively and programmatically via web APIs",
+     "Insures consistent weather assumptions across business processes and applications"
+    ]
+   },
+   {
+    "id": "Customer_Care_And_Billing",
+    "name": "Customer Care & Billing",
+    "short": "Customer Care & Billing",
+    "summary": "Transform · Customer Care · Billing",
+    "problem": [
+     "Billing system too complex to easily modify",
+     "Needed 360 view of major corporate customers",
+     "Give customers ability to self-service their data needs",
+     "Check each bill for 100% accuracy before sending",
+     "Give key account team flexible customer info"
+    ],
+    "solution": [
+     "Delivered parallel customer care and billing system costing 90% less than legacy system",
+     "Reconciled every bill before being sent to customer",
+     "Delivered customer data portal to all customers",
+     "Entire solution in production in 90 days",
+     "Gained deeper understanding of largest customers",
+     "Key accounts team and call center increased customer satisfaction"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Able to add new features in hours and days rather than months"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Gas_Utility",
+  "name": "Gas Utilities",
+  "icon": "🔥",
+  "blurb": "Billing, meter reading quality assurance, demand forecasting, and rate management solutions.",
+  "title": "AI Solutions for Gas Utilities",
+  "sub": "15 production-proven solutions for billing, metering, demand forecasting, and customer intelligence — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Billing_Quality_Assurance",
+    "name": "Billing Quality Assurance",
+    "short": "Billing Quality Assurance",
+    "summary": "Reconcile All Bills · Improve Quality · Easily Update Rates",
+    "problem": [
+     "Billing system complexity makes billing errors likely",
+     "Changes in rate structures and rate plan assignments require additional quality assurance checks",
+     "Need to quickly check bills before sending",
+     "Need to reconcile billing input values against source meter data"
+    ],
+    "solution": [
+     "Delivered parallel billing system to check system-of-record billing system",
+     "Reconciled every line item of every bill before being sent to customer",
+     "Rate editor enables real-time changes to rate structures and rate plans",
+     "Billing inputs reconciled against source meter data and any discrepancies flagged",
+     "Rate assignments on every account checked to insure that account qualifies for that rate"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Utility is able to update rate models in minutes",
+     "Utility now has an independent way of checking billing and meter data"
+    ]
+   },
+   {
+    "id": "Metering_Quality_Assurance",
+    "name": "Metering Quality Assurance",
+    "short": "Metering Quality Assurance",
+    "summary": "Reconcile All Meter Data · Improve Quality · Pattern Detection",
+    "problem": [
+     "Multiple sources of meter data can lead to inconsistencies",
+     "Customers need to see a consistent data view",
+     "Billing calculations must produce matching results regardless of meter data source",
+     "Meter communication issues create data issues"
+    ],
+    "solution": [
+     "Delivered parallel meter data management system to check system-of-record",
+     "Reconciled all interval data against all daily data",
+     "Reconciled all meter data against billing system data",
+     "Machine learning module to identify unusual consumption patterns"
+    ],
+    "impact": [
+     "Eliminated need for $10 million meter data management system re-write"
+    ],
+    "why": [
+     "Delivered parallel meter data management system to check system-of-record",
+     "Parallel application run over 1,000 times faster, reduced storage 90%, and eliminated meter data errors",
+     "Utility is able to bill with confidence that meter data is correct",
+     "Utility now has an independent way of checking billing and meter data"
+    ]
+   },
+   {
+    "id": "Meter_Aggregation_And_Analysis",
+    "name": "Meter Aggregation & Analysis",
+    "short": "Meter Aggregation & Analysis",
+    "summary": "Analyze by Rate · Demographic · Program Participation · Equipment",
+    "problem": [
+     "Need to analyze aggregate behavior by customer groups",
+     "Need a flexible/easy way to define customer groups",
+     "Need to correlate behavior with weather, program participation, and other non-billing attributes",
+     "Need to aggregate at the scale of entire customer base"
+    ],
+    "solution": [
+     "Virtual meter capability enables easy definition of customer groups",
+     "Aggregation performed on all meter data",
+     "Aggregation by rate class, demographics, consumption patterns, program participation, on premise equipment, and building type",
+     "Analyze group response to events such as demand response, weather changes, etc."
+    ],
+    "impact": [
+     "Deeper insight into customer behavior",
+     "Deeper insight into customer program results"
+    ],
+    "why": [
+     "Fractal Programming enables virtual meters that aggregate millions of individual meters",
+     "Virtual meter definitions are easy to create and edit",
+     "Fractal Programming performance enables real-time analysis",
+     "Utility can now do more sophisticated analysis by grouping / aggregating customer base many different ways"
+    ]
+   },
+   {
+    "id": "Program_Measurement_And_Verification",
+    "name": "Program Measurement & Verification",
+    "short": "Program Measurement & Verification",
+    "summary": "Measure Aggregate Response · Verify Individual Response",
+    "problem": [
+     "Effectiveness of utility program difficult to measure and analyze",
+     "The scale of large programs make data processing difficult",
+     "Need to analyze sub-groups within programs",
+     "Need to adjust group definitions based on changing conditions"
+    ],
+    "solution": [
+     "Virtual meters defined for program participants to analyze aggregate behavior",
+     "Each individual customer's behavior also analyzed",
+     "Virtual meters defined for each sub-group within the program",
+     "Virtual meters also defined for reference groups that do not participate in the program"
+    ],
+    "impact": [
+     "Programs can be analyzed at overall program level and sub-groups to identify where program is most effective",
+     "Program resources can be allocated based on effectiveness to maximize program impact and results"
+    ],
+    "why": [
+     "Fractal Programming enables virtual meters that aggregate millions of individual meters",
+     "Virtual meter definitions are easy to create and edit",
+     "Fractal Programming performance enables real-time analysis",
+     "Utility can now accurately measure and analyze program participation and effectiveness"
+    ]
+   },
+   {
+    "id": "Demand_Forecasting",
+    "name": "Demand Forecasting",
+    "short": "Demand Forecasting",
+    "summary": "Forecast With Tight Time Constraints",
+    "problem": [
+     "Forecasting system must run in less than 12 hours",
+     "Using major data center, legacy system did not always finish in time",
+     "Utility also needed to increase system size and capacity",
+     "Utility needed to accurately bid in futures market"
+    ],
+    "solution": [
+     "Fractal Programming enabled new demand forecasting system to be written and deployed in a single business quarter",
+     "Dramatically increased accuracy and number of scenarios that can be run",
+     "Uses full customer data set instead of just a data sub-set",
+     "System runs in minutes instead of hours"
+    ],
+    "impact": [
+     "Added accuracy of forecasting 100% of the data, not samples, impacts millions of dollars of futures contracts each year"
+    ],
+    "why": [
+     "Fractal Programming enabled the development of a demand forecasting application that runs over 1,000 times faster than the legacy application",
+     "Forecasting system was delivered in a single business quarter and is more accurate than legacy system"
+    ]
+   },
+   {
+    "id": "Key_Customer_Identification",
+    "name": "Key Customer Identification",
+    "short": "Key Customer Identification",
+    "summary": "Identify By · Behavior Patterns · Rules-Based Metrics",
+    "problem": [
+     "Key customer relationship are not always obvious – especially when customers have a portfolio of locations and multiple billable entities",
+     "Ownership of commercial properties frequently via special purpose vehicles, making it unclear who the portfolio customer relationship is with",
+     "Qualification for key account status based on spending levels and program participation can be complicated to identify and track"
+    ],
+    "solution": [
+     "Implement qualification rules for key accounts",
+     "Implement aggregation rules to identify portfolio relationships",
+     "Classify every customer at both individual account and aggregate customer portfolio level",
+     "Enable profitability analysis by key account relationship"
+    ],
+    "impact": [
+     "Identify key account customers by evaluating total portfolio consumption and behavior",
+     "Enables more focused programs by identifying impactful portfolio level decision makers in customer base"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for assigning accounts to a customer based on multiple attributes",
+     "Application performance enables rule sets to be applied to entire customer base to identify key account relationships",
+     "Automatic assignment of key account status based on qualification rules",
+     "Both metered and non-metered attributes incorporated into rules"
+    ]
+   },
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Rate_Assignment_And_Validation",
+    "name": "Rate Assignment & Validation",
+    "short": "Rate Assignment & Validation",
+    "summary": "Validate Rate Class Qualification · Auto Assign Rates",
+    "problem": [
+     "Assigning rates to accounts can be time consuming and error prone",
+     "Qualification requirements for rates change over time requiring reassessment of all customer accounts"
+    ],
+    "solution": [
+     "Implement qualification rules for each rate class",
+     "Test every rate on every customer account",
+     "Enable “what if” scenario analysis for key account customers for qualification for different rate",
+     "Forecast customer budget impact and utility revenue changes for new rate assignments",
+     "Enable utility profitability analysis by rate plan"
+    ],
+    "impact": [
+     "Saved half a million dollars in consulting fees for validating rate assignments",
+     "100% of customers on correct rate plans"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for checking rate assignments",
+     "Application performance enables 100% of customer accounts to be validated for correct rate assignment",
+     "Automatic assignment of correct rates",
+     "Automated customer notification of new rate assignments along with explanation"
+    ]
+   },
+   {
+    "id": "Rate_Design_And_Simulation",
+    "name": "Rate Design & Simulation",
+    "short": "Rate Design & Simulation",
+    "summary": "Real Time Planning · All Customers · 100% Accuracy",
+    "problem": [
+     "Need to plan different rates across millions of customers every year",
+     "Costs millions of dollars to simulate rates, create financial forecasts, and estimate customer impact",
+     "Customers may get billing surprises when rates structures change"
+    ],
+    "solution": [
+     "Implement real time rate planning engine",
+     "Test every rate, across every customer, using previous bills",
+     "Forecast annual revenue to the penny",
+     "Eliminate all new rate surprises",
+     "Enable utility profitability analysis by rate plan"
+    ],
+    "impact": [
+     "Saved $2 million paid to rate consultants for single rate plan",
+     "Saved $8 million for subsequent rate planning"
+    ],
+    "why": [
+     "Fractal Programming enables flexible real-time creation of rate plans",
+     "Application performance enables rate plans to be run against 100% of customers for dozens (multiple years) of billing cycles in minutes",
+     "Utility eliminates all new rate surprises for customers",
+     "Utility has highly accurate financial forecasts for itself and its customers"
+    ]
+   },
+   {
+    "id": "Service_Level_Agreement_Monitoring",
+    "name": "Service Level Agreement Monitoring",
+    "short": "Service Level Agreement Monitoring",
+    "summary": "Exception Detection · Analysis · Alarming",
+    "problem": [
+     "Data provider service level agreements can be challenging to monitor, analyze and manage",
+     "Meter data service level shortfalls can lead to billing problems with customers",
+     "Quick early detection of data provider problems is needed to prevent downstream issues"
+    ],
+    "solution": [
+     "Parallel meter data management system",
+     "Analyze all interval and daily data to locate any missing data elements and test against service level agreement metrics",
+     "Reconcile all meter data to check for consistency",
+     "Machine learning module to identify unusual consumption patterns that can indicate meter reading issues"
+    ],
+    "impact": [
+     "Increase in bill quality",
+     "Reduction is customer billing complaints and issues"
+    ],
+    "why": [
+     "Delivered parallel meter data management system (MDMS) with Fractal Programming",
+     "Parallel MDMS application identifies all missing data and meter reading errors",
+     "Automatic alerting and alarming of failures to meet data service level agreement metrics",
+     "Utility is able to bill with confidence that meter data is correct"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Customer Contact Management",
+    "summary": "Critical Loads · Priority Loads · Key Contact Management",
+    "problem": [
+     "Contact information for notification of outages or other problems can be different than billing contact",
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information",
+     "Identification and classification of critical, priority, and key accounts loads for real-time detection of site-specific outages and other issues"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking critical, priority and key accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Customer Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to energy and billing data on digital devices",
+     "Customers want to do scenario analysis for rate plans",
+     "Customers want budget forecasts",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customer can test different rate plans in real time",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, green energy metrics, and enables customer to enter supplemental information about energy efficiency projects",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Metering · Billing · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API's are exposed as components of parallel systems for managing meter data, billing, and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make metering, billing, weather, and other customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   },
+   {
+    "id": "Weather_Data",
+    "name": "Weather Data",
+    "short": "Weather Data",
+    "summary": "Data For · Demand & Financial Forecasting · Scenario Analysis",
+    "problem": [
+     "Weather data is required for many business functions and applications",
+     "Consistent weather assumptions must be made across multiple business processes and applications",
+     "Required weather data may need to be integrated from multiple data sources"
+    ],
+    "solution": [
+     "Weather data management system",
+     "Integrates data from multiple data sources",
+     "Provides data at multiple levels of time granularity (5-minute, hourly, daily, weekly, monthly)",
+     "Data accessible via interactive graphical user interface(s) as well as application programming interface(s) API"
+    ],
+    "impact": [
+     "Increased consistency across business processes",
+     "Increased quality and consistency in analysis and forecasting processes and applications"
+    ],
+    "why": [
+     "Delivered weather data management system with Fractal Programming",
+     "Integrates data from multiple data sources and reconciles the sources for a consistent data view",
+     "Data accessible both interactively and programmatically via web APIs",
+     "Insures consistent weather assumptions across business processes and applications"
+    ]
+   },
+   {
+    "id": "Customer_Care_And_Billing",
+    "name": "Customer Care & Billing",
+    "short": "Customer Care & Billing",
+    "summary": "Transform · Customer Care · Billing",
+    "problem": [
+     "Billing system too complex to easily modify",
+     "Needed 360 view of major corporate customers",
+     "Give customers ability to self-service their data needs",
+     "Check each bill for 100% accuracy before sending",
+     "Give key account team flexible customer info"
+    ],
+    "solution": [
+     "Delivered parallel customer care and billing system costing 90% less than legacy system",
+     "Reconciled every bill before being sent to customer",
+     "Delivered customer data portal to all customers",
+     "Entire solution in production in 90 days",
+     "Gained deeper understanding of largest customers",
+     "Key accounts team and call center increased customer satisfaction"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Able to add new features in hours and days rather than months"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Water_Utility",
+  "name": "Water Utilities",
+  "icon": "💧",
+  "blurb": "Leak detection support, billing, meter reading error detection, and forecasting solutions.",
+  "title": "AI Solutions for Water Utilities",
+  "sub": "15 production-proven solutions for billing, metering, leak detection support, and demand forecasting — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Billing_Quality_Assurance",
+    "name": "Billing Quality Assurance",
+    "short": "Billing Quality Assurance",
+    "summary": "Reconcile All Bills · Improve Quality · Easily Update Rates",
+    "problem": [
+     "Billing system complexity makes billing errors likely",
+     "Changes in rate structures and rate plan assignments require additional quality assurance checks",
+     "Need to quickly check bills before sending",
+     "Need to reconcile billing input values against source meter data"
+    ],
+    "solution": [
+     "Delivered parallel billing system to check system-of-record billing system",
+     "Reconciled every line item of every bill before being sent to customer",
+     "Rate editor enables real-time changes to rate structures and rate plans",
+     "Billing inputs reconciled against source meter data and any discrepancies flagged",
+     "Rate assignments on every account checked to insure that account qualifies for that rate"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Utility is able to update rate models in minutes",
+     "Utility now has an independent way of checking billing and meter data"
+    ]
+   },
+   {
+    "id": "Metering_Quality_Assurance",
+    "name": "Metering Quality Assurance",
+    "short": "Metering Quality Assurance",
+    "summary": "Reconcile All Meter Data · Improve Quality · Pattern Detection",
+    "problem": [
+     "Multiple sources of meter data can lead to inconsistencies",
+     "Customers need to see a consistent data view",
+     "Billing calculations must produce matching results regardless of meter data source",
+     "Meter communication issues create data issues"
+    ],
+    "solution": [
+     "Delivered parallel meter data management system to check system-of-record",
+     "Reconciled all interval data against all daily data",
+     "Reconciled all daily and interval data against billing system data",
+     "Machine learning module to identify unusual consumption patterns"
+    ],
+    "impact": [
+     "Eliminated need for $10 million meter data management system re-write"
+    ],
+    "why": [
+     "Delivered parallel meter data management system to check system-of-record",
+     "Parallel application run over 1,000 times faster, reduced storage 90%, and eliminated meter data errors",
+     "Utility is able to bill with confidence that meter data is correct",
+     "Utility now has an independent way of checking billing and meter data"
+    ]
+   },
+   {
+    "id": "Meter_Aggregation_And_Analysis",
+    "name": "Meter Aggregation & Analysis",
+    "short": "Meter Aggregation & Analysis",
+    "summary": "Analyze by Rate · Demographic · Program Participation · Equipment",
+    "problem": [
+     "Need to analyze aggregate behavior by customer groups",
+     "Need a flexible/easy way to define customer groups",
+     "Need to correlate behavior with weather, program participation, and other non-billing attributes",
+     "Need to aggregate at the scale of entire customer base"
+    ],
+    "solution": [
+     "Virtual meter capability enables easy definition of customer groups",
+     "Aggregation performed on both daily and interval data",
+     "Aggregation by rate class, demographics, consumption patterns, program participation, on premise equipment, and building type",
+     "Analyze group response to events such as demand response, weather changes, etc."
+    ],
+    "impact": [
+     "Deeper insight into customer behavior",
+     "Deeper insight into customer program results"
+    ],
+    "why": [
+     "Fractal Programming enables virtual meters that aggregate millions of individual meters",
+     "Virtual meter definitions are easy to create and edit",
+     "Fractal Programming performance enables real-time analysis",
+     "Utility can now do more sophisticated analysis by grouping / aggregating customer base many different ways"
+    ]
+   },
+   {
+    "id": "Program_Measurement_And_Verification",
+    "name": "Program Measurement & Verification",
+    "short": "Program Measurement & Verification",
+    "summary": "Measure Aggregate Response · Verify Individual Response",
+    "problem": [
+     "Effectiveness of utility program difficult to measure and analyze",
+     "The scale of large programs make data processing difficult",
+     "Need to analyze sub-groups within programs",
+     "Need to adjust group definitions based on changing conditions"
+    ],
+    "solution": [
+     "Virtual meters defined for program participants to analyze aggregate behavior",
+     "Each individual customer's behavior also analyzed",
+     "Virtual meters defined for each sub-group within the program",
+     "Virtual meters also defined for reference groups that do not participate in the program"
+    ],
+    "impact": [
+     "Programs can be analyzed at overall program level and sub-groups to identify where program is most effective",
+     "Program resources can be allocated based on effectiveness to maximize program impact and results"
+    ],
+    "why": [
+     "Fractal Programming enables virtual meters that aggregate millions of individual meters",
+     "Virtual meter definitions are easy to create and edit",
+     "Fractal Programming performance enables real-time analysis",
+     "Can now accurately measure and analyze program participation and effectiveness"
+    ]
+   },
+   {
+    "id": "Demand_Forecasting",
+    "name": "Demand Forecasting",
+    "short": "Demand Forecasting",
+    "summary": "Forecast With Tight Time Constraints",
+    "problem": [
+     "Forecasting system must run within time constraints",
+     "Using major data center, legacy system did not always finish in time",
+     "Utility also needed to increase system size and capacity",
+     "Utility needed to accurately bid in futures market"
+    ],
+    "solution": [
+     "Fractal Programming enabled new demand forecasting system to be written and deployed in a single business quarter",
+     "Dramatically increased accuracy and number of scenarios that can be run",
+     "Uses full customer data set instead of just a data sub-set",
+     "System runs in minutes instead of hours"
+    ],
+    "impact": [
+     "Added accuracy of forecasting 100% of the data, not samples, impacts millions of dollars of futures contracts each year"
+    ],
+    "why": [
+     "Fractal Programming enabled the development of a demand forecasting application that runs over 1,000 times faster than the legacy application",
+     "Forecasting system was delivered in a single business quarter and is more accurate than legacy system"
+    ]
+   },
+   {
+    "id": "Key_Customer_Identification",
+    "name": "Key Customer Identification",
+    "short": "Key Customer Identification",
+    "summary": "Identify By · Behavior Patterns · Rules-Based Metrics",
+    "problem": [
+     "Key customer relationship are not always obvious – especially when customers have a portfolio of locations and multiple billable entities",
+     "Ownership of commercial properties frequently via special purpose vehicles, making it unclear who the portfolio customer relationship is with",
+     "Qualification for key account status based on spending levels and program participation can be complicated to identify and track"
+    ],
+    "solution": [
+     "Implement qualification rules for key accounts",
+     "Implement aggregation rules to identify portfolio relationships",
+     "Classify every customer at both individual account and aggregate customer portfolio level",
+     "Enable utility profitability analysis by key account relationship"
+    ],
+    "impact": [
+     "Identify key account customers by evaluating total portfolio consumption and behavior",
+     "Enables more focused programs by identifying impactful portfolio level decision makers in customer base"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for assigning accounts to a customer based on multiple attributes",
+     "Application performance enables rule sets to be applied to entire customer base to identify key account relationships",
+     "Automatic assignment of key account status based on qualification rules",
+     "Both metered and non-metered attributes incorporated into rules"
+    ]
+   },
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Rate_Assignment_And_Validation",
+    "name": "Rate Assignment & Validation",
+    "short": "Rate Assignment & Validation",
+    "summary": "Validate Rate Class Qualification · Auto Assign Rates",
+    "problem": [
+     "Assigning rates to accounts can be time consuming and error prone",
+     "Rate assignment is complicated",
+     "Qualification requirements for rates change over time requiring reassessment of all customer accounts"
+    ],
+    "solution": [
+     "Implement qualification rules for each rate class",
+     "Test every rate on every customer account",
+     "Enable “what if” scenario analysis for key account customers for qualification for different rate",
+     "Forecast customer budget impact and utility revenue changes for new rate assignments",
+     "Enable utility profitability analysis by rate plan"
+    ],
+    "impact": [
+     "Saved half a million dollars in consulting fees for validating rate assignments",
+     "100% of customers on correct rate plans"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for checking rate assignments",
+     "Application performance enables 100% of customer accounts to be validated for correct rate assignment",
+     "Automatic assignment of correct rates",
+     "Automated customer notification of new rate assignments along with explanation"
+    ]
+   },
+   {
+    "id": "Rate_Design_And_Simulation",
+    "name": "Rate Design & Simulation",
+    "short": "Rate Design & Simulation",
+    "summary": "Real Time Planning · All Customers · 100% Accuracy",
+    "problem": [
+     "Need to plan different rates across millions of customers every year",
+     "Complicated rate structures",
+     "Costs millions of dollars to simulate rates, create financial forecasts, and estimate customer impact",
+     "Customers may get billing surprises when rates structures change"
+    ],
+    "solution": [
+     "Implement real time rate planning engine",
+     "Test every rate, across every customer, using previous bills",
+     "Forecast annual revenue to the penny",
+     "Eliminate all new rate surprises",
+     "Enable utility profitability analysis by rate plan"
+    ],
+    "impact": [
+     "Saved $2 million paid to rate consultants for single rate plan",
+     "Saved $8 million for subsequent rate planning"
+    ],
+    "why": [
+     "Fractal Programming enables flexible real-time creation of rate plans",
+     "Application performance enables rate plans to be run against 100% of customers for dozens (multiple years) of billing cycles in minutes",
+     "Eliminate all new rate surprises for customers",
+     "Utility has highly accurate financial forecasts for itself and its customers"
+    ]
+   },
+   {
+    "id": "Service_Level_Agreement_Monitoring",
+    "name": "Service Level Agreement Monitoring",
+    "short": "Service Level Agreement Monitoring",
+    "summary": "Exception Detection · Analysis · Alarming",
+    "problem": [
+     "Data provider service level agreements can be challenging to monitor, analyze and manage",
+     "Data service level shortfalls can lead to billing problems with customers",
+     "Quick early detection of data provider problems is needed to prevent downstream issues"
+    ],
+    "solution": [
+     "Parallel meter data management system",
+     "Analyze all interval and daily data to locate any missing data elements and test against service level agreement metrics",
+     "Reconcile all interval data against all daily data to check for consistency",
+     "Machine learning module to identify unusual consumption patterns that can indicate meter reading issues"
+    ],
+    "impact": [
+     "Increase in bill quality",
+     "Reduction is customer billing complaints and issues"
+    ],
+    "why": [
+     "Delivered parallel meter data management system (MDMS) with Fractal Programming",
+     "Parallel MDMS application identifies all missing data and meter reading errors",
+     "Automatic alerting and alarming of failures to meet data service level agreement metrics",
+     "Utility is able to bill with confidence that meter data is correct"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Customer Contact Management",
+    "summary": "Critical Loads · Priority Loads · Key Contact Management",
+    "problem": [
+     "Contact information for notification of outages or other problems can be different than billing contact",
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information",
+     "Identification and classification of critical, priority, and key accounts loads for real-time detection of site-specific outages and other issues"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking critical, priority and key accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Customer Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to water and billing data on digital devices",
+     "Customers want to do scenario analysis for rate plans",
+     "Customers want budget forecasts",
+     "Customers want visibility to conservation metrics",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customer can test different rate plans in real time",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, conservation metrics, and enables customer to enter supplemental information about efficiency projects",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Metering · Billing · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API’s are exposed as components of parallel systems for managing meter data, billing, and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make metering, billing, weather, and other customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   },
+   {
+    "id": "Weather_Data",
+    "name": "Weather Data",
+    "short": "Weather Data",
+    "summary": "Data For · Demand & Financial Forecasting · Scenario Analysis",
+    "problem": [
+     "Weather data is required for many business functions and applications",
+     "Consistent weather assumptions must be made across multiple business processes and applications",
+     "Required weather data may need to be integrated from multiple data sources"
+    ],
+    "solution": [
+     "Weather data management system",
+     "Integrates data from multiple data sources",
+     "Provides data at multiple levels of time granularity (5-minute, hourly, daily, weekly, monthly)",
+     "Data accessible via interactive graphical user interface(s) as well as application programming interface(s) API"
+    ],
+    "impact": [
+     "Increased consistency across business processes",
+     "Increased quality and consistency in analysis and forecasting processes and applications"
+    ],
+    "why": [
+     "Delivered weather data management system with Fractal Programming",
+     "Integrates data from multiple data sources and reconciles the sources for a consistent data view",
+     "Data accessible both interactively and programmatically via web APIs",
+     "Insures consistent weather assumptions across business processes and applications"
+    ]
+   },
+   {
+    "id": "Customer_Care_And_Billing",
+    "name": "Customer Care & Billing",
+    "short": "Customer Care & Billing",
+    "summary": "Transform · Customer Care · Billing",
+    "problem": [
+     "Billing system too complex to easily modify",
+     "Needed 360 view of major corporate customers",
+     "Give customers ability to self-service their data needs",
+     "Check each bill for 100% accuracy before sending",
+     "Give key account team flexible customer info"
+    ],
+    "solution": [
+     "Delivered parallel customer care and billing system costing 90% less than legacy application",
+     "Reconciled every bill before being sent to customer",
+     "Delivered customer data portal to all customers",
+     "Entire solution in production in 90 days",
+     "Gained deeper understanding of largest customers",
+     "Key accounts team and call center increased customer satisfaction"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Able to add new features in hours and days rather than months"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Telecommunications",
+  "name": "Telecommunications",
+  "icon": "📡",
+  "blurb": "Customer insight, network SLA monitoring, billing quality, rate modeling, and forecasting solutions.",
+  "title": "AI Solutions for Telecommunications",
+  "sub": "11 production-proven solutions for billing quality assurance, rate design, customer insight, and service level monitoring — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Billing_Quality_Assurance",
+    "name": "Billing Quality Assurance",
+    "short": "Billing Quality Assurance",
+    "summary": "Reconcile All Bills · Improve Quality · Easily Update Rates",
+    "problem": [
+     "Billing system complexity makes billing errors likely",
+     "Changes in rate structures and rate plan assignments require additional quality assurance checks",
+     "Need to quickly check bills before sending",
+     "Need to reconcile billing input values against source data"
+    ],
+    "solution": [
+     "Delivered parallel billing system to check system-of-record billing system",
+     "Reconciled every line item of every bill before being sent to customer",
+     "Rate editor enables real-time changes to rate structures and rate plans",
+     "Billing inputs reconciled against source data and any discrepancies flagged",
+     "Rate assignments on every account checked to insure that account qualifies for that rate"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Now able to update rate models in minutes",
+     "Now have an independent way of checking billing and source data"
+    ]
+   },
+   {
+    "id": "Program_Measurement_And_Verification",
+    "name": "Program Measurement & Verification",
+    "short": "Program Measurement & Verification",
+    "summary": "Measure Aggregate Response · Verify Individual Response",
+    "problem": [
+     "Effectiveness of marketing and customer programs difficult to measure and analyze",
+     "The scale of large programs make data processing difficult",
+     "Need to analyze sub-groups within programs",
+     "Need to adjust group definitions based on changing conditions"
+    ],
+    "solution": [
+     "Virtual aggregation for program participants to analyze aggregate behavior",
+     "Each individual customer's behavior also analyzed",
+     "Aggregation rules defined for each sub-group within the program",
+     "Aggregation rules defined for reference groups that do not participate in the program"
+    ],
+    "impact": [
+     "Programs can be analyzed at overall program level and sub-groups to identify where program is most effective",
+     "Program resources can be allocated based on effectiveness to maximize program impact and results"
+    ],
+    "why": [
+     "Virtual aggregation definitions are easy to create and edit",
+     "Fractal Programming performance enables real-time analysis",
+     "Can now accurately measure and analyze program participation and effectiveness"
+    ]
+   },
+   {
+    "id": "Key_Customer_Identification",
+    "name": "Key Customer Identification",
+    "short": "Key Customer Identification",
+    "summary": "Identify By · Behavior Patterns · Rules-Based Metrics",
+    "problem": [
+     "Key customer relationship are not always obvious – especially when customers have a portfolio of locations and multiple billable entities",
+     "Qualification for key account status based on spending levels and program participation can be complicated to identify and track"
+    ],
+    "solution": [
+     "Implement qualification rules for key accounts",
+     "Implement aggregation rules to identify portfolio relationships",
+     "Classify every customer at both individual account and aggregate customer portfolio level",
+     "Enable profitability analysis by key account relationship"
+    ],
+    "impact": [
+     "Identify key account customers by evaluating total portfolio behavior",
+     "Enables more focused customer programs by identifying impactful decision makers in customer base"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for assigning accounts to a customer based on multiple attributes",
+     "Application performance enables rule sets to be applied to entire customer base to identify key account relationships",
+     "Automatic assignment of key account status based on qualification rules"
+    ]
+   },
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Rate_Assignment_And_Validation",
+    "name": "Rate Assignment & Validation",
+    "short": "Rate Assignment & Validation",
+    "summary": "Validate Rate Class Qualification · Auto Assign Rates",
+    "problem": [
+     "Assigning rates to accounts can be time consuming and error prone",
+     "Qualification requirements for rates change over time requiring reassessment of all customer accounts"
+    ],
+    "solution": [
+     "Implement qualification rules for each rate class",
+     "Test every rate on every customer account",
+     "Enable “what if” scenario analysis for key account customers for qualification for different rate",
+     "Forecast customer budget impact and revenue changes for new rate assignments",
+     "Enable profitability analysis by rate plan"
+    ],
+    "impact": [
+     "Saved half a million dollars in consulting fees for validating rate assignments",
+     "100% of customers on correct rate plans"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for checking rate assignments",
+     "Application performance enables 100% of customer accounts to be validated for correct rate assignment",
+     "Automatic assignment of correct rates",
+     "Automated customer notification of new rate assignments along with explanation"
+    ]
+   },
+   {
+    "id": "Rate_Design_And_Simulation",
+    "name": "Rate Design & Simulation",
+    "short": "Rate Design & Simulation",
+    "summary": "Real Time Planning · All Customers · 100% Accuracy",
+    "problem": [
+     "Need to plan different rates across millions of customers every year",
+     "Costs millions of dollars to simulate rates, create financial forecasts, and estimate customer impact",
+     "Customers may get billing surprises when rates structures change"
+    ],
+    "solution": [
+     "Implement real time rate planning engine",
+     "Test every rate, across every customer",
+     "Forecast annual revenue to the penny",
+     "Eliminate all new rate surprises",
+     "Enable profitability analysis by rate plan"
+    ],
+    "impact": [
+     "Saved $2 million paid to rate consultants for single rate plan",
+     "Saved $8 million for subsequent rate planning"
+    ],
+    "why": [
+     "Fractal Programming enables flexible real-time creation of rate plans",
+     "Application performance enables rate plans to be run against 100% of customers for dozens (multiple years) of monthly billing cycles in minutes",
+     "Eliminates all new rate surprises for customers",
+     "Telco has highly accurate financial forecasts for itself and its customers"
+    ]
+   },
+   {
+    "id": "Service_Level_Agreement_Monitoring",
+    "name": "Service Level Agreement Monitoring",
+    "short": "Service Level Agreement Monitoring",
+    "summary": "Exception Detection · Analysis · Alarming",
+    "problem": [
+     "Data provider service level agreements can be challenging to monitor, analyze and manage",
+     "Data service level shortfalls can lead to billing problems with customers",
+     "Quick early detection of data provider problems is needed to prevent downstream issues"
+    ],
+    "solution": [
+     "Parallel data management system",
+     "Analyze all source data to locate any missing data elements and test against service level agreement metrics",
+     "Reconcile all data to check for consistency",
+     "Machine learning module to identify unusual patterns that can indicate data issues"
+    ],
+    "impact": [
+     "Increase in bill quality",
+     "Reduction is customer billing complaints and issues"
+    ],
+    "why": [
+     "Delivered parallel source data management system with Fractal Programming",
+     "Parallel Fractal application identifies missing data and data errors",
+     "Automatic alerting and alarming of failures to meet data service level agreement metrics",
+     "Now able to bill with confidence that underlying data is correct"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Customer Contact Management",
+    "summary": "Customer Data Management · Key Contact Information",
+    "problem": [
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization",
+     "Contact information for problem notification can be different than billing contact"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking priority accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Customer Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to their data on digital devices",
+     "Customers want to do scenario analysis",
+     "Customers want budget forecasts",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customer can test scenarios in real time",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, and enables customer to enter supplemental information",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Account Information · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API’s are exposed as components of parallel systems for managing billing data and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make all customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   },
+   {
+    "id": "Customer_Care_And_Billing",
+    "name": "Customer Care & Billing",
+    "short": "Customer Care & Billing",
+    "summary": "Transform · Customer Care · Billing",
+    "problem": [
+     "Billing system too complex to easily modify",
+     "Needed 360 view of major corporate customers",
+     "Give customers ability to self-service their data needs",
+     "Check each bill for 100% accuracy before sending",
+     "Give key account team flexible customer info"
+    ],
+    "solution": [
+     "Delivered parallel customer care and billing system costing 90% less than legacy application",
+     "Reconciled every bill before being sent to customer",
+     "Delivered customer data portal to all customers",
+     "Entire solution in production in 90 days",
+     "Gained deeper understanding of largest customers",
+     "Key accounts team and call center increased customer satisfaction"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Able to add new features in hours and days rather than months"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Financial",
+  "name": "Financial Services",
+  "icon": "📊",
+  "blurb": "Large data management and processing, transaction processing, and customer insight solutions.",
+  "title": "AI Solutions for Financial Services",
+  "sub": "4 production-proven solutions for data management, customer insight, and contact intelligence — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Contact Management",
+    "summary": "All Customer Contacts · Manage Customer Communications",
+    "problem": [
+     "Contact information for notification of outages or other problems can be different than billing contact",
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information",
+     "Identification and classification of critical, priority, and key accounts loads for real-time detection of site-specific outages and other issues"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking critical, priority and key accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to customer and billing data on digital devices",
+     "Customers want to do scenario analysis",
+     "Customers want budget forecasts",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, and enables customer to enter supplemental information",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Billing · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API's are exposed as components of parallel systems for managing billing, and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make billing and other customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Healthcare",
+  "name": "Healthcare",
+  "icon": "🏥",
+  "blurb": "Revenue optimization, customer care, billing, and data portal solutions for healthcare organizations.",
+  "title": "AI Solutions for Healthcare",
+  "sub": "Revenue optimization, customer insight, contact management, and data access — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Contact Management",
+    "summary": "All Customer Contacts · Manage Customer Communications",
+    "problem": [
+     "Contact information for notification of outages or other problems can be different than billing contact",
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information",
+     "Identification and classification of critical, priority, and key accounts loads for real-time detection of site-specific outages and other issues"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking critical, priority and key accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to customer and billing data on digital devices",
+     "Customers want to do scenario analysis",
+     "Customers want budget forecasts",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, and enables customer to enter supplemental information",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Billing · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API's are exposed as components of parallel systems for managing billing, and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make billing and other customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   }
+  ],
+  "video": {
+   "id": "Revenue_Optimization",
+   "name": "Revenue Optimization",
+   "src": "/VIDEO?fName=SRD_Fractal.mp4"
+  }
+ },
+ {
+  "slug": "Insurance",
+  "name": "Insurance",
+  "icon": "🛡",
+  "blurb": "Fraud detection support, risk analysis, financial forecasting, and customer insight solutions.",
+  "title": "AI Solutions for Insurance",
+  "sub": "4 production-proven solutions for customer data management, contact intelligence, and API-driven access — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Contact Management",
+    "summary": "Customer Data Management · Key Contact Information",
+    "problem": [
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization",
+     "Contact information for problem notification can be different than billing contact"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking priority accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to their data on digital devices",
+     "Customers want to do scenario analysis",
+     "Customers want budget forecasts",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customer can test scenarios in real time",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, green energy metrics, and enables customer to enter supplemental information about energy efficiency projects",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Account Information · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API's are exposed as components of parallel systems for managing billing data and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make all customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Logistics",
+  "name": "Logistics",
+  "icon": "🚚",
+  "blurb": "Data processing at point of delivery, inventory management, and customer insight solutions.",
+  "title": "AI Solutions for Logistics",
+  "sub": "Production-proven solutions for data processing, inventory management, and customer intelligence — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Customer Contact Management",
+    "summary": "Customer Data Management · Key Contact Information",
+    "problem": [
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization",
+     "Contact information for problem notification can be different than billing contact"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking priority accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Customer Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to their data on digital devices",
+     "Customers want to do scenario analysis",
+     "Customers want budget forecasts",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customer can test scenarios in real time",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, green energy metrics, and enables customer to enter supplemental information about energy efficiency projects",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Account Information · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API's are exposed as components of parallel systems for managing billing data and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make all customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Retail",
+  "name": "Retail",
+  "icon": "🛍",
+  "blurb": "End-of-day closing, inventory management, customer insight systems, and forecasting solutions.",
+  "title": "AI Solutions for Retail",
+  "sub": "Production-proven solutions for customer identification, insight, contact management, and billing — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Key_Customer_Identification",
+    "name": "Key Customer Identification",
+    "short": "Key Customer Identification",
+    "summary": "Identify By · Behavior Patterns · Rules-Based Metrics",
+    "problem": [
+     "Key customer relationship are not always obvious – especially when customers have a portfolio of locations and multiple billable entities",
+     "Qualification for key account status based on spending levels and program participation can be complicated to identify and track"
+    ],
+    "solution": [
+     "Implement qualification rules for key accounts",
+     "Implement aggregation rules to identify portfolio relationships",
+     "Classify every customer at both individual account and aggregate customer portfolio level",
+     "Enable profitability analysis by key account relationship"
+    ],
+    "impact": [
+     "Identify key account customers by evaluating total portfolio behavior",
+     "Enables more focused customer programs by identifying impactful decision makers in customer base"
+    ],
+    "why": [
+     "Fractal Programming enables flexible rules for assigning accounts to a customer based on multiple attributes",
+     "Application performance enables rule sets to be applied to entire customer base to identify key account relationships",
+     "Automatic assignment of key account status based on qualification rules"
+    ]
+   },
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Customer Contact Management",
+    "summary": "Customer Data Management · Key Contact Information",
+    "problem": [
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization",
+     "Contact information for problem notification can be different than billing contact"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking priority accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Customer Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to their data on digital devices",
+     "Customers want to do scenario analysis",
+     "Customers want budget forecasts",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customer can test scenarios in real time",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, and enables customer to enter supplemental information",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Account Information · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API's are exposed as components of parallel systems for managing billing data and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make all customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   },
+   {
+    "id": "Customer_Care_And_Billing",
+    "name": "Customer Care & Billing",
+    "short": "Customer Care & Billing",
+    "summary": "Transform · Customer Care · Billing",
+    "problem": [
+     "Billing system too complex to easily modify",
+     "Needed 360 view of major corporate customers",
+     "Give customers ability to self-service their data needs",
+     "Check each bill for 100% accuracy before sending",
+     "Give key account team flexible customer info"
+    ],
+    "solution": [
+     "Delivered parallel customer care and billing system costing 90% less than legacy application",
+     "Reconciled every bill before being sent to customer",
+     "Delivered customer data portal to all customers",
+     "Entire solution in production in 90 days",
+     "Gained deeper understanding of largest customers",
+     "Key accounts team and call center increased customer satisfaction"
+    ],
+    "impact": [
+     "Eliminated need for $35 million billing system rewrite"
+    ],
+    "why": [
+     "Delivered parallel solution with Fractal Programming",
+     "Parallel application ran over 1,000 times faster, reduced storage 90%, and eliminated billing errors",
+     "Able to add new features in hours and days rather than months"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Oil_And_Gas",
+  "name": "Oil & Gas",
+  "icon": "⛽",
+  "blurb": "Large data management and processing, demand forecasting, process management, and machine learning solutions.",
+  "title": "AI Solutions for Oil & Gas",
+  "sub": "Production-proven solutions for demand forecasting, service level monitoring, customer management, and data APIs — each running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [
+   {
+    "id": "Demand_Forecasting",
+    "name": "Demand Forecasting",
+    "short": "Demand Forecasting",
+    "summary": "Forecast With Tight Time Constraints",
+    "problem": [
+     "Forecasting system must run in less than 12 hours",
+     "Using major data center, legacy system did not always finish in time",
+     "Utility also needed to increase system size and capacity",
+     "Utility needed to accurately bid in futures market"
+    ],
+    "solution": [
+     "Fractal Programming enabled new demand forecasting system to be written and deployed in a single business quarter",
+     "Dramatically increased accuracy and number of scenarios that can be run",
+     "Uses full customer data set instead of just a data sub-set",
+     "System runs in minutes instead of hours"
+    ],
+    "impact": [
+     "Added accuracy of forecasting 100% of the data, not samples, impacts millions of dollars of futures contracts each year"
+    ],
+    "why": [
+     "Fractal Programming enabled the development of a demand forecasting application that runs over 1,000 times faster than the legacy application",
+     "Forecasting system was delivered in a single business quarter and is more accurate than legacy system"
+    ]
+   },
+   {
+    "id": "Key_Customer_Insight",
+    "name": "Key Customer Insight",
+    "short": "Key Customer Insight",
+    "summary": "Insight From Multiple Sources · Internal and External",
+    "problem": [
+     "Key customer insight data is often located outside of systems-of-record",
+     "Valuable customer information is located department-level computers or desktop spreadsheets that are not accessible by systems-of-record",
+     "Customer entered and customer maintained data needs to be incorporated into customer insight apps",
+     "Public domain information (eg. tax records) must be incorporated into customer insights"
+    ],
+    "solution": [
+     "Implement continuous real-time data import from systems-of-record",
+     "Implement continuous real-time data import from department-level computers and desktop applications",
+     "Implement continuous real-time data import from public domain sources",
+     "Implement continuous real-time data import directly from customers"
+    ],
+    "impact": [
+     "Deeper key customer insight",
+     "Enables all customer information, regardless of where it resides, to be incorporated into 360 degree view of customer relationship and customer activities"
+    ],
+    "why": [
+     "Fractal Programming enables continuous real-time data import",
+     "Data import tools work with internal and external data sources, including public domain data",
+     "Data import tools work with desktop resources such as spreadsheets and text files in addition to data exports from systems-of-record",
+     "Customer data entry / import supported"
+    ]
+   },
+   {
+    "id": "Service_Level_Agreement_Monitoring",
+    "name": "Service Level Agreement Monitoring",
+    "short": "SLA Monitoring",
+    "summary": "Exception Detection · Analysis · Alarming",
+    "problem": [
+     "Data provider service level agreements can be challenging to monitor, analyze and manage",
+     "Data service level shortfalls can lead to billing problems with customers",
+     "Quick early detection of data provider problems is needed to prevent downstream issues"
+    ],
+    "solution": [
+     "Parallel meter data management system",
+     "Analyze all meter and sensor data to locate any missing data elements and test against service level agreement metrics",
+     "Reconcile all data to check for consistency",
+     "Machine learning module to identify unusual patterns that can indicate data issues"
+    ],
+    "impact": [
+     "Increase in bill quality",
+     "Reduction is customer billing complaints and issues"
+    ],
+    "why": [
+     "Delivered parallel meter and sensor data management system with Fractal Programming",
+     "Parallel Fractal application identifies missing data and data errors",
+     "Automatic alerting and alarming of failures to meet data service level agreement metrics",
+     "Now able to bill with confidence that underlying data is correct"
+    ]
+   },
+   {
+    "id": "Customer_Contact_Management",
+    "name": "Customer Contact Management",
+    "short": "Customer Contact Management",
+    "summary": "Customer Data Management · Key Contact Information",
+    "problem": [
+     "The scale of customer base can make data management and automated communication challenging",
+     "Customers need to be able to update contact information and preferences to track changes in their internal organization",
+     "Contact information for problem notification can be different than billing contact"
+    ],
+    "solution": [
+     "Customer portal that enables customers to update their contact information and preferences",
+     "Internal support portal for use by call center and key accounts team to track and update customer contact information"
+    ],
+    "impact": [
+     "Customers proactively notified and updated on issues",
+     "Organizational and contact changes continuously tracked and updated"
+    ],
+    "why": [
+     "Fractal enables data portals to be easily built for both internal and external customer use",
+     "Flexible database definitions enable easy addition of attributes for tracking priority accounts",
+     "Native email, text and voicemail communication for alerting and alarming",
+     "Solution scalability for entire customer base"
+    ]
+   },
+   {
+    "id": "Customer_Data_Portal",
+    "name": "Customer Data Portal",
+    "short": "Customer Data Portal",
+    "summary": "Customer Data Available On · Desktop · Mobile Devices",
+    "problem": [
+     "Customers want access to billing data on digital devices",
+     "Customers want to do scenario analysis for rate plans",
+     "Customers want budget forecasts",
+     "Customer want to supplement their data"
+    ],
+    "solution": [
+     "Parallel customer care and billing system that is accessible from customer's digital devices",
+     "Instant customer visibility to their real time bill",
+     "Customer can test different rate plans in real time",
+     "Customers have easy access to budget forecasts",
+     "Customers can self-service their data needs which frees up key account and call center resources"
+    ],
+    "impact": [
+     "$10 million development cost savings and customer support cost reduction for customer information portal"
+    ],
+    "why": [
+     "Delivered a parallel customer care and billing system in 90 days with 90% less cost than legacy system",
+     "Application provides customer rate plan scenario analysis, budget forecasts, green energy metrics, and enables customer to enter supplemental information about energy efficiency projects",
+     "Customers can self-service their information needs on web portal from their digital devices"
+    ]
+   },
+   {
+    "id": "Data_API",
+    "name": "Data API",
+    "short": "Data API",
+    "summary": "Web Services · Metering · Billing · Customer & Program Info",
+    "problem": [
+     "Customers increasingly requesting programmatic access to their data",
+     "Large customers want convenient access to their entire portfolio of accounts and associated information",
+     "An API is necessary in order to make many third party services available to customers"
+    ],
+    "solution": [
+     "Web services API's are exposed as components of parallel systems for managing meter data, billing, and customer information",
+     "Customers can access the data both via interactive web portals and via programmatic APIs",
+     "Multiple data format supported (JSON, XML, CSV) as well as custom data formats"
+    ],
+    "impact": [
+     "Increased customer satisfaction",
+     "No additional load on IT resources",
+     "Third party services easier to enable for customers"
+    ],
+    "why": [
+     "Delivered parallel data management system with Fractal Programming",
+     "Make metering, billing, weather, and other customer data available without imposing any load on legacy systems-of-record",
+     "Consistent interface and interaction for customers across all data types and data requests"
+    ]
+   },
+   {
+    "id": "Weather_Data",
+    "name": "Weather Data",
+    "short": "Weather Data",
+    "summary": "Data For · Demand & Financial Forecasting · Scenario Analysis",
+    "problem": [
+     "Weather data is required for many business functions and applications",
+     "Consistent weather assumptions must be made across multiple business processes and applications",
+     "Required weather data may need to be integrated from multiple data sources"
+    ],
+    "solution": [
+     "Weather data management system",
+     "Integrates data from multiple data sources",
+     "Provides data at multiple levels of time granularity (5-minute, hourly, daily, weekly, monthly)",
+     "Data accessible via interactive graphical user interface(s) as well as application programming interface(s) API"
+    ],
+    "impact": [
+     "Increased consistency across business processes",
+     "Increased quality and consistency in analysis and forecasting processes and applications"
+    ],
+    "why": [
+     "Delivered weather data management system with Fractal Programming",
+     "Integrates data from multiple data sources and reconciles the sources for a consistent data view",
+     "Data accessible both interactively and programmatically via web APIs",
+     "Insures consistent weather assumptions across business processes and applications"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "Government",
+  "name": "Government",
+  "icon": "🏛",
+  "blurb": "Replace legacy applications with lower cost, higher availability, agile modern alternatives.",
+  "title": "AI Solutions for Government",
+  "sub": "Production-proven sustainable computing solutions — running as a parallel digital twin with zero risk to your systems of record.",
+  "solutions": [],
+  "video": {
+   "id": "Sustainable_Computing",
+   "name": "Sustainable Computing",
+   "src": "/VIDEO?fName=Sustainable_Computing_v2.mp4"
+  }
+ }
+]

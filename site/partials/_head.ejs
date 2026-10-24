@@ -1,0 +1,22 @@
+<%# Shared <head> for every page of the site. Called as
+    include('partials/_head', {title, desc}); env (with env.nonce) comes from the page's own data. -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= locals.title ? title + ' · Fractal Computing' : 'Fractal Computing' %></title>
+<% if (locals.desc) { %><meta name="description" content="<%= desc %>">
+<% } -%>
+<link rel="icon"                         href="/apps/images/favicon_color.png">
+<link rel="apple-touch-icon-precomposed" href="/apps/images/favicon_color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/apps/style_site.css">
+<script nonce="<%- env.nonce %>">/* apply a saved theme choice before first paint, so the page doesn't flash the other theme;
+   mark the page as scripted, so content that _site.js animates in (eg. .timeline[data-animate]) starts hidden only when it will be animated */
+document.documentElement.classList.add('js');
+try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t) } catch (e) {}</script>
+<script nonce="<%- env.nonce %>" src="/apps/_site.js" defer></script>
+</head>

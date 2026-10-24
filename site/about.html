@@ -1,0 +1,60 @@
+<%- include('partials/_head', {title:'About', desc:'Fractal Computing was designed by MIT and Stanford computer scientists around Locality Optimization, and runs in production at Fortune 500 companies in utilities, telecommunications and financial services.'}) %>
+<body>
+<%- include('partials/_nav', {page:'about'}) %>
+
+<%# About: origin, timeline, production record and talks, from the apps_12.01 About page. -%>
+<main id="main" class="wrap">
+<header class="hero">
+  <h1>Built by MIT and Stanford engineers to make structured-data AI safe</h1>
+  <p class="lede">An architecture decades in the making, now running enterprise AI in production at Fortune 500 companies on hardware small enough to hold in one hand.</p>
+</header>
+
+<section id="origin">
+  <h2>Decades in the making</h2>
+  <div class="cols">
+    <div>
+      <p>Fractal Computing's architecture was designed in the early 1980s by <strong>MIT and Stanford computer scientists</strong> for a government agency project. The core innovation, <strong>Locality Optimization</strong>, was built to solve a fundamental problem: data and compute were too far apart, and the gap was making applications slow and expensive.</p>
+      <p>The science was ahead of the hardware. It took four decades for commodity processors to catch up. When they did, Fractal's architecture made possible enterprise-scale AI applications that are safe, fast and cheap to run.</p>
+      <p>Today the platform runs on off-the-shelf hardware. Fortune 500 companies in utilities, telecommunications and financial services run production AI workloads on Fractal digital twins, including billing, customer care, rate planning and transaction processing, serving tens of millions of customers with zero risk of data corruption in their systems of record.</p>
+      <p class="xref"><span class="xl">Detail</span> <a href="/how#locality">Locality of Reference →</a></p>
+    </div>
+    <div>
+      <h4 class="first">Timeline</h4>
+      <ol class="timeline" data-animate>
+        <li><span class="when">1980s</span><p><b>Research begins</b> with a team of MIT and Stanford computer scientists working on a government agency project. Locality Optimization is developed as the core architectural principle.</p></li>
+        <li><span class="when">2000s</span><p><b>Commodity hardware catches up</b> as off-the-shelf processors reach the performance needed to run the architecture at enterprise scale.</p></li>
+        <li><span class="when">2010s</span><p><b>First Fortune 500 deployments</b> go live in utilities and telecommunications, running applications for millions of customers on hardware that fits on a desk.</p></li>
+        <li><span class="when">Today</span><p><b>Enterprise AI in production</b> across utilities, telecommunications and financial services, with Fractal as the distributed computing and storage layer for Enterprise AI applications.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="production">
+  <h2>In production</h2>
+  <p class="intro">Fractal Computing runs in production at Fortune 500 companies across a range of industries: in live billing, customer care and transaction processing systems where data integrity is non-negotiable.</p>
+  <div class="stats three">
+    <div class="stat"><div class="v">5+</div><div class="l">years of Fortune 500 production deployments</div></div>
+    <div class="stat"><div class="v">10M+</div><div class="l">customers served by applications on $20K of hardware</div></div>
+    <div class="stat"><div class="v good">Zero</div><div class="l">source-system data corruption events across all production deployments</div></div>
+  </div>
+  <p class="xref"><span class="xl">More</span> <a href="/benchmarks">Benchmarks →</a> <a href="/markets">Solutions by industry →</a></p>
+</section>
+
+<section id="talks">
+  <h2>Webinars, podcasts and talks</h2>
+  <ul class="links">
+    <li><a href="https://webinartv.us/watch/af485870d935f2832a04d1f5278394fb38348156" target="_blank" rel="noopener"><span class="d">2026-03-05</span>AI Without Environmental Suicide</a></li>
+    <li><a href="https://techtv.live/ai-chip-wars-biggest-winners-in-the-move-from-training-to-inference" target="_blank" rel="noopener"><span class="d">2026-04-09</span>AI Chip Wars: Biggest Winners</a></li>
+    <li><a href="https://www.linkedin.com/posts/lynncomp_the-hidden-risk-of-ai-on-enterprise-data-activity-7453194419698302976-7hYE?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAADkegBU4Tv1kTaSw9y1lQD6MlH8mj1HwA" target="_blank" rel="noopener"><span class="d">2026-04-16</span>The Hidden Risk of AI on Enterprise Data (part 1 of 3)</a></li>
+    <li><a href="https://www.linkedin.com/posts/lynncomp_using-speed-to-achieve-safety-most-organizations-ugcPost-7454986203260428288-fW65/?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAAAADkegBU4Tv1kTaSw9y1lQD6MlH8mj1HwA" target="_blank" rel="noopener"><span class="d">2026-04-16</span>Using Speed to Achieve AI Safety (part 2 of 3)</a></li>
+    <li><a href="https://www.linkedin.com/posts/lynncomp_the-hidden-risk-of-ai-on-enterprise-data-ugcPost-7453194417580007425-SR-z/?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAAAADkegBU4Tv1kTaSw9y1lQD6MlH8mj1HwA" target="_blank" rel="noopener"><span class="d">2026-04-16</span>Fractal Backstory and Digital Twins (part 3 of 3)</a></li>
+    <li><a href="https://vimeo.com/1200264946?fl=ip&amp;fe=ec" target="_blank" rel="noopener"><span class="d">2026-06-10</span>Demystify AI Within Your Hardware &amp; Power Budget</a></li>
+    <li><a href="https://vimeo.com/1212700629?autoplay=1&amp;muted=1&amp;stream_id=Y2xpcHN8MjU4Njk4Nzk0fGlkOmRlc2N8W10%3D" target="_blank" rel="noopener"><span class="d">2026-07-23</span>AI: Centralized or Distributed?</a></li>
+    <li><a href="https://vimeo.com/1221623084?share=copy&amp;fl=sv&amp;fe=ci" target="_blank" rel="noopener"><span class="d">2026-08-26</span>Fractal AI</a></li>
+  </ul>
+</section>
+
+<%- include('partials/_cta', {ctaLink:'/benchmarks', ctaLinkText:'See the benchmarks →'}) %>
+</main>
+<%- include('partials/_footer') %>

@@ -1,0 +1,9 @@
+<%# Closing call to action, shared by most pages. Optional: {ctaTitle, ctaText, ctaLink, ctaLinkText}. -%>
+<div class="cta">
+  <h2><%= locals.ctaTitle || 'See what safe, low-cost AI looks like on your data' %></h2>
+  <p><%= locals.ctaText || 'A 90-day deployment at production scale, alongside your existing systems. No disruption. Your data. Real numbers.' %></p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/contact">Schedule a call →</a>
+    <a class="btn btn-ghost" href="<%= locals.ctaLink || '/how' %>"><%= locals.ctaLinkText || 'How it works →' %></a>
+  </div>
+</div>

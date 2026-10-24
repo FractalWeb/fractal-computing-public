@@ -1,0 +1,29 @@
+<%- include('partials/_head', {title:'Markets', desc:'Production-proven Fractal solutions for 11 industries, each running as a parallel digital twin with no changes to your systems of record.'}) %>
+<body>
+<%- include('partials/_nav', {page:'markets'}) %>
+
+<%# Markets overview. env.sectors is data/markets.json, passed in by index.mjs. -%>
+<main id="main" class="wrap">
+<header class="hero">
+  <h1>Fractal solutions for your industry</h1>
+  <p class="lede">Production-proven solutions across utilities, telecommunications, financial services, healthcare and more. Every one runs as a parallel digital twin: no changes to your systems of record, no corruption risk and no disruption.</p>
+</header>
+
+<section id="sectors">
+  <h2>Solutions by sector</h2>
+  <p class="intro">Each industry page is a library of solution data sheets: the problem, what Fractal delivered, the impact and why Fractal made the difference.</p>
+  <div class="sectors">
+<% env.sectors.forEach(function(s){ const n = s.solutions.length + (s.video ? 1 : 0) -%>
+    <a class="pillar sector" href="/markets/<%= s.slug %>">
+      <div class="icon" aria-hidden="true"><%= s.icon %></div>
+      <h3><%= s.name %></h3>
+      <p><%= s.blurb %></p>
+      <div class="count"><%= n %> solution<%= n === 1 ? '' : 's' %> →</div>
+    </a>
+<% }) -%>
+  </div>
+</section>
+
+<%- include('partials/_cta', {ctaLink:'/benchmarks', ctaLinkText:'See the benchmarks →'}) %>
+</main>
+<%- include('partials/_footer') %>

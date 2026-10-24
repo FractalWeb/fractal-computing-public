@@ -1,0 +1,330 @@
+<%- include('partials/_head', {title:'Working with Fractal', desc:'Fractal builds market segment applications on the Fractal Computing framework and sells them as a service, directly and through channel partners. How applications are built, how partners take part and how they are paid.'}) %>
+<body>
+<%- include('partials/_nav', {page:'working'}) %>
+
+<%# Working with Fractal: the business model (in-house and collaboration applications,
+    distribution, channel roles, continuous development) and links to the standard
+    partner agreements. Diagrams are animated by _working.js. -%>
+<main id="main" class="wrap">
+<header class="hero">
+  <h1>Working with Fractal</h1>
+  <p class="lede">Fractal builds applications for specific market segments on the Fractal Computing framework, and sells them as a service, both directly and through channel partners. Partners can help build those applications, help sell them, or both, and are paid for every role they provide.</p>
+  <nav class="toc" aria-label="Contents">
+    <a href="#model">The model</a>
+    <a href="#build">How applications are built</a>
+    <a href="#market">Going to market</a>
+    <a href="#roles">Channel roles</a>
+    <a href="#ongoing">Always improving</a>
+    <a href="#agreements">Agreements</a>
+  </nav>
+</header>
+
+
+<!-- ============ THE MODEL ============ -->
+<section id="model">
+  <h2>One framework, many market applications</h2>
+  <p class="intro">Every Fractal application is built on the same Fractal Computing framework, and each one is made for a particular market segment: its data, its regulations and the questions its people ask. The applications are delivered as a service, so customers subscribe to an outcome rather than buying and running software.</p>
+
+  <div class="diagram">
+  <svg viewBox="0 0 1000 470" role="img" aria-labelledby="wb-title wb-desc">
+    <title id="wb-title">How Fractal applications are built</title>
+    <desc id="wb-desc">Fractal engineering builds market segment applications on the Fractal Computing framework. Two applications, Electric Utilities and Telecommunications, are built entirely in-house. The Healthcare application is a collaboration: a partner's capability is licensed into it, for that application only, and it cannot be used in another application without the partner's permission. Fractal keeps enhancing the framework, every application gets the improvements, and new segment applications are added.</desc>
+    <defs>
+      <marker id="ah-wb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-ah-sync" d="M0 0 L10 5 L0 10 z"/></marker>
+    </defs>
+
+    <!-- Who builds -->
+    <rect id="wb-eng" class="d-ai" x="20" y="24" width="200" height="92" rx="10"/>
+    <text class="d-t" x="120" y="58" text-anchor="middle">Fractal engineering</text>
+    <text class="d-s" x="120" y="80" text-anchor="middle">Builds the framework</text>
+    <text class="d-s" x="120" y="97" text-anchor="middle">and the applications</text>
+    <rect id="wb-part" class="d-part" x="780" y="24" width="200" height="92" rx="10"/>
+    <text class="d-t" x="880" y="58" text-anchor="middle">Collaboration partner</text>
+    <text class="d-s" x="880" y="80" text-anchor="middle">Contributes a capability</text>
+    <text class="d-s" x="880" y="97" text-anchor="middle">to one application</text>
+
+    <!-- Routes the tokens travel -->
+    <polyline id="wb-r1" class="d-route" points="120,118 120,150 140,150 140,176"/>
+    <polyline id="wb-r2" class="d-route" points="222,96 350,96 350,176"/>
+    <polyline id="wb-r3" class="d-route" points="350,96 620,96 620,176"/>
+    <polyline id="wb-r4" class="d-route" points="880,118 880,140 420,140 420,176"/>
+    <polyline id="wb-r5" class="d-route" points="30,118 30,356"/>
+    <g id="wb-block" style="opacity:0">
+      <polyline id="wb-rb" class="d-block" points="880,140 880,158 700,158"/>
+      <path class="d-x" d="M684 150 L700 166 M700 150 L684 166"/>
+      <text class="d-m wk-bad" x="880" y="176" text-anchor="middle">NEEDS THE PARTNER'S PERMISSION</text>
+    </g>
+
+    <!-- Market segment applications -->
+    <g id="wb-tile1">
+      <rect class="d-box wk-tile" x="60" y="180" width="160" height="140" rx="8"/>
+      <text class="d-t" x="140" y="206" text-anchor="middle">Electric Utilities</text>
+      <text class="d-m" x="140" y="224" text-anchor="middle">IN-HOUSE</text>
+      <g class="wk-band" id="wb-b1">
+        <rect class="stk-app" x="72" y="238" width="136" height="28" rx="4"/><text class="stk-t" x="140" y="257" text-anchor="middle">Application logic</text>
+        <rect class="stk-app" x="72" y="272" width="136" height="28" rx="4"/><text class="stk-t" x="140" y="291" text-anchor="middle">Segment context</text>
+      </g>
+    </g>
+    <g id="wb-tile2">
+      <rect class="d-box wk-tile" x="300" y="180" width="160" height="140" rx="8"/>
+      <text class="d-t" x="380" y="206" text-anchor="middle">Healthcare</text>
+      <text class="d-m" x="380" y="224" text-anchor="middle">COLLABORATION</text>
+      <g class="wk-band" id="wb-b2a">
+        <rect class="stk-app" x="312" y="238" width="136" height="28" rx="4"/><text class="stk-t" x="380" y="257" text-anchor="middle">Application logic</text>
+      </g>
+      <g class="wk-band" id="wb-b2b">
+        <rect class="stk-data" x="312" y="272" width="136" height="28" rx="4"/><text class="stk-t" x="388" y="291" text-anchor="middle">Partner capability</text>
+        <rect class="d-lock" x="318" y="283" width="9" height="8" rx="1.5"/><path class="d-lock-arc" d="M319.5 283 v-2.5 a3 3 0 0 1 6 0 v2.5"/>
+        <text class="d-m wk-mid" x="380" y="314" text-anchor="middle">THIS APP ONLY</text>
+      </g>
+    </g>
+    <g id="wb-tile3">
+      <rect class="d-box wk-tile" x="540" y="180" width="160" height="140" rx="8"/>
+      <text class="d-t" x="620" y="206" text-anchor="middle">Telecommunications</text>
+      <text class="d-m" x="620" y="224" text-anchor="middle">IN-HOUSE</text>
+      <g class="wk-band" id="wb-b3">
+        <rect class="stk-app" x="552" y="238" width="136" height="28" rx="4"/><text class="stk-t" x="620" y="257" text-anchor="middle">Application logic</text>
+        <rect class="stk-app" x="552" y="272" width="136" height="28" rx="4"/><text class="stk-t" x="620" y="291" text-anchor="middle">Segment context</text>
+      </g>
+    </g>
+    <g id="wb-tile4">
+      <rect class="d-box wk-tile wk-next" x="780" y="180" width="160" height="140" rx="8"/>
+      <text class="d-t" x="860" y="206" text-anchor="middle">Next segment</text>
+      <text class="d-m" x="860" y="224" text-anchor="middle">IN DEVELOPMENT</text>
+      <rect class="stk-app wk-ghost" x="792" y="238" width="136" height="28" rx="4"/>
+      <rect class="stk-app wk-ghost" x="792" y="272" width="136" height="28" rx="4"/>
+      <line class="d-plug" x1="860" y1="322" x2="860" y2="358"/>
+    </g>
+    <line class="d-plug" x1="140" y1="322" x2="140" y2="358"/>
+    <line class="d-plug" x1="380" y1="322" x2="380" y2="358"/>
+    <line class="d-plug" x1="620" y1="322" x2="620" y2="358"/>
+
+    <!-- The framework -->
+    <rect id="wb-fw" class="stk-proc" x="20" y="360" width="960" height="90" rx="10"/>
+    <text class="d-t" x="44" y="390">Fractal Computing framework</text>
+    <text class="d-m" id="wb-ver" x="956" y="390" text-anchor="end">RELEASE N</text>
+    <g id="wb-chips"></g>
+
+    <!-- Animation overlay -->
+    <g id="tok-wb-app" class="anim-off"><rect class="d-tok-out" x="-20" y="-11" width="40" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">App</text></g>
+    <g id="tok-wb-cap" class="anim-off"><rect class="d-tok-mid" x="-36" y="-11" width="72" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">Capability</text></g>
+    <g id="tok-wb-up" class="anim-off"><rect class="d-tok-back" x="-14" y="-11" width="28" height="22" rx="4"/><text class="d-tok-t" y="5" text-anchor="middle">+</text></g>
+  </svg>
+  <div class="anim-bar">
+    <button type="button" id="wb-play" aria-label="Pause animation">Pause</button>
+    <button type="button" id="wb-restart">Restart</button>
+    <div class="anim-cap"><span aria-live="polite"><span class="anim-stepno" id="wb-step">Step 1 of 5</span><span id="wb-text"></span></span></div>
+  </div>
+  <div class="anim-prog" aria-hidden="true"><div class="anim-fill" id="wb-fill"></div></div>
+  </div>
+
+  <div class="pillars three">
+    <div class="pillar"><h3>The framework</h3><p>The Fractal Computing software stack: the digital twin, distributed storage and computing, the multi-model database and the AI integration that every application shares.</p><a class="more" href="/how">How it works →</a></div>
+    <div class="pillar"><h3>Market segment applications</h3><p>Each application is made for one market segment, built on the framework with that segment's data structures, context libraries and workflows.</p><a class="more" href="/markets">Solutions by industry →</a></div>
+    <div class="pillar"><h3>Sold as a service</h3><p>Customers subscribe to the application rather than buying a license and running it themselves. Fractal operates it, keeps it current and collects the subscription revenue.</p></div>
+  </div>
+</section>
+
+<!-- ============ HOW APPLICATIONS ARE BUILT ============ -->
+<section id="build">
+  <h2>Two ways an application gets built</h2>
+  <p class="intro">Some applications are built entirely by Fractal engineering. Others combine Fractal's work with a capability that a partner company already has: a domain model, a data source, an algorithm, a set of rules or a workflow that took the partner years to perfect.</p>
+  <div class="vs">
+    <div class="wk-inhouse">
+      <div class="lab">In-house</div>
+      <h3>Built completely by Fractal</h3>
+      <ul>
+        <li>Fractal engineering designs, builds and operates the application.</li>
+        <li>Fractal owns all of it.</li>
+        <li>Partners can still take part in selling and delivering it, in any of the <a href="#roles">channel roles</a>.</li>
+      </ul>
+    </div>
+    <div class="wk-collab">
+      <div class="lab">Collaboration</div>
+      <h3>Built with one or more partners</h3>
+      <ul>
+        <li><b>Fractal licenses the partner's contribution</b> and builds it into the application on the Fractal framework.</li>
+        <li><b>The partner is paid as revenue is collected</b> from the customers of that application, for as long as the application is sold under the license.</li>
+        <li><b>The license is specific to that application.</b> Fractal can't use the contribution in any other application without the partner's permission.</li>
+        <li>The partner keeps ownership of its contribution, and can be a channel partner for the application too.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="why"><b>Why collaborate:</b> a partner's capability reaches customers as part of a production-scale application, at Fractal's speed and cost, without the partner building or running the platform. Fractal gets depth in a segment that would take years to build alone.</p>
+  <p class="xref"><span class="xl">Agreement</span> <a href="/working/license">Partner Contribution License Agreement →</a></p>
+</section>
+
+<!-- ============ GOING TO MARKET ============ -->
+<section id="market">
+  <h2>Taking applications to market</h2>
+  <p class="intro">Fractal sells its applications as a service, both directly and through channel partners. The distribution model is chosen for each market segment, according to how that segment buys. In one segment Fractal may sell directly to large enterprises; in another it may work through partners who already have the customer relationships, the contracts or the integration skills that segment needs.</p>
+
+  <div class="diagram">
+  <svg viewBox="0 0 1000 430" role="img" aria-labelledby="wm-title wm-desc">
+    <title id="wm-title">How applications reach customers and how revenue is shared</title>
+    <desc id="wm-desc">Fractal sells an application as a service directly to customers in segment A, and through a channel partner to customers in segment B. Customers pay subscriptions, and the revenue is collected. Fractal pays the channel partner for each role it performed, and pays the collaboration partner whose capability is in the application as the revenue is collected.</desc>
+    <defs>
+      <marker id="ah-wm-out"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-ah-out"  d="M0 0 L10 5 L0 10 z"/></marker>
+      <marker id="ah-wm-back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-ah-back" d="M0 0 L10 5 L0 10 z"/></marker>
+    </defs>
+
+    <!-- Fractal -->
+    <rect id="wm-fr" class="d-ai" x="20" y="40" width="200" height="370" rx="12"/>
+    <text class="d-t" x="120" y="180" text-anchor="middle">Fractal</text>
+    <text class="d-s" x="120" y="202" text-anchor="middle">Market segment</text>
+    <text class="d-s" x="120" y="219" text-anchor="middle">applications,</text>
+    <text class="d-s" x="120" y="236" text-anchor="middle">sold as a service</text>
+
+    <!-- Customers -->
+    <rect id="wm-ca" class="d-box" x="770" y="40" width="210" height="110" rx="10"/>
+    <text class="d-t" x="875" y="72" text-anchor="middle">Segment A customers</text>
+    <text class="d-m" x="875" y="92" text-anchor="middle">DIRECT</text>
+    <g class="wk-people" transform="translate(845 106)"><circle class="d-person" cx="0" cy="8" r="7"/><path class="d-person" d="M-12 32 Q-12 18 0 18 Q12 18 12 32 Z"/></g>
+    <g class="wk-people" transform="translate(875 106)"><circle class="d-person" cx="0" cy="8" r="7"/><path class="d-person" d="M-12 32 Q-12 18 0 18 Q12 18 12 32 Z"/></g>
+    <g class="wk-people" transform="translate(905 106)"><circle class="d-person" cx="0" cy="8" r="7"/><path class="d-person" d="M-12 32 Q-12 18 0 18 Q12 18 12 32 Z"/></g>
+    <rect id="wm-cb" class="d-box" x="770" y="180" width="210" height="110" rx="10"/>
+    <text class="d-t" x="875" y="212" text-anchor="middle">Segment B customers</text>
+    <text class="d-m" x="875" y="232" text-anchor="middle">THROUGH PARTNERS</text>
+    <g class="wk-people" transform="translate(845 246)"><circle class="d-person" cx="0" cy="8" r="7"/><path class="d-person" d="M-12 32 Q-12 18 0 18 Q12 18 12 32 Z"/></g>
+    <g class="wk-people" transform="translate(875 246)"><circle class="d-person" cx="0" cy="8" r="7"/><path class="d-person" d="M-12 32 Q-12 18 0 18 Q12 18 12 32 Z"/></g>
+    <g class="wk-people" transform="translate(905 246)"><circle class="d-person" cx="0" cy="8" r="7"/><path class="d-person" d="M-12 32 Q-12 18 0 18 Q12 18 12 32 Z"/></g>
+
+    <!-- Partners -->
+    <rect id="wm-ch" class="d-box" x="410" y="180" width="200" height="110" rx="10"/>
+    <text class="d-t" x="510" y="214" text-anchor="middle">Channel partner</text>
+    <text class="d-s" x="510" y="236" text-anchor="middle">Performs one or more</text>
+    <text class="d-s" x="510" y="253" text-anchor="middle">channel roles</text>
+    <rect id="wm-co" class="d-part" x="410" y="330" width="200" height="80" rx="10"/>
+    <text class="d-t" x="510" y="364" text-anchor="middle">Collaboration partner</text>
+    <text class="d-s" x="510" y="386" text-anchor="middle">Capability licensed into the app</text>
+
+    <!-- Service out -->
+    <line id="wm-a"  class="d-out"  x1="222" y1="80"  x2="766" y2="80"  marker-end="url(#ah-wm-out)"/>
+    <text class="d-m" x="495" y="70" text-anchor="middle">SERVICE</text>
+    <line id="wm-b1" class="d-out"  x1="222" y1="205" x2="406" y2="205" marker-end="url(#ah-wm-out)"/>
+    <line id="wm-b2" class="d-out"  x1="612" y1="205" x2="766" y2="205" marker-end="url(#ah-wm-out)"/>
+    <text class="d-m" x="314" y="195" text-anchor="middle">SERVICE</text>
+    <!-- Revenue back -->
+    <line id="wm-ra"  class="d-back" x1="768" y1="120" x2="226" y2="120" marker-end="url(#ah-wm-back)"/>
+    <text class="d-m" x="495" y="140" text-anchor="middle">SUBSCRIPTION REVENUE</text>
+    <line id="wm-rb2" class="d-back" x1="768" y1="262" x2="616" y2="262" marker-end="url(#ah-wm-back)"/>
+    <line id="wm-rb1" class="d-back" x1="408" y1="262" x2="226" y2="262" marker-end="url(#ah-wm-back)"/>
+    <text class="d-m" x="314" y="252" text-anchor="middle">REVENUE</text>
+    <!-- Payments to partners -->
+    <polyline id="wm-pc" class="d-back" points="222,310 510,310 510,294" marker-end="url(#ah-wm-back)"/>
+    <text class="d-m" x="314" y="302" text-anchor="middle">PAID PER ROLE</text>
+    <line id="wm-po" class="d-back" x1="222" y1="380" x2="406" y2="380" marker-end="url(#ah-wm-back)"/>
+    <text class="d-m" x="314" y="370" text-anchor="middle">PAID AS COLLECTED</text>
+
+    <!-- Step numbers -->
+    <g id="wm-s1" class="d-num"><circle class="d-num-out"  cx="680" cy="80"  r="11"/><text class="d-num-t" x="680" y="84"  text-anchor="middle">1</text></g>
+    <g id="wm-s2" class="d-num"><circle class="d-num-out"  cx="690" cy="205" r="11"/><text class="d-num-t" x="690" y="209" text-anchor="middle">2</text></g>
+    <g id="wm-s3" class="d-num"><circle class="d-num-back" cx="690" cy="262" r="11"/><text class="d-num-t" x="690" y="266" text-anchor="middle">3</text></g>
+    <g id="wm-s4" class="d-num"><circle class="d-num-back" cx="420" cy="310" r="11"/><text class="d-num-t" x="420" y="314" text-anchor="middle">4</text></g>
+    <g id="wm-s5" class="d-num"><circle class="d-num-back" cx="314" cy="395" r="11"/><text class="d-num-t" x="314" y="399" text-anchor="middle">5</text></g>
+
+    <!-- Animation overlay -->
+    <g id="tok-wm-a"  class="anim-off"><rect class="d-tok-out"  x="-20" y="-11" width="40" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">App</text></g>
+    <g id="tok-wm-b"  class="anim-off"><rect class="d-tok-out"  x="-20" y="-11" width="40" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">App</text></g>
+    <g id="tok-wm-r1" class="anim-off"><rect class="d-tok-back" x="-12" y="-11" width="24" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">$</text></g>
+    <g id="tok-wm-r2" class="anim-off"><rect class="d-tok-back" x="-12" y="-11" width="24" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">$</text></g>
+    <g id="tok-wm-p"  class="anim-off"><rect class="d-tok-back" x="-12" y="-11" width="24" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">$</text></g>
+  </svg>
+  <div class="anim-bar">
+    <button type="button" id="wm-play" aria-label="Pause animation">Pause</button>
+    <button type="button" id="wm-restart">Restart</button>
+    <div class="anim-cap"><span aria-live="polite"><span class="anim-stepno" id="wm-step">Step 1 of 5</span><span id="wm-text"></span></span></div>
+  </div>
+  <div class="anim-prog" aria-hidden="true"><div class="anim-fill" id="wm-fill"></div></div>
+  </div>
+
+  <ol class="steps" id="wm-steps">
+    <li data-step="1" tabindex="0"><span class="n">1</span><b>Direct.</b> In some segments Fractal sells the application as a service directly to the customer.</li>
+    <li data-step="2" tabindex="0"><span class="n">2</span><b>Through partners.</b> In others the application reaches customers through channel partners who know that market.</li>
+    <li data-step="3" tabindex="0"><span class="n back">3</span><b>Revenue is collected</b> from the customers' subscriptions to the service.</li>
+    <li data-step="4" tabindex="0"><span class="n back">4</span><b>Channel partners are paid for each role</b> they performed in winning and serving the customer.</li>
+    <li data-step="5" tabindex="0"><span class="n back">5</span><b>Collaboration partners are paid as revenue is collected</b> from the application their capability is licensed into.</li>
+  </ol>
+</section>
+
+<!-- ============ CHANNEL ROLES ============ -->
+<section id="roles">
+  <h2>Channel partner roles</h2>
+  <p class="intro">A channel partner can take on any of six roles, from introducing a customer to building Fractal's application into its own product. Fractal encourages partners to take every role that fits their business model, and pays for each one. <strong>The more roles a partner provides, the greater its portion of the revenue.</strong></p>
+  <p class="intro">Each role is made up of specific services, such as account management, application deployment or a level of technical support. Each service earns a set share of the customer’s subscription in each of the customer’s first three years.</p>
+
+  <div class="diagram">
+  <svg viewBox="0 0 1000 410" role="img" aria-labelledby="wr-title wr-desc">
+    <title id="wr-title">Channel roles and the partner's portion of revenue</title>
+    <desc id="wr-desc">Six channel roles: Referral, Sales support, Reseller, Distributor, System integrator and OEM. As a partner takes on each additional role, its portion of the revenue grows. The bar is illustrative.</desc>
+    <g id="wr-rows"></g>
+    <text class="d-t" x="810" y="30" text-anchor="middle">Partner's portion of revenue</text>
+    <rect class="d-box" x="750" y="46" width="120" height="330" rx="6"/>
+    <g id="wr-bar"></g>
+    <path class="d-brace" d="M886 370 V56"/>
+    <path class="d-ah-out" d="M880 62 L886 50 L892 62 Z"/>
+    <text class="d-m" x="900" y="210">MORE</text>
+    <text class="d-m" x="900" y="225">ROLES,</text>
+    <text class="d-m" x="900" y="240">LARGER</text>
+    <text class="d-m" x="900" y="255">PORTION</text>
+    <text class="d-m" x="810" y="398" text-anchor="middle">ILLUSTRATIVE</text>
+  </svg>
+  <div class="anim-bar">
+    <button type="button" id="wr-play" aria-label="Pause animation">Pause</button>
+    <button type="button" id="wr-restart">Restart</button>
+    <div class="anim-cap"><span aria-live="polite"><span class="anim-stepno" id="wr-step">Step 1 of 7</span><span id="wr-text"></span></span></div>
+  </div>
+  <div class="anim-prog" aria-hidden="true"><div class="anim-fill" id="wr-fill"></div></div>
+  </div>
+
+  <ol class="steps" id="wr-steps">
+    <li data-step="1" tabindex="0"><span class="n">1</span><b>Referral.</b> Introduces Fractal to a decision-maker and attends the first sales meeting.</li>
+    <li data-step="2" tabindex="0"><span class="n">2</span><b>Sales support.</b> Takes an active part in the sale, through to the close of the contract.</li>
+    <li data-step="3" tabindex="0"><span class="n">3</span><b>Reseller.</b> Manages the account after the sale, grows the business and takes the first (Level 1) technical support calls.</li>
+    <li data-step="4" tabindex="0"><span class="n">4</span><b>Distributor.</b> Manages a country outside the US, with partners there providing the other roles.</li>
+    <li data-step="5" tabindex="0"><span class="n">5</span><b>System integrator.</b> Configures, deploys and enhances the application, trains the customer, runs “Fractal Enabled” marketing and provides Level 2 support.</li>
+    <li data-step="6" tabindex="0"><span class="n">6</span><b>OEM.</b> Builds the application into its own offering, markets it as “Fractal Enabled” and provides Level 3 support.</li>
+  </ol>
+  <p class="why"><b>Roles combine in any way that fits.</b> A partner doesn't have to start at referral, or take the roles in order. A system integrator might also refer and resell; a software company might be an OEM in one segment and a referral partner in another. Each role a partner fills adds to its share.</p>
+  <p class="xref"><span class="xl">Agreement</span> <a href="/working/channel">Channel Partner Agreement: every service and its share, by year →</a></p>
+</section>
+
+<!-- ============ ALWAYS IMPROVING ============ -->
+<section id="ongoing">
+  <h2>Always improving</h2>
+  <p class="intro">Fractal continually enhances the Fractal Computing software stack and continually develops applications for more market segments. That work keeps paying off for partners after the agreement is signed.</p>
+  <div class="pillars">
+    <div class="pillar"><h3>A better framework</h3><p>New features are delivered daily. Every application on the framework gets them, including the ones a partner helps build or sell.</p></div>
+    <div class="pillar"><h3>More applications</h3><p>New segment applications give channel partners more to offer the customers they already serve.</p></div>
+    <div class="pillar"><h3>More collaborations</h3><p>A new segment is often a new chance to collaborate. A partner's capability can go into another application under its own license, when the partner agrees.</p></div>
+  </div>
+</section>
+
+<!-- ============ AGREEMENTS ============ -->
+<section id="agreements">
+  <h2>Getting started</h2>
+  <div class="cols">
+    <div>
+      <ol class="next-steps">
+        <li><b>Talk to us</b> about your business, the segments you serve and the capabilities you have.</li>
+        <li><b>Sign a mutual NDA</b>, so both sides can share plans, technology and customer opportunities in confidence.</li>
+        <li><b>Agree the roles</b>: which channel roles you'll take in which segments, and whether there is a collaboration application to build.</li>
+        <li><b>Sign the agreements</b>: the channel partner agreement for those roles and, for a collaboration, the license for your contribution.</li>
+      </ol>
+    </div>
+    <div>
+      <h4 class="first">Standard agreements</h4>
+      <div class="pillars wk-docs">
+        <a class="pillar" href="/working/nda"><span class="tag">Agreement</span><h3>Mutual Non-Disclosure Agreement</h3><p>Protects the confidential information both parties share while they evaluate and pursue working together.</p></a>
+        <a class="pillar" href="/working/channel"><span class="tag">Agreement</span><h3>Channel Partner Agreement</h3><p>The channel roles and services a partner provides, and the share of each customer’s subscription paid for each one, by year.</p></a>
+        <a class="pillar" href="/working/license"><span class="tag">Agreement</span><h3>Partner Contribution License Agreement</h3><p>Licenses a partner's capability for one Fractal application, with payment as revenue is collected.</p></a>
+        <a class="pillar" href="/working/subscription"><span class="tag">Agreement</span><h3>Customer Subscription Agreement</h3><p>A customer’s subscription to a Fractal application delivered as a service: what Fractal provides, the fees, and the customer’s ownership of its data.</p></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/_cta', {ctaTitle:'Let’s talk about working together', ctaText:'Tell us about your business and the markets you serve. We’ll show you where Fractal applications fit and which roles make sense for you.', ctaLink:'/working/nda', ctaLinkText:'Read the mutual NDA →'}) %>
+</main>
+<%- include('partials/_footer') %>
+<script nonce="<%- env.nonce %>" src="/apps/_working.js" defer></script>

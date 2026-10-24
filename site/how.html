@@ -1,0 +1,477 @@
+<%- include('partials/_head', {title:'How It Works', desc:'Fractal is the distributed computing and storage layer for Enterprise AI: the language model captures intent and summarizes results, while Fractal runs the work deterministically on a digital twin, on commodity hardware.'}) %>
+<body>
+<%- include('partials/_nav', {page:'how'}) %>
+
+<main id="main" class="wrap">
+<header class="hero">
+  <h1>Fractal AI: the distributed computing and storage layer for Enterprise AI applications</h1>
+  <p class="lede">Language models are good at understanding what people want and at explaining results. They are slow, costly and non-deterministic when asked to process an enterprise's data. In Fractal's architecture the model does only the first and last steps. Fractal does the heavy lifting in between: it stores a digital twin of the systems of record and runs the work in parallel across many small instances on commodity hardware.</p>
+  <nav class="toc" aria-label="Contents">
+    <a href="#architecture">Architecture</a>
+    <a href="#ai-edges">AI at the edges</a>
+    <a href="#heavy-lifting">Heavy lifting &amp; digital twin</a>
+    <a href="#deterministic">Deterministic AI</a>
+    <a href="#locality">Locality of Reference</a>
+    <a href="#tokens">Token economics</a>
+    <a href="#start">Getting started</a>
+    <a href="#summary">Summary</a>
+    <a class="companion" href="/">The business case →</a>
+  </nav>
+</header>
+
+
+<!-- ============ ARCHITECTURE ============ -->
+<section id="architecture">
+  <h2>The architecture</h2>
+  <p class="intro">The user talks to the AI language model. The model writes a Fractal App, which the Fractal mesh runs in parallel against its local copy of the enterprise's data. The results go back to the model, which summarizes them for the user.</p>
+
+  <div class="diagram">
+  <svg viewBox="0 0 1000 540" role="img" aria-labelledby="dgm-title dgm-desc">
+    <title id="dgm-title">Enterprise AI application with Fractal as the computing and storage layer</title>
+    <desc id="dgm-desc">A user tells an AI language model what they want. The model writes a Fractal App, which is deployed to the Fractal Computing mesh and runs in parallel on every Fractal instance. Results return to the model, which summarizes them for the user. Systems of record feed the mesh by one-way sync, forming a digital twin.</desc>
+    <defs>
+      <marker id="ah-out" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-ah-out" d="M0 0 L10 5 L0 10 z"/></marker>
+      <marker id="ah-back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-ah-back" d="M0 0 L10 5 L0 10 z"/></marker>
+      <marker id="ah-sync" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-ah-sync" d="M0 0 L10 5 L0 10 z"/></marker>
+    </defs>
+
+    <!-- User -->
+    <rect id="n-user" class="d-box" x="20" y="170" width="130" height="120" rx="10"/>
+    <circle class="d-person" cx="85" cy="203" r="14"/>
+    <path class="d-person" d="M60 245 Q60 222 85 222 Q110 222 110 245 Z"/>
+    <text class="d-t" x="85" y="267" text-anchor="middle">User</text>
+    <text class="d-s" x="85" y="283" text-anchor="middle">Enterprise App</text>
+
+    <!-- AI Language Model -->
+    <rect id="n-lm" class="d-ai" x="220" y="135" width="200" height="190" rx="12"/>
+    <text class="d-t" x="320" y="170" text-anchor="middle">AI Language Model</text>
+    <text class="d-s" x="320" y="200" text-anchor="middle">Captures the user's intent</text>
+    <text class="d-s" x="320" y="220" text-anchor="middle">Writes the Fractal App</text>
+    <text class="d-s" x="320" y="240" text-anchor="middle">Summarizes the results</text>
+    <text class="d-m" x="320" y="300" text-anchor="middle">CONVERSATIONAL</text>
+
+    <!-- User <-> LM -->
+    <line id="a1" class="d-out" x1="152" y1="205" x2="216" y2="205" marker-end="url(#ah-out)"/>
+    <line id="a6" class="d-back" x1="218" y1="255" x2="155" y2="255" marker-end="url(#ah-back)"/>
+    <text class="d-m" x="185" y="193" text-anchor="middle">INTENT</text>
+    <text class="d-m" x="185" y="279" text-anchor="middle">ANSWER</text>
+
+    <!-- Fractal Application -->
+    <rect id="n-app" class="d-box" x="495" y="65" width="150" height="90" rx="8"/>
+    <text class="d-t" x="570" y="96" text-anchor="middle">Fractal App</text>
+    <text class="d-s" x="570" y="118" text-anchor="middle">Small, bounded program</text>
+    <text class="d-s" x="570" y="135" text-anchor="middle">for one data shard</text>
+
+    <!-- Results -->
+    <rect id="n-res" class="d-box" x="495" y="300" width="150" height="90" rx="8"/>
+    <text class="d-t" x="570" y="331" text-anchor="middle">Results</text>
+    <text class="d-s" x="570" y="353" text-anchor="middle">Aggregated from</text>
+    <text class="d-s" x="570" y="370" text-anchor="middle">every instance</text>
+
+    <!-- LM -> Application -> Mesh -->
+    <polyline id="a2" class="d-out" points="422,170 458,170 458,110 491,110" marker-end="url(#ah-out)"/>
+    <line id="a3" class="d-out" x1="647" y1="110" x2="716" y2="110" marker-end="url(#ah-out)"/>
+    <text class="d-m" x="682" y="98" text-anchor="middle">DEPLOY</text>
+
+    <!-- Mesh -> Results -> LM -->
+    <line id="a4" class="d-back" x1="718" y1="345" x2="651" y2="345" marker-end="url(#ah-back)"/>
+    <polyline id="a5" class="d-back" points="493,345 458,345 458,290 426,290" marker-end="url(#ah-back)"/>
+    <text class="d-m" x="682" y="372" text-anchor="middle">RESULTS</text>
+
+    <!-- Step numbers -->
+    <g id="s1" class="d-num"><circle class="d-num-out" cx="185" cy="205" r="11"/><text class="d-num-t" x="185" y="209" text-anchor="middle">1</text></g>
+    <g id="s2" class="d-num"><circle class="d-num-out" cx="458" cy="140" r="11"/><text class="d-num-t" x="458" y="144" text-anchor="middle">2</text></g>
+    <g id="s3" class="d-num"><circle class="d-num-out" cx="682" cy="110" r="11"/><text class="d-num-t" x="682" y="114" text-anchor="middle">3</text></g>
+    <g id="s4" class="d-num"><circle class="d-num-back" cx="682" cy="345" r="11"/><text class="d-num-t" x="682" y="349" text-anchor="middle">4</text></g>
+    <g id="s5" class="d-num"><circle class="d-num-back" cx="458" cy="318" r="11"/><text class="d-num-t" x="458" y="322" text-anchor="middle">5</text></g>
+    <g id="s6" class="d-num"><circle class="d-num-back" cx="185" cy="255" r="11"/><text class="d-num-t" x="185" y="259" text-anchor="middle">6</text></g>
+
+    <!-- Fractal mesh -->
+    <rect id="n-mesh" class="d-mesh" x="720" y="40" width="260" height="370" rx="12"/>
+    <text class="d-t" x="850" y="68" text-anchor="middle">Fractal Computing mesh</text>
+    <text class="d-s" x="850" y="87" text-anchor="middle">The App runs on every instance, in parallel</text>
+    <g id="mesh-grid">
+      <!-- 5 x 6 grid of Fractal instances; each = data shard + full stack -->
+    </g>
+    <text class="d-s" x="850" y="374" text-anchor="middle">Each instance: own data shard</text>
+    <text class="d-s" x="850" y="391" text-anchor="middle">+ full stack · peer-to-peer</text>
+
+    <!-- Systems of record -->
+    <rect class="d-sor" x="720" y="460" width="260" height="62" rx="8"/>
+    <text class="d-t" x="850" y="486" text-anchor="middle">Systems of record</text>
+    <text class="d-s" x="850" y="507" text-anchor="middle">ERP · billing · CRM · ledgers · ...</text>
+    <line class="d-sync" x1="850" y1="458" x2="850" y2="414" marker-end="url(#ah-sync)"/>
+    <text class="d-m" x="838" y="434" text-anchor="end">ONE-WAY SYNC</text>
+    <text class="d-m" x="838" y="449" text-anchor="end">→ DIGITAL TWIN</text>
+
+    <!-- Layer brackets -->
+    <path class="d-brace" d="M20 400 V412 H420 V400"/>
+    <text class="d-t" x="220" y="438" text-anchor="middle">AI: beginning and end of the workflow</text>
+    <text class="d-s" x="220" y="458" text-anchor="middle">Few tokens · intent in, summary out</text>
+    <path class="d-brace" d="M495 400 V412 H645 V400"/>
+    <text class="d-s" x="570" y="434" text-anchor="middle">Only code and results</text>
+    <text class="d-s" x="570" y="451" text-anchor="middle">cross between layers</text>
+    <!-- Animation overlay -->
+    <g id="bubble" class="anim-off">
+      <rect class="d-bubble" x="14" y="104" width="142" height="50" rx="8"/>
+      <path class="d-bubble" d="M78 154 L85 164 L92 154 Z"/>
+      <text class="d-t" x="85" y="126" text-anchor="middle" style="font-size:13px">Executive summary</text>
+      <text class="d-s" x="85" y="143" text-anchor="middle">delivered</text>
+    </g>
+    <g id="converge"></g>
+    <g id="tok-intent" class="anim-off"><circle class="d-tok-out" r="8"/></g>
+    <g id="tok-app" class="anim-off"><rect class="d-tok-out" x="-20" y="-11" width="40" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">App</text></g>
+    <g id="tok-res" class="anim-off"><rect class="d-tok-back" x="-14" y="-11" width="28" height="22" rx="4"/><text class="d-tok-t" y="5" text-anchor="middle">Σ</text></g>
+    <g id="tok-sum" class="anim-off"><rect class="d-tok-back" x="-30" y="-11" width="60" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">Summary</text></g>
+  </svg>
+  <div class="anim-bar">
+    <button type="button" id="anim-play" aria-label="Pause animation">Pause</button>
+    <button type="button" id="anim-restart">Restart</button>
+    <div class="anim-cap"><span aria-live="polite"><span class="anim-stepno" id="anim-step">Step 1 of 6</span><span id="anim-text"></span></span></div>
+  </div>
+  <div class="anim-prog" aria-hidden="true"><div class="anim-fill" id="anim-fill"></div></div>
+  </div>
+
+  <ol class="steps">
+    <li data-step="1" tabindex="0"><span class="n">1</span><b>The user states what they want</b> in plain language, inside an Enterprise Application. For example: "Which customers were overbilled last quarter, and by how much?"</li>
+    <li data-step="2" tabindex="0"><span class="n">2</span><b>The language model writes a Fractal App.</b> The App is a small program that works on one data shard, inside a bounded context.</li>
+    <li data-step="3" tabindex="0"><span class="n">3</span><b>The App is sent to the Fractal Computing mesh</b> and deployed to every Fractal instance.</li>
+    <li data-step="4" tabindex="0"><span class="n back">4</span><b>Every instance runs the App in parallel</b> against its own local shard of the digital twin. The results are aggregated.</li>
+    <li data-step="5" tabindex="0"><span class="n back">5</span><b>The results go back to the language model</b>: a compact, structured answer, not the underlying data.</li>
+    <li data-step="6" tabindex="0"><span class="n back">6</span><b>The model summarizes and presents the result</b> to the user as an executive summary they can act on.</li>
+  </ol>
+  <p class="xref"><span class="xl">Business case</span> <a href="/#benefits">What a Fractal deployment gives you →</a></p>
+</section>
+
+<!-- ============ AI AT THE EDGES ============ -->
+<section id="ai-edges">
+  <h2>AI at the beginning and end of the workflow</h2>
+  <p class="intro">Language models are good at two things this architecture needs: understanding loosely stated requests, and explaining structured results in plain language. Fractal uses them for exactly those two steps and nothing else.</p>
+  <div class="cols">
+    <div>
+      <h4>At the beginning: capturing intent</h4>
+      <ul>
+        <li>The user doesn't need to know a query language, a schema or a report menu. They describe what they want.</li>
+        <li>The model maps that intent onto the enterprise's data structures and the domain context libraries, and writes a Fractal App.</li>
+        <li>New questions don't need a new development project. The model writes a new Fractal App.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>At the end: a human-consumable view</h4>
+      <ul>
+        <li>The App returns structured results such as totals, exceptions, rankings or forecasts.</li>
+        <li>The model turns them into an executive summary: what was found, what it means, and what to look at next.</li>
+        <li>Because the summary is built from the App's deterministic output, every figure in it can be traced back to the computation that produced it.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="why"><b>The model never touches the data directly.</b> It sees the user's request, the App it wrote, and the App's results. It does not read millions of records, and it never has credentials to the systems of record.</p>
+  <p class="xref"><span class="xl">Business case</span> <a href="/#b-sovereign">Your data stays yours →</a></p>
+</section>
+
+<!-- ============ HEAVY LIFTING ============ -->
+<section id="heavy-lifting">
+  <h2>Fractal does the heavy lifting, on a digital twin</h2>
+  <p class="intro">All of the application's actual work, including storing the data, processing it and producing results, happens in the Fractal Computing mesh. The mesh works on a digital twin of the systems of record, never on the systems of record themselves.</p>
+  <div class="pillars">
+    <div class="pillar"><h3>A live digital twin</h3><p>Fractal replicates data from the systems of record into the Fractal instances. The twin is a continuously synchronized, full-fidelity replica, not a backup, snapshot or stale staging copy.</p></div>
+    <div class="pillar"><h3>One-way sync</h3><p>Data flows from source to twin only. There is no return path through the sync channel, so nothing an Application does can reach a system of record that way.</p></div>
+    <div class="pillar"><h3>Source systems cannot be corrupted</h3><p>Hallucinations, prompt injection, cascading agent errors and model drift are contained in the twin. Fractal reports zero source-system corruption events across its production deployments.</p></div>
+    <div class="pillar"><h3>Controlled promotion</h3><p>When a result should change a system of record, it goes back only through an explicit, logged, human-approved promotion step that sits outside the AI loop.</p></div>
+    <div class="pillar"><h3>Distributed storage</h3><p>Each Fractal instance holds a discrete shard of the twin in its own multi-model database (relational, document, time-series, graph, vector). The data is spread across the mesh, not concentrated in one database server.</p></div>
+    <div class="pillar"><h3>Distributed computing</h3><p>A MapReduce-style middleware runs the App on all instances at once and combines their results. Instances coordinate peer-to-peer over HTTPS, with no central broker and no single point of failure.</p></div>
+  </div>
+  <p class="xref"><span class="xl">Business case</span> <a href="/#b-safe">AI without risk to your systems →</a> <a href="/#b-failover">Hot backup at a tenth of the cost →</a></p>
+</section>
+
+<!-- ============ DETERMINISTIC AI ============ -->
+<section id="deterministic">
+  <h2>Scale invariance and Deterministic AI</h2>
+  <p class="intro">Fractal's architecture is <strong>scale invariant</strong>. Every Fractal instance is the same small, self-contained stack: application code, middleware, web server, shard and partition manager, database scheme library, multi-model database and stream processor. Scale comes only from the number of instances, from one on a smartphone to 1,000+ on a large server. An Application written for one instance runs unchanged on all of them.</p>
+
+  <div class="diagram">
+  <svg viewBox="0 0 1000 450" role="img" aria-labelledby="stk-title stk-desc">
+    <title id="stk-title">The Fractal: the enterprise stack distilled into one instance, then scaled as instances</title>
+    <desc id="stk-desc">On the left, the general-purpose enterprise software ecosystem. It is distilled to 0.1% into a single Fractal: an eight-layer stack from application code down to the memory manager, into which an AI-written Application plugs. The same stack then scales as instances: 1 on a smartphone, 1 to 10 on a tablet, 10 to 20 on a desktop PC, 100 to 400 on a small server and over 1,000 on a large server.</desc>
+    <defs>
+      <marker id="ah-stk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-ah-out" d="M0 0 L10 5 L0 10 z"/></marker>
+    </defs>
+
+    <!-- Enterprise ecosystem -->
+    <text class="d-t" x="136" y="40" text-anchor="middle">Enterprise software ecosystem</text>
+    <text class="d-s" x="136" y="58" text-anchor="middle">General-purpose, many layers</text>
+    <g id="eco-grid"></g>
+    <text class="d-m" x="18" y="118" text-anchor="middle" transform="rotate(-90,18,118)">INFRA</text>
+    <text class="d-m" x="18" y="202" text-anchor="middle" transform="rotate(-90,18,202)">DATA</text>
+    <text class="d-m" x="18" y="286" text-anchor="middle" transform="rotate(-90,18,286)">APPS</text>
+    <text class="d-s" x="136" y="350" text-anchor="middle">Most of this code rarely or never runs</text>
+
+    <line class="d-out" x1="252" y1="210" x2="300" y2="210" marker-end="url(#ah-stk)"/>
+    <text class="d-m" x="276" y="198" text-anchor="middle">0.1%</text>
+
+    <!-- A single Fractal -->
+    <text class="d-t" x="400" y="40" text-anchor="middle">A single Fractal</text>
+    <text class="d-s" x="400" y="58" text-anchor="middle">One small, complete stack</text>
+    <g class="stk-layer" data-i="0"><rect id="stk-app" class="stk-app" x="310" y="76"  width="180" height="30" rx="4"/><text class="stk-t" x="400" y="96"  text-anchor="middle">Application Code</text></g>
+    <g class="stk-layer" data-i="1"><rect class="stk-app"   x="310" y="110" width="180" height="30" rx="4"/><text class="stk-t" x="400" y="130" text-anchor="middle">GUI Widgets</text></g>
+    <g class="stk-layer" data-i="2"><rect class="stk-proc"  x="310" y="144" width="180" height="30" rx="4"/><text class="stk-t" x="400" y="164" text-anchor="middle">Distributed Processing</text></g>
+    <g class="stk-layer" data-i="3"><rect class="stk-proc"  x="310" y="178" width="180" height="30" rx="4"/><text class="stk-t" x="400" y="198" text-anchor="middle">Web Server (P2P HTTPS)</text></g>
+    <g class="stk-layer" data-i="4"><rect class="stk-data"  x="310" y="212" width="180" height="30" rx="4"/><text class="stk-t" x="400" y="232" text-anchor="middle">Shard &amp; Partition Mgr</text></g>
+    <g class="stk-layer" data-i="5"><rect class="stk-data"  x="310" y="246" width="180" height="30" rx="4"/><text class="stk-t" x="400" y="266" text-anchor="middle">Database Scheme Library</text></g>
+    <g class="stk-layer" data-i="6"><rect class="stk-store" x="310" y="280" width="180" height="30" rx="4"/><text class="stk-t" x="400" y="300" text-anchor="middle">Multi-model DB Engine</text></g>
+    <g class="stk-layer" data-i="7"><rect class="stk-store" x="310" y="314" width="180" height="30" rx="4"/><text class="stk-t" x="400" y="334" text-anchor="middle">Memory Mgr / Stream Proc.</text></g>
+
+    <line class="d-out" x1="500" y1="210" x2="548" y2="210" marker-end="url(#ah-stk)"/>
+    <text class="d-m" x="524" y="198" text-anchor="middle">× N</text>
+
+    <!-- N Fractal instances -->
+    <text class="d-t" x="767" y="40" text-anchor="middle">N Fractal instances</text>
+    <text class="d-s" x="767" y="58" text-anchor="middle">Same stack, same App: only N changes</text>
+    <g id="plat-rows"></g>
+
+    <!-- Scale invariance -->
+    <path class="d-brace" d="M310 372 V384 H980 V372"/>
+    <text class="d-t" x="645" y="412" text-anchor="middle">Scale invariant: correct on one instance, correct on every instance</text>
+    <text class="d-s" x="645" y="432" text-anchor="middle">AI writes the Application for one bounded instance; Fractal runs it at any scale</text>
+
+    <!-- Animation overlay -->
+    <g id="tok2" class="anim-off"><rect class="d-tok-out" x="-20" y="-11" width="40" height="22" rx="4"/><text class="d-tok-t" y="4" text-anchor="middle">App</text></g>
+  </svg>
+  <div class="anim-bar">
+    <button type="button" id="anim2-play" aria-label="Pause animation">Pause</button>
+    <button type="button" id="anim2-restart">Restart</button>
+    <div class="anim-cap"><span aria-live="polite"><span class="anim-stepno" id="anim2-step">Step 1 of 4</span><span id="anim2-text"></span></span></div>
+  </div>
+  <div class="anim-prog" aria-hidden="true"><div class="anim-fill" id="anim2-fill"></div></div>
+  </div>
+
+  <p>The building block is the <strong>Fractal</strong>: a small, self-contained, vertically integrated software stack that runs as an independent processing unit in a loosely coupled distributed system. It keeps only the essential 0.1% of the conventional enterprise software ecosystem. Each instance carries a complete copy of the application logic, so it runs autonomously. Instances talk to each other over a peer-to-peer HTTPS mesh with no central coordinator and no shared-memory bottleneck.</p>
+  <div class="tbl-wrap" style="margin-bottom:14px">
+  <table>
+    <thead><tr><th>Layer</th><th>Function</th><th>Role when AI writes the App</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lyr lyr-app">Application Code</span></td><td>Small, focused modules that use context libraries for domain-specific heavy lifting</td><td>Where the AI-written Application plugs in. The plug-in is a thin module, not a whole application.</td></tr>
+      <tr><td><span class="lyr lyr-app">GUI Widgets</span></td><td>Front-end interface components</td><td>Ready-made components for showing results in the Enterprise Application</td></tr>
+      <tr><td><span class="lyr lyr-proc">Distributed Processing Middleware</span></td><td>MapReduce variant for parallel computation across Fractal instances</td><td>Runs the Application on every instance at once and combines the results</td></tr>
+      <tr><td><span class="lyr lyr-proc">Web Server</span></td><td>HTTPS peer-to-peer communication between Fractals</td><td>Instances coordinate without a central broker</td></tr>
+      <tr><td><span class="lyr lyr-data">Shard &amp; Partition Manager</span></td><td>Granular, explicit, developer-controlled data distribution</td><td>Each instance gets its own shard, so the Application never has to fetch remote data</td></tr>
+      <tr><td><span class="lyr lyr-data">Database Scheme Library</span></td><td>Domain-specific context, stored procedures and co-located application logic</td><td>Business knowledge (rates, billing logic, account hierarchies) the Application calls instead of rebuilding</td></tr>
+      <tr><td><span class="lyr lyr-store">Multi-model Database Engine</span></td><td>Relational, document, time-series, graph and vector data in one engine</td><td>The Application queries every kind of data in one place, with no cross-system joins</td></tr>
+      <tr><td><span class="lyr lyr-store">Memory Manager / Stream Processor</span></td><td>Pipelined data movement from persistent storage to CPU registers</td><td>Data is cache-resident before the Application needs it, so the Application never waits on I/O</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The whole stack is written in JavaScript and is identical on every platform, so an Application is written once and deployed anywhere. Typical instance counts are 1 on a smartphone, 1–10 on a tablet, 10–20 on a desktop PC, 100–400 on a small server such as a Mac mini or Intel NUC clone, and 1,000+ on a large server.</p>
+  <div class="cols">
+    <div>
+      <h4>Why AI can write Fractal Apps reliably</h4>
+      <ul>
+        <li><b>Bounded, contained context.</b> An App works on one shard. Through Locality of Logic, each stored procedure needs to know only its local scheme, or at most one or two adjacent schemes.</li>
+        <li><b>Small surface.</b> A Fractal App has fewer than 10 encapsulation boundaries, compared with hundreds of interacting tables in a legacy application. That is a context a language model can hold and get right.</li>
+        <li><b>Domain context libraries.</b> Business logic such as rate structures, billing rules and account hierarchies is already encoded in libraries. The App calls them instead of reinventing them.</li>
+        <li><b>Safe to try.</b> The App runs on the twin, so a wrong App costs a rerun, not a corrupted system of record.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Why the result is deterministic</h4>
+      <ul>
+        <li>The model's non-determinism is confined to <em>writing</em> the App. Once written, the App is ordinary code: the same input gives the same output, every time.</li>
+        <li>The App can be inspected, tested on a sample shard, versioned, reused and audited like any other enterprise software.</li>
+        <li>The scale is massive but the logic is local, so an App that is correct on one shard is correct on every shard.</li>
+        <li>The summary is built from the App's output, so it can be checked against the numbers.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="why"><b>Deterministic AI:</b> the flexibility of a language model for capturing intent, combined with the repeatable, auditable behavior of enterprise software for doing the work.</p>
+  <p class="xref"><span class="xl">Business case</span> <a href="/#b-reliable">AI you can rely on →</a> <a href="/#b-anywhere">Runs where you need it →</a></p>
+</section>
+
+<!-- ============ LOCALITY ============ -->
+<section id="locality">
+  <h2>Locality of Reference: fast on commodity hardware</h2>
+  <p class="intro">Conventional enterprise software spends most of its time waiting on I/O. Each abstraction boundary (application, ORM, connection pool, network stack, database server, storage engine, disk) adds roughly 10 I/O wait states per useful instruction cycle. With seven boundaries, software runs about 10<sup>7</sup> below what the hardware can do. Fractal's <strong>Locality Optimization™</strong> removes that waste.</p>
+  <div class="diagram">
+  <svg viewBox="0 0 1000 350" role="img" aria-labelledby="pipe-title pipe-desc">
+    <title id="pipe-title">Conventional stack versus the Fractal locality pipeline</title>
+    <desc id="pipe-desc">Top: in a conventional stack a request crosses seven abstraction boundaries (application, ORM, connection pool, network stack, database server, storage engine, disk I/O), each adding about 10 I/O wait states, so the CPU mostly waits and software runs about ten million times below hardware capability. Bottom: Fractal's stream processor moves data from persistent storage through RAM and L2 cache into CPU registers ahead of time, so the model never waits.</desc>
+    <defs>
+      <marker id="ah-pipe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-ah-out" d="M0 0 L10 5 L0 10 z"/></marker>
+    </defs>
+
+    <!-- Conventional stack -->
+    <rect id="pipe-row1" class="pipe-row" x="8" y="54" width="984" height="134" rx="10"/>
+    <text class="d-t" x="20" y="88">Conventional stack</text>
+    <text class="d-s" x="20" y="106">7 abstraction boundaries</text>
+    <text class="d-s" x="20" y="122">~10 I/O waits at each</text>
+    <g id="pipe-bounds"></g>
+    <g id="pipe-tok" class="anim-off"><circle class="d-tok-out" r="7"/></g>
+    <rect class="pipe-wait" x="190" y="156" width="170" height="24" rx="12"/>
+    <text class="pipe-pill-t pipe-wait-t" x="275" y="172" text-anchor="middle">CPU: WAITING ON I/O</text>
+    <text class="d-s" x="980" y="173" text-anchor="end">7 boundaries × ~10 waits each → about 10<tspan dy="-6" font-size="9">7</tspan><tspan dy="6"> below hardware speed</tspan></text>
+
+    <!-- Fractal locality pipeline -->
+    <rect id="pipe-row2" class="pipe-row" x="8" y="200" width="984" height="134" rx="10"/>
+    <text class="d-t" x="20" y="234">Fractal locality</text>
+    <text class="d-t" x="20" y="252">pipeline</text>
+    <text class="d-s" x="20" y="270">Data pre-positioned;</text>
+    <text class="d-s" x="20" y="286">no network in the hot path</text>
+    <g id="pipe-tiers"></g>
+    <g id="pipe-blocks"></g>
+    <rect class="pipe-busy" x="190" y="300" width="170" height="24" rx="12"/>
+    <text class="pipe-pill-t pipe-busy-t" x="275" y="316" text-anchor="middle">CPU: COMPUTING</text>
+    <text class="d-s" x="980" y="317" text-anchor="end">&lt;1 boundary crossing in the hot path: the model never waits for data</text>
+  </svg>
+  <div class="anim-bar">
+    <button type="button" id="anim4-play" aria-label="Pause animation">Pause</button>
+    <button type="button" id="anim4-restart">Restart</button>
+    <div class="anim-cap"><span aria-live="polite"><span class="anim-stepno" id="anim4-step">Step 1 of 2</span><span id="anim4-text"></span></span></div>
+  </div>
+  <div class="anim-prog" aria-hidden="true"><div class="anim-fill" id="anim4-fill"></div></div>
+  </div>
+  <div class="cols">
+    <div>
+      <h4>How it works</h4>
+      <ul>
+        <li><b>Locality of Reference:</b> data is sharded when the system is built, so each instance works only on data it holds locally. No network requests happen mid-computation.</li>
+        <li>A stream processor pipelines data from persistent storage through RAM and L2 cache to CPU registers, so computation doesn't wait for data.</li>
+        <li>Because every instance runs at near-hardware speed on its own shard, total throughput grows nearly linearly with the number of instances.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What it means for cost</h4>
+      <ul>
+        <li>Fortune 500-scale workloads run on a shelf of small, inexpensive computers. No data center or cloud dependency is required.</li>
+        <li>Reference deployment: 10 Mac mini / NUC clones running 400 Fractal instances serve a 10-million-customer billing application, totaling 3.6 trillion input records.</li>
+        <li>The same JavaScript stack runs on any platform, from a phone to a large server.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="stats five">
+    <div class="stat"><div class="v">≤ 90 days</div><div class="l">to production scale, in parallel with existing systems</div></div>
+    <div class="stat"><div class="v">≥ 50%</div><div class="l">lower cost than the application it replaces</div></div>
+    <div class="stat"><div class="v">≥ 10×</div><div class="l">faster than the original application</div></div>
+    <div class="stat"><div class="v">1/10</div><div class="l">the cost of the existing system for a hot backup/failover</div></div>
+    <div class="stat"><div class="v">≈ 0</div><div class="l">AI token cost; it becomes immaterial</div></div>
+  </div>
+  <p class="fine">Figures are Fractal-reported results from Fortune 500 production deployments in utilities, telecommunications and financial services.</p>
+  <p class="xref"><span class="xl">Business case</span> <a href="/#stage-3">≥ 50% lower cost, ≥ 10× faster →</a></p>
+</section>
+
+<!-- ============ TOKENS ============ -->
+<section id="tokens">
+  <h2>Token costs go from a large expense to an immaterial one</h2>
+  <p class="intro">When a language model processes enterprise data itself, token usage grows with the amount of data: every record the model reads costs tokens. In Fractal's architecture the model handles only the request, the App and the results. Token usage then depends on how complex the question is, not on how much data is behind it.</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Step</th><th>Model at the center of the work</th><th>Fractal architecture</th></tr></thead>
+    <tbody>
+      <tr><td>Capture intent</td><td>A short request</td><td>A short request</td></tr>
+      <tr><td>Do the work</td><td>The model reads and reasons over the records, repeatedly. Token use grows with every record and every rerun.</td><td>The model writes one Fractal App, typically a few hundred lines. Fractal runs it over all the records at no token cost.</td></tr>
+      <tr><td>Present results</td><td>Summary from whatever fit in the context window</td><td>Summary from compact, aggregated Application results</td></tr>
+      <tr><td>Repeat next month</td><td>The full cost again</td><td>Rerun the same App: no new tokens until the summary step</td></tr>
+      <tr><td>Scaling to more data</td><td>Token cost scales with data volume</td><td>Token cost stays flat; Fractal adds instances</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="why"><b>Order of magnitude:</b> the reference billing deployment holds 3.6 trillion input records. Even at a few tokens per record, reading that data would cost trillions of tokens. Writing a Fractal App and summarizing its results takes thousands. The language model becomes a small, fixed cost per question, and the data processing runs on about $20K of hardware.</p>
+  <p class="xref"><span class="xl">Business case</span> <a href="/#b-tokens">AI token costs become immaterial →</a></p>
+</section>
+
+<!-- ============ START ============ -->
+<section id="start">
+  <h2>Getting started: a 90-day parallel proof of concept</h2>
+  <p class="intro">Fractal deployments start with a 90-day proof of concept that runs alongside existing systems. The systems of record keep running unchanged. The Fractal twin and the AI layer are built in parallel and measured against live production data.</p>
+  <div class="diagram">
+  <svg viewBox="0 0 1000 340" role="img" aria-labelledby="poc-title poc-desc">
+    <title id="poc-title">The 90-day parallel proof of concept</title>
+    <desc id="poc-desc">Systems of record keep running unchanged for the whole period. In parallel, days 1 to 14 set up and sync the Fractal twin, days 15 to 60 run AI-generated Apps on the twin while metrics accumulate daily, and days 61 to 90 compare results with the production baseline and end in a transition decision. After day 90 workloads move gradually, with no hard cutover.</desc>
+    <defs>
+      <marker id="ah-poc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="d-ah-sync" d="M0 0 L10 5 L0 10 z"/></marker>
+      <clipPath id="poc-clip"><rect id="poc-clip-r" x="0" y="0" width="1000" height="340"/></clipPath>
+    </defs>
+
+    <!-- Day axis -->
+    <line class="poc-axis" x1="210" y1="50" x2="980" y2="50"/>
+    <g id="poc-ticks"></g>
+
+    <!-- Lane labels -->
+    <text class="d-t" x="20" y="80">Systems of record</text><text class="d-s" x="20" y="96">Unchanged throughout</text>
+    <text class="d-t" x="20" y="166">Fractal twin + AI</text><text class="d-s" x="20" y="182">Built in parallel</text>
+    <text class="d-t" x="20" y="228">Daily metrics</text><text class="d-s" x="20" y="244">Performance · accuracy · cost</text>
+    <text class="d-t" x="20" y="296">Milestones</text>
+
+    <!-- Lane 1: production keeps running -->
+    <rect class="d-sor" x="210" y="62" width="640" height="40" rx="6"/>
+    <rect class="d-sor poc-legacy" x="852" y="62" width="128" height="40" rx="6"/>
+    <text class="d-s" x="530" y="87" text-anchor="middle">Production runs as usual: no changes to systems of record</text>
+    <text class="d-s" x="916" y="87" text-anchor="middle">Still available</text>
+
+    <!-- One-way sync arrows -->
+    <g id="poc-sync"></g>
+
+    <!-- Lane 2: Fractal phases, revealed as the day cursor passes -->
+    <g class="poc-reveal" clip-path="url(#poc-clip)">
+      <rect class="poc-s1" x="210" y="148" width="98"  height="40" rx="6"/>
+      <rect class="poc-s2" x="310" y="148" width="326" height="40" rx="6"/>
+      <rect class="poc-s3" x="638" y="148" width="212" height="40" rx="6"/>
+      <rect class="poc-s4" x="852" y="148" width="128" height="40" rx="6"/>
+      <text class="poc-st" x="259" y="166" text-anchor="middle">Setup</text><text class="poc-st" x="259" y="180" text-anchor="middle">&amp; sync</text>
+      <text class="poc-st" x="473" y="173" text-anchor="middle">Parallel AI operation on the twin</text>
+      <text class="poc-st" x="744" y="173" text-anchor="middle">Validation &amp; decision</text>
+      <text class="poc-st" x="916" y="173" text-anchor="middle">Gradual transition</text>
+    </g>
+
+    <!-- Lane 3: metrics vs. baseline -->
+    <rect class="d-box" x="210" y="202" width="770" height="66" rx="6"/>
+    <g id="poc-bars"></g>
+    <line id="poc-base" class="poc-base" x1="310" y1="252" x2="850" y2="252"/>
+    <text id="poc-base-t" class="d-m" x="744" y="264" text-anchor="middle">PRODUCTION BASELINE</text>
+    <text id="poc-cmp" class="d-s" x="744" y="232" text-anchor="middle">Compared with the baseline</text>
+
+    <!-- Lane 4: milestones -->
+    <g id="poc-ms"></g>
+
+    <!-- Day cursor -->
+    <g id="poc-cur">
+      <line class="poc-cur" x1="0" y1="50" x2="0" y2="312"/>
+      <rect class="poc-cur-box" x="-30" y="14" width="60" height="22" rx="4"/>
+      <text id="poc-cur-t" class="d-tok-t" x="0" y="29" text-anchor="middle">Day 1</text>
+    </g>
+  </svg>
+  <div class="anim-bar">
+    <button type="button" id="anim3-play" aria-label="Pause animation">Pause</button>
+    <button type="button" id="anim3-restart">Restart</button>
+    <div class="anim-cap"><span aria-live="polite"><span class="anim-stepno" id="anim3-step">Step 1 of 4</span><span id="anim3-text"></span></span></div>
+  </div>
+  <div class="anim-prog" aria-hidden="true"><div class="anim-fill" id="anim3-fill"></div></div>
+  </div>
+  <div class="cols poc-list">
+    <ul>
+      <li data-phase="1" tabindex="0"><b>Days 1–14:</b> provision the twin on commodity hardware, establish one-way sync and verify the replica against production.</li>
+      <li data-phase="2" tabindex="0"><b>Days 15–60:</b> run AI-generated Fractal Apps against the twin and collect performance, accuracy and cost metrics daily.</li>
+    </ul>
+    <ul>
+      <li data-phase="3" tabindex="0"><b>Days 61–90:</b> compare results with the production baseline and make a transition decision based on measured data.</li>
+      <li data-phase="4" tabindex="0"><b>After day 90:</b> move workloads on the client's timeline. There is no hard cutover; the twin keeps running in parallel as long as needed.</li>
+    </ul>
+  </div>
+  <p class="why"><b>You are not on your own:</b> Fractal's onboarding team guides the twin setup, the AI integration and the deployment. A typical deployment needs one point of contact on your side, not a team of consultants (see the <a href="/benchmarks#team">benchmarks</a>).</p>
+  <p class="xref"><span class="xl">Business case</span> <a href="/#path">A safe, controlled migration path →</a> <a href="/#next">Recommended next step →</a></p>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="bluf">
+    <p>Most Enterprise AI designs put the language model in the middle of the work. The model reads the data, reasons over it and writes the results. That is expensive, because every record becomes tokens. It is slow, because the model sits on top of the conventional database stack. It is also risky, because a non-deterministic model with write access to production can corrupt millions of records at once.</p>
+    <p>Fractal changes where the model sits. <strong>AI is used only at the beginning and the end of the workflow.</strong> At the beginning, the model turns the user's request into a <strong>Fractal App</strong>: a small, bounded program. At the end, it turns the App's results into an executive summary. <strong>Fractal is the distributed computing and storage layer in between.</strong> It holds a continuously synchronized digital twin of the systems of record, runs the Application in parallel on every Fractal instance, and returns the results.</p>
+    <p>The outcome is AI with the flexibility of a language model and the <strong>deterministic behavior of enterprise software</strong>. The systems of record cannot be corrupted, performance improves by orders of magnitude on inexpensive hardware, and language-model token costs become immaterial.</p>
+  </div>
+  <p class="xref"><span class="xl">Business case</span> <a href="/#summary">The decision, in business terms →</a></p>
+</section>
+
+<%- include('partials/_cta', {ctaLink:'/benchmarks', ctaLinkText:'See the benchmarks →'}) %>
+</main>
+
+<script nonce="<%- env.nonce %>" src="/apps/_anim.js" defer></script>
+<%- include('partials/_footer') %>

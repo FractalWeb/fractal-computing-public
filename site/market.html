@@ -1,0 +1,51 @@
+<%  const s = env.sector, n = s.solutions.length + (s.video ? 1 : 0) -%>
+<%- include('partials/_head', {title:s.name, desc:s.sub}) %>
+<body>
+<%- include('partials/_nav', {page:'markets'}) %>
+
+<%# One industry's solution library, rendered for every /markets/<slug> route.
+    env.sector is one entry of data/markets.json (extracted from the apps_12.01
+    markets_<slug>.html pages), passed in by index.mjs. -%>
+<main id="main" class="wrap">
+<a class="back" href="/markets">← All markets</a>
+<header class="hero">
+  <h1><%= s.title %></h1>
+  <p class="lede"><%= s.sub %></p>
+<% if (n > 1) { -%>
+  <nav class="sol-toc" aria-label="Solutions">
+<%   if (s.video) { %>    <a href="#<%= s.video.id %>"><%= s.video.name %></a>
+<%   } s.solutions.forEach(function(x){ %>    <a href="#<%= x.id %>"><%= x.short || x.name %></a>
+<%   }) -%>
+  </nav>
+<% } -%>
+</header>
+
+<section id="solutions">
+<% if (s.video) { -%>
+  <div class="video" id="<%= s.video.id %>">
+    <h3><%= s.video.name %></h3>
+    <video src="<%= s.video.src %>" controls muted playsinline preload="metadata"></video>
+  </div>
+<% } -%>
+<% s.solutions.forEach(function(x){ -%>
+  <article class="sol" id="<%= x.id %>">
+    <header><h3><%= x.name %></h3><% if (x.summary) { %><p class="summary"><%= x.summary %></p><% } %></header>
+    <div class="sol-cols">
+<%   [['problem','Problem'], ['solution','Solution'], ['impact','Impact']].forEach(function(c){ -%>
+      <div><span class="lab <%= c[0] %>"><%= c[1] %></span><ul>
+<%     x[c[0]].forEach(function(li){ %>        <li><%= li %></li>
+<%     }) %>      </ul></div>
+<%   }) -%>
+    </div>
+<%   if (x.why.length) { -%>
+    <div class="sol-why"><span class="lab whyf">Why Fractal</span><ul>
+<%     x.why.forEach(function(li){ %>      <li><%= li %></li>
+<%     }) %>    </ul></div>
+<%   } -%>
+  </article>
+<% }) -%>
+</section>
+
+<%- include('partials/_cta', {ctaTitle:'Ready to see Fractal in your environment?', ctaText:'90 days, your production data, zero disruption to existing systems.', ctaLink:'/benchmarks', ctaLinkText:'See the benchmarks →'}) %>
+</main>
+<%- include('partials/_footer') %>

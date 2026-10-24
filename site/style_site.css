@@ -1,0 +1,474 @@
+/* Fractal Computing web site, apps_13.00.
+   One stylesheet for every page. The palette, type and components come from the
+   Enterprise AI executive brief and technical overview (fractal-computing.docs
+   apps/docs/Fractal_Enterprise_AI_Exec_v1.html and Fractal_Enterprise_AI_v1.html),
+   so the site and those documents read as one set. Site chrome (navigation,
+   buttons, forms, market pages) is added in the same style. */
+
+/* ---- tokens: light by default, dark from the OS setting or the theme toggle (data-theme) */
+:root{
+  --bg:#f7f7f4; --surface:#ffffff; --surface-2:#f0f0ea; --ink:#1b1d21; --ink-2:#4a4f58; --ink-3:#737985;
+  --rule:#dcdcd3; --accent:#1f4e8c; --accent-soft:#e3ebf6; --good:#1e6b45; --good-soft:#e2f1e8;
+  --mid:#8a5a00; --mid-soft:#f7ecd6; --bad:#a3352a; --bad-soft:#f8e4e1; --band:#26313f; --band-ink:#f2f4f7;
+  --logo-light:inline-block; --logo-dark:none;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121417; --surface:#1a1d22; --surface-2:#22262c; --ink:#e7e9ec; --ink-2:#b4bac3; --ink-3:#8b929d;
+    --rule:#30353d; --accent:#7fb0ef; --accent-soft:#1d2b3e; --good:#6fcf97; --good-soft:#18301f;
+    --mid:#e2b35a; --mid-soft:#352a14; --bad:#ef8a7e; --bad-soft:#3a1f1c; --band:#0c0e11; --band-ink:#e7e9ec;
+    --logo-light:none; --logo-dark:inline-block;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121417; --surface:#1a1d22; --surface-2:#22262c; --ink:#e7e9ec; --ink-2:#b4bac3; --ink-3:#8b929d;
+  --rule:#30353d; --accent:#7fb0ef; --accent-soft:#1d2b3e; --good:#6fcf97; --good-soft:#18301f;
+  --mid:#e2b35a; --mid-soft:#352a14; --bad:#ef8a7e; --bad-soft:#3a1f1c; --band:#0c0e11; --band-ink:#e7e9ec;
+  --logo-light:none; --logo-dark:inline-block;
+}
+
+/* ---- base */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Geist",system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+a{color:var(--accent)}
+p{margin:0 0 14px}
+h1,.h1-look{font:600 clamp(30px,5vw,44px)/1.12 "Geist",system-ui,sans-serif;margin:10px 0 14px;letter-spacing:-.02em}
+h2{font:600 clamp(23px,3.2vw,30px)/1.2 "Geist",system-ui,sans-serif;margin:0 0 6px}
+h3{font-size:19px;margin:0 0 8px;line-height:1.3}
+h4{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin:18px 0 6px}
+h4.first{margin-top:0}
+sup{line-height:0}
+.skip{position:absolute;left:-999px;top:8px;background:var(--surface);padding:6px 10px;border-radius:6px;z-index:100}
+.skip:focus{left:8px}
+
+/* ---- site navigation */
+.site-nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.site-nav .wrap{display:flex;align-items:center;gap:18px;height:60px}
+.brand{display:flex;align-items:center;text-decoration:none;flex:none}
+.brand img{height:40px;width:auto}
+.brand .logo-l{display:var(--logo-light)} .brand .logo-d{display:var(--logo-dark)}
+.nav-links{display:flex;gap:2px;margin:0 0 0 auto;padding:0;list-style:none}
+.nav-links a{display:block;white-space:nowrap;padding:6px 10px;border-radius:6px;font-size:14.5px;font-weight:500;color:var(--ink-2);text-decoration:none}
+.nav-links a:hover{color:var(--accent);background:var(--surface-2)}
+.nav-links a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:6px;border:1px solid var(--rule);background:var(--surface);color:var(--ink-2);cursor:pointer}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent)}
+.theme-btn .i-moon{display:var(--logo-light)} .theme-btn .i-sun{display:var(--logo-dark)}
+.menu-btn{display:none}
+.nav-actions .btn{white-space:nowrap}
+@media screen and (max-width:1040px){.site-nav .wrap{gap:12px}.nav-links a{padding:6px 7px}}   /* seven links and the actions fit on one line down to the drawer breakpoint */
+.nav-drawer{display:none}
+@media screen and (max-width:900px){
+  .nav-links,.nav-actions .btn{display:none}
+  .nav-actions{margin-left:auto}
+  .menu-btn{display:inline-flex}
+  .nav-drawer.open{display:block;border-top:1px solid var(--rule);background:var(--bg);padding:8px 16px 16px}
+  .nav-drawer a{display:block;padding:10px 4px;border-bottom:1px solid var(--rule);color:var(--ink);text-decoration:none;font-weight:500}
+  .nav-drawer a[aria-current="page"]{color:var(--accent)}
+  .nav-drawer a.btn{border:0;margin-top:12px;text-align:center;color:var(--surface)}
+}
+
+/* ---- buttons */
+.btn{display:inline-block;font:600 14.5px/1 "Geist",sans-serif;padding:11px 18px;border-radius:6px;text-decoration:none;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--surface)}
+.btn-primary:hover{filter:brightness(1.1)}
+.btn-ghost{background:var(--surface);color:var(--accent);border-color:var(--rule)}
+.btn-ghost:hover{border-color:var(--accent)}
+.btn-sm{padding:8px 13px;font-size:13.5px}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+
+/* ---- page header */
+header.hero{padding:52px 0 30px;border-bottom:1px solid var(--rule)}
+.eyebrow{font:500 12px/1.4 "Geist Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.lede{font-size:clamp(17px,2.2vw,20px);color:var(--ink-2);margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:20px;font-size:13px;color:var(--ink-3)}
+.meta b{color:var(--ink-2);font-weight:600}
+nav.toc{margin:24px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+nav.toc a{font-size:13px;text-decoration:none;color:var(--ink-2);border:1px solid var(--rule);background:var(--surface);padding:5px 11px;border-radius:999px}
+nav.toc a:hover{border-color:var(--accent);color:var(--accent)}
+nav.toc a.companion{border-color:var(--accent);color:var(--accent)}
+.back{display:inline-block;margin-top:22px;font-size:13.5px;text-decoration:none}
+.back:hover{text-decoration:underline}
+.back + header.hero{padding-top:20px}
+.h1-logo img{height:2em;width:auto;vertical-align:middle}
+.h1-logo .logo-l{display:var(--logo-light)} .h1-logo .logo-d{display:var(--logo-dark)}
+.hero-img{display:block;width:100%;height:auto;margin:6px 0 24px;border-radius:6px}
+
+/* ---- sections */
+main section{padding:40px 0;border-bottom:1px solid var(--rule)}
+main section:last-of-type{border-bottom:0}
+.sec-num{font:500 13px "Geist Mono",monospace;color:var(--ink-3);display:block;margin-bottom:6px}
+.intro{color:var(--ink-2);margin-bottom:22px}
+.bluf{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:22px 24px;margin-top:8px}
+.bluf p:last-child{margin-bottom:0}
+.bluf.warn{border-left-color:var(--bad)}
+.fine{font-size:12.5px;color:var(--ink-3)}
+.why{font-size:15px;margin:16px 0 0;padding:12px 14px;background:var(--surface-2);border-radius:6px}
+.why b{color:var(--ink)}
+.ask{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--good);border-radius:6px;padding:20px 24px}
+.ask p:last-child{margin-bottom:0}
+.quote{margin:20px 0 0;padding:16px 20px;border-left:4px solid var(--accent);background:var(--surface);border-radius:0 6px 6px 0;font:500 18px/1.45 "Geist",system-ui,sans-serif;color:var(--ink)}
+.quote cite{display:block;margin-top:8px;font:400 13px "Geist",sans-serif;color:var(--ink-3);font-style:normal}
+.xref{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:18px 0 0;font-size:13.5px}
+.xref .xl{font:500 11.5px "Geist Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.xref a{text-decoration:none}
+.xref a:hover{text-decoration:underline}
+
+/* ---- stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:22px 0 6px}
+.stats.five{grid-template-columns:repeat(5,1fr)}
+.stats.three{grid-template-columns:repeat(3,1fr)}
+.stat{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.stat .v{font:600 26px/1.1 "Geist",sans-serif;color:var(--accent);font-variant-numeric:tabular-nums}
+.stat .v.good{color:var(--good)} .stat .v.bad{color:var(--bad)}
+.stat .l{font-size:13px;color:var(--ink-2);margin-top:4px}
+
+/* ---- cards */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.pillars.three{grid-template-columns:repeat(3,1fr)}
+.pillars.five{grid-template-columns:repeat(5,1fr)}
+.pillar{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px;scroll-margin-top:76px}
+.pillar h3{font-size:16px}
+.pillar p{font-size:14.5px;color:var(--ink-2);margin:0 0 8px}
+.pillar .more{font-size:12.5px;text-decoration:none}
+.pillar .more:hover{text-decoration:underline}
+.pillar .tag{font:500 11.5px "Geist Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--good)}
+.pillar.bad{border-top:3px solid var(--bad)}
+.pillar.bad .tag{color:var(--bad)}
+.pillar .num{font:600 28px/1.15 "Geist",sans-serif;color:var(--accent);margin:4px 0 8px;font-variant-numeric:tabular-nums}
+.pillar .num.good{color:var(--good)} .pillar .num.bad{color:var(--bad)}
+.pillar:target,.path li:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+a.pillar{display:block;text-decoration:none;color:inherit}
+a.pillar:hover{border-color:var(--accent)}
+a.pillar:hover h3{color:var(--accent)}
+
+/* migration path: numbered stages, the last in "good" green */
+.path{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.path.four{grid-template-columns:repeat(4,1fr)}
+.path li{background:var(--surface);border:1px solid var(--rule);border-top:4px solid var(--accent);border-radius:6px;padding:14px 16px;scroll-margin-top:76px}
+.path li.last{border-top-color:var(--good)}
+.path .stage{font:500 12px "Geist Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.path li.last .stage{color:var(--good)}
+.path h3{font-size:16px;margin:4px 0 6px}
+.path p{font-size:14.5px;color:var(--ink-2);margin:0}
+.path .out{display:block;margin-top:10px;font-size:13.5px;font-weight:600;color:var(--ink)}
+
+/* two-column lists */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.cols ul{margin:0;padding-left:18px;font-size:14.5px}
+.cols li{margin:3px 0}
+
+/* failure modes / risk list */
+.risks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.risks li{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--bad);border-radius:6px;padding:10px 14px;font-size:15px;color:var(--ink-2)}
+.risks li b{color:var(--ink)}
+
+/* before / after comparisons */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vs > div{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px 18px}
+.vs .before{border-top:4px solid var(--bad)}
+.vs .after{border-top:4px solid var(--good)}
+.vs .lab{font:500 12px "Geist Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.vs .big{font:600 clamp(28px,4vw,38px)/1.1 "Geist",sans-serif;margin:6px 0 4px;font-variant-numeric:tabular-nums}
+.vs .before .big{color:var(--bad)} .vs .after .big{color:var(--good)}
+.vs .sub{font-size:14px;color:var(--ink-2)}
+.vs ul{margin:10px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-2)}
+.vs li{margin:0 0 4px}
+.vs dl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin:12px 0 0;font-size:14.5px}
+.vs dt{color:var(--ink-2)} .vs dd{margin:0;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+
+/* ---- tables */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);background:var(--surface-2);font-weight:600}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+td.bad{color:var(--bad)} td.good{color:var(--good);font-weight:600}
+
+/* ---- diagrams (How it works) */
+.diagram{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px;margin:8px 0 18px}
+.diagram svg{width:100%;height:auto;display:block}
+.d-box{fill:var(--surface);stroke:var(--rule);stroke-width:1.5}
+.d-ai{fill:var(--accent-soft);stroke:var(--accent);stroke-width:2}
+.d-mesh{fill:var(--good-soft);stroke:var(--good);stroke-width:2}
+.d-inst{fill:var(--surface);stroke:var(--good);stroke-width:1.2}
+.d-inst-bar{fill:var(--good);opacity:.55}
+.d-sor{fill:var(--surface-2);stroke:var(--ink-3);stroke-width:1.5}
+.d-t{fill:var(--ink);font:600 15px "Geist",sans-serif}
+.d-s{fill:var(--ink-2);font:400 12.5px "Geist",sans-serif}
+.d-m{fill:var(--ink-3);font:500 11px "Geist Mono",monospace;letter-spacing:.04em}
+.d-out{stroke:var(--accent);stroke-width:2.2;fill:none}
+.d-back{stroke:var(--good);stroke-width:2.2;fill:none}
+.d-sync{stroke:var(--ink-3);stroke-width:2;fill:none;stroke-dasharray:5 4}
+.d-ah-out{fill:var(--accent)} .d-ah-back{fill:var(--good)} .d-ah-sync{fill:var(--ink-3)}
+.d-num-out{fill:var(--accent)} .d-num-back{fill:var(--good)}
+.d-num-t{fill:var(--surface);font:600 12px "Geist",sans-serif}
+.d-person{fill:var(--ink-3)}
+.d-brace{stroke:var(--accent);stroke-width:1.5;fill:none}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.steps li{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 14px 12px 50px;position:relative;font-size:14.5px;color:var(--ink-2)}
+.steps li b{color:var(--ink)}
+.steps .n{position:absolute;left:14px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--surface);font:600 12.5px/24px "Geist",sans-serif;text-align:center}
+.steps .n.back{background:var(--good)}
+/* animation */
+.anim-off{display:none}
+.d-tok-out{fill:var(--accent)}
+.d-tok-back{fill:var(--good)}
+.d-tok-t{fill:var(--surface);font:600 11.5px "Geist",sans-serif}
+.d-bubble{fill:var(--surface);stroke:var(--good);stroke-width:1.8}
+.d-conv{fill:var(--good)}
+.d-inst-prog{fill:var(--accent)}
+.d-inst.lit{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.6}
+.d-sync{animation:sync-flow 1.1s linear infinite}
+@keyframes sync-flow{to{stroke-dashoffset:-18}}
+.hl{stroke:var(--accent)!important;stroke-width:3!important}
+.hl-back{stroke:var(--good)!important;stroke-width:3!important}
+.d-ai.glow{animation:glow .7s ease-in-out infinite alternate}
+@keyframes glow{from{stroke-width:2}to{stroke-width:5}}
+.d-num circle{transition:r .2s}
+.d-num.active circle{r:14}
+.d-num:not(.active){opacity:.45}
+.anim-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:12px}
+.anim-bar button{font:500 13px "Geist",sans-serif;color:var(--ink);background:var(--surface-2);border:1px solid var(--rule);border-radius:6px;padding:5px 12px;cursor:pointer;min-width:72px}
+.anim-bar button:hover{border-color:var(--accent);color:var(--accent)}
+.anim-cap{flex:1 1 260px;font-size:14.5px;color:var(--ink-2);display:grid}
+/* Every caption of a loop sits in the same grid cell: the current one plus hidden
+   copies of all the others (added by animCaptions in _anim.js). The caption box is
+   therefore always as tall as the longest caption at the current width, so it
+   doesn't grow and shrink as the captions change and the page never shifts. */
+.anim-cap>span{grid-area:1/1}
+.anim-ghost{visibility:hidden}
+.anim-stepno,.anim-ghost-step{font:500 12px "Geist Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:10px}
+.anim-prog{height:3px;background:var(--surface-2);border-radius:2px;margin-top:10px;overflow:hidden}
+.anim-fill{height:100%;width:0;background:var(--accent)}
+.steps li[data-step]{cursor:pointer;transition:border-color .2s,background .2s}
+.steps li.active{border-color:var(--accent);background:var(--accent-soft)}
+@media (prefers-reduced-motion: reduce){.d-sync{animation:none}.d-ai.glow{animation:none;stroke-width:4}}
+/* single-Fractal stack diagram */
+.eco-cell{fill:var(--surface-2);stroke:var(--rule);stroke-width:1}
+.eco-t{fill:var(--ink-3);font:500 7.5px "Geist Mono",monospace}
+.stk-app{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.3}
+.stk-proc{fill:var(--good-soft);stroke:var(--good);stroke-width:1.3}
+.stk-data{fill:var(--mid-soft);stroke:var(--mid);stroke-width:1.3}
+.stk-store{fill:var(--surface-2);stroke:var(--ink-3);stroke-width:1.3}
+.stk-t{fill:var(--ink);font:500 12.5px "Geist",sans-serif}
+.gl-a{fill:var(--accent)} .gl-p{fill:var(--good)} .gl-d{fill:var(--mid)}
+.lyr{display:block;text-align:center;padding:5px 10px;border-radius:4px;border:1.3px solid;font-weight:500;color:var(--ink)}
+.lyr-app{background:var(--accent-soft);border-color:var(--accent)}
+.lyr-proc{background:var(--good-soft);border-color:var(--good)}
+.lyr-data{background:var(--mid-soft);border-color:var(--mid)}
+.lyr-store{background:var(--surface-2);border-color:var(--ink-3)}
+/* 90-day proof-of-concept diagram */
+.poc-axis{stroke:var(--ink-3);stroke-width:1.2}
+.poc-legacy{opacity:.6}
+.poc-s1{fill:var(--accent)}
+.poc-s2{fill:var(--accent);fill-opacity:.82}
+.poc-s3{fill:var(--accent);fill-opacity:.64}
+.poc-s4{fill:var(--good)}
+.poc-st{fill:var(--surface);font:500 12px "Geist",sans-serif}
+.poc-base{stroke:var(--mid);stroke-width:1.5;stroke-dasharray:6 4}
+.poc-dia{fill:var(--accent)}
+.poc-cur{stroke:var(--accent);stroke-width:1.5}
+.poc-cur-box{fill:var(--accent)}
+.poc-fade,#poc-base,#poc-base-t,#poc-cmp,#poc-cur{transition:opacity .25s}
+.poc-list ul{list-style:none;padding:0}
+.poc-list li{padding:8px 12px;border:1px solid transparent;border-radius:6px;cursor:pointer;transition:border-color .2s,background .2s}
+.poc-list li.active{border-color:var(--accent);background:var(--accent-soft)}
+/* locality pipeline diagram */
+.pipe-row{fill:transparent;stroke:transparent;transition:fill .3s}
+.pipe-row.on{fill:var(--surface-2)}
+.pipe-wait{fill:var(--mid-soft);stroke:var(--mid);stroke-width:1.2}
+.pipe-busy{fill:var(--good-soft);stroke:var(--good);stroke-width:1.2}
+.pipe-pill-t{font:600 11px "Geist Mono",monospace;letter-spacing:.04em}
+.pipe-wait-t{fill:var(--mid)} .pipe-busy-t{fill:var(--good)}
+.pipe-tag{transition:opacity .25s}
+.hl-mid{stroke:var(--mid)!important;stroke-width:3!important}
+.plat-t{fill:var(--ink);font:600 13px "Geist",sans-serif}
+/* working with Fractal diagrams (_working.js): partners in amber, routes the tokens travel */
+.d-part{fill:var(--mid-soft);stroke:var(--mid);stroke-width:2}
+.d-route{stroke:var(--ink-3);stroke-width:1.5;fill:none;stroke-dasharray:4 4;opacity:.6}
+.d-block{stroke:var(--bad);stroke-width:2;fill:none;stroke-dasharray:5 4}
+.d-x{stroke:var(--bad);stroke-width:3;stroke-linecap:round}
+.d-plug{stroke:var(--good);stroke-width:2}
+.d-lock{fill:var(--mid)}
+.d-lock-arc{fill:none;stroke:var(--mid);stroke-width:1.6}
+.d-tok-mid{fill:var(--mid)}
+.wk-mid{fill:var(--mid)} .wk-bad{fill:var(--bad)}
+.wk-next{stroke-dasharray:6 4}
+.wk-ghost{opacity:.4}
+.wk-chip{fill:var(--surface);stroke:var(--good);stroke-width:1.2;transition:fill .25s}
+.wk-chip.on{fill:var(--good-soft);stroke-width:2}
+.wk-band{opacity:0}
+.wr-on{fill:var(--accent-soft);stroke:var(--accent)}
+.wr-seg{fill:var(--accent)}
+.vs .wk-inhouse{border-top:4px solid var(--accent)}
+.vs .wk-collab{border-top:4px solid var(--mid)}
+.wk-docs{grid-template-columns:1fr}
+/* customers: "help spread the word" diagram and the compounding discount */
+.wc-p{fill:var(--good)}
+.wc-bar{fill:var(--accent);fill-opacity:.55}
+.wc-bar.cur{fill-opacity:1}
+.wc-bar0{fill:var(--ink-3)}
+.wc-curve{fill:none;stroke:var(--good);stroke-width:2;stroke-dasharray:5 4}
+.wc-hot{fill:var(--good)}
+.wc-math p.wc-eq{font:600 22px "Geist",sans-serif;color:var(--ink);margin:6px 0 14px}
+.wc-math{margin-top:22px}
+.wc-math p{color:var(--ink-2);font-size:15px}
+table.comp.wc-tbl{min-width:0}
+.wc-math > div{min-width:0}
+.comp.wc-tbl th.num{white-space:normal}
+.wc-tbl th i{text-transform:none}
+
+/* ---- markets */
+.sectors{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.sector .icon{font-size:24px;line-height:1;margin-bottom:10px}
+.sector .count{font:500 12px "Geist Mono",monospace;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.sol-toc{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.sol-toc a{font-size:12.5px;text-decoration:none;color:var(--ink-2);border:1px solid var(--rule);background:var(--surface);padding:4px 10px;border-radius:999px}
+.sol-toc a:hover{border-color:var(--accent);color:var(--accent)}
+.sol{background:var(--surface);border:1px solid var(--rule);border-radius:8px;margin:0 0 14px;scroll-margin-top:76px}
+.sol:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.sol > header{padding:16px 18px 12px;border-bottom:1px solid var(--rule)}
+.sol h3{margin:0}
+.sol .summary{font-size:13.5px;color:var(--ink-3);margin:4px 0 0}
+.sol-cols{display:grid;grid-template-columns:repeat(3,1fr)}
+.sol-cols > div{padding:14px 18px}
+.sol-cols > div + div{border-left:1px solid var(--rule)}
+.sol ul{margin:6px 0 0;padding-left:18px;font-size:14px;color:var(--ink-2)}
+.sol li{margin:0 0 5px}
+.sol .lab{font:500 11.5px "Geist Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.lab.problem{color:var(--bad)} .lab.solution{color:var(--accent)} .lab.impact{color:var(--good)} .lab.whyf{color:var(--mid)}
+.sol .sol-why{padding:12px 18px 14px;background:var(--surface-2);border-top:1px solid var(--rule);border-radius:0 0 8px 8px}
+.video{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px;margin:0 0 14px}
+.video video{width:100%;border-radius:6px;display:block;margin-top:8px;background:#000}
+
+/* ---- about: timeline and links */
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--rule)}
+.timeline li{position:relative;padding:0 0 18px 24px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.timeline li:last-child::before{background:var(--good)}
+.timeline .when{font:600 13px "Geist Mono",monospace;color:var(--accent)}
+.timeline p{margin:2px 0 0;color:var(--ink-2);font-size:15px}
+/* animated timeline (data-animate, run by _site.js): an accent line draws down the track
+   (its height is --tl-p), and each milestone's dot fills and its text fades in as the line
+   reaches it; the last milestone then keeps a slow pulse. Without scripts it shows as above. */
+.timeline[data-animate]{position:relative}
+.js .timeline[data-animate]::after{content:"";position:absolute;left:-2px;top:0;width:2px;height:var(--tl-p,0);background:var(--accent)}
+.js .timeline[data-animate] li > *{transition:opacity .5s,transform .5s}
+.js .timeline[data-animate] li:not(.on) > *{opacity:.2;transform:translateY(6px)}
+.js .timeline[data-animate] li:not(.on)::before{background:var(--surface);box-shadow:inset 0 0 0 2px var(--rule)}
+.js .timeline[data-animate] li.on::before{animation:tl-pop .45s ease-out}
+.js .timeline[data-animate] li.on:last-child::after{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid var(--good);box-sizing:border-box;animation:tl-pulse 2.2s ease-out .4s infinite;opacity:0}
+@keyframes tl-pop{0%{transform:scale(.4)}60%{transform:scale(1.5)}100%{transform:scale(1)}}
+@keyframes tl-pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.6);opacity:0}}
+@media (prefers-reduced-motion: reduce){.js .timeline[data-animate] li > *{transition:none}.js .timeline[data-animate] li.on::before,.js .timeline[data-animate] li.on:last-child::after{animation:none}}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.links a{display:flex;gap:14px;align-items:baseline;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--ink)}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links .d{font:500 12.5px "Geist Mono",monospace;color:var(--ink-3);flex:none}
+
+/* ---- contact form */
+.contact-grid{display:grid;grid-template-columns:5fr 7fr;gap:28px;align-items:start}
+.form{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:22px 24px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{margin:0 0 14px}
+.field > label,.field > .lbl{display:block;font-size:13.5px;font-weight:600;margin:0 0 5px}
+.req{color:var(--accent)}
+.field input,.field select,.field textarea{width:100%;font:15px "Geist",sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:6px;padding:9px 11px}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
+.field .invalid{border-color:var(--bad)}
+.intent{display:flex;flex-wrap:wrap;gap:8px}
+.intent label{display:flex;align-items:center;gap:6px;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font-size:14px;cursor:pointer;background:var(--bg)}
+.intent input{accent-color:var(--accent)}
+.intent label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-2);margin:4px 0 16px}
+.consent input{margin-top:4px;accent-color:var(--accent)}
+.consent.invalid{color:var(--bad)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-note{margin:10px 0 0}
+.form-msg{margin:10px 0 0;font-size:14px;color:var(--bad)}
+.form-done{display:none;text-align:center;padding:30px 10px}
+.form-done .tick{width:48px;height:48px;border-radius:50%;background:var(--good-soft);color:var(--good);font:600 24px/48px "Geist",sans-serif;margin:0 auto 12px}
+.next-steps{list-style:none;margin:0;padding:0;counter-reset:n}
+.next-steps li{counter-increment:n;position:relative;padding:0 0 14px 40px;color:var(--ink-2);font-size:15px}
+.next-steps li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:1px;font:500 13px "Geist Mono",monospace;color:var(--accent)}
+.next-steps b{color:var(--ink)}
+
+/* ---- agreements (agreements/*.html): numbered clauses, fill-in fields, signature blocks */
+.legal{padding:36px 0 0;font-size:15.5px}
+.legal h3{font-size:17px;margin:28px 0 8px}
+.legal p{color:var(--ink-2)}
+.legal p b{color:var(--ink)}
+.blank{background:var(--mid-soft);color:var(--ink);border-bottom:1px dashed var(--mid);padding:0 3px;border-radius:2px}
+.sig-intro{margin-top:32px}
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:12px 0 8px}
+.sig > div{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px 18px}
+.sig-party{font-weight:600;margin-bottom:6px}
+.sig dl{display:grid;grid-template-columns:80px 1fr;gap:14px 10px;margin:0;font-size:13.5px;color:var(--ink-3)}
+.sig dd{margin:0;border-bottom:1px solid var(--ink-3);min-height:22px}
+h2.schedule{margin:44px 0 12px}
+table.sched{min-width:0}
+table.sched td:first-child{width:30%}
+/* channel agreement compensation tables: one row per Channel Service, roles grouped by a heavier rule */
+table.comp{min-width:760px}
+table.comp td:first-child{width:auto;font-weight:400}
+.comp .box{font-weight:400;text-align:center;font-size:18px;line-height:1.2}
+.comp th.num,.comp td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.comp tr.role-first td{border-top:2px solid var(--ink-3)}
+table.comp td.role{font-weight:600}
+.comp tr.nre td:not(.role){background:var(--good-soft);color:var(--good);font-weight:600}   /* NRE: partner revenue outside the subscription share */
+.comp tr.total td{font-weight:600;background:var(--surface-2)}
+
+/* ---- closing call to action and footer */
+.cta{background:var(--band);color:var(--band-ink);border-radius:10px;padding:32px 28px;margin:40px 0}
+.cta h2{color:var(--band-ink)}
+.cta p{color:color-mix(in srgb,var(--band-ink) 80%,transparent);margin:0}
+.cta .btn-primary{background:var(--band-ink);color:var(--band)}
+.cta .btn-ghost{background:transparent;color:var(--band-ink);border-color:color-mix(in srgb,var(--band-ink) 40%,transparent)}
+.site-foot{border-top:1px solid var(--rule);padding:28px 0 40px;font-size:13px;color:var(--ink-3)}
+.site-foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+.site-foot nav{display:flex;flex-wrap:wrap;gap:6px 16px}
+.site-foot a{color:var(--ink-2);text-decoration:none}
+.site-foot a:hover{color:var(--accent);text-decoration:underline}
+
+@media screen and (max-width:1000px){.pillars.five{grid-template-columns:repeat(3,1fr)}}
+
+/* ---- narrow layouts, for phones only. A printed Letter/A4 page is ~720 CSS px
+   wide, which would also match a plain (max-width:760px) and print the phone layout. */
+@media screen and (max-width:760px){
+  .stats.five,.stats.three{grid-template-columns:repeat(2,1fr)}
+  .pillars.three,.pillars.five{grid-template-columns:1fr}
+  .path,.path.four,.cols,.vs,.sol-cols,.contact-grid,.form .row,.sig{grid-template-columns:1fr}
+  .sol-cols > div + div{border-left:0;border-top:1px solid var(--rule)}
+  header.hero{padding:36px 0 24px}
+  .cta{padding:24px 20px}
+}
+
+/* ---- print: drop the site chrome and the moving parts of the diagrams */
+@media print{
+  body{font-size:13px}
+  .site-nav,.nav-drawer,.site-foot,.cta .btn-row,nav.toc,.anim-bar,.anim-prog,.skip,.back,header.hero .btn-row{display:none!important}
+  .legal ~ .cta{display:none}
+  .blank{background:none}
+  .sig{grid-template-columns:1fr 1fr;break-inside:avoid}
+  main section{padding:16px 0}
+  .stat,.pillar,.path li,.steps li,.cols li,.poc-list li,.why,.xref,.diagram,tr,.bluf p,.sol,.risks li,.vs > div{break-inside:avoid}
+  h2,h3,h4,.sec-num,.intro{break-after:avoid}
+  #bubble,#converge,[id^="tok-"],.d-inst-prog,#tok2,#pipe-tok,#poc-cur{display:none!important}
+  .eco-g,.stk-layer,.gl,.poc-fade,#poc-base,#poc-base-t,#poc-cmp,.pipe-tag,.wk-band,#wb-tile4{opacity:1!important}
+  #wb-block{opacity:0!important}
+  .poc-reveal{clip-path:none!important}
+  .d-sync,.d-ai.glow{animation:none!important}
+  .timeline li > *{opacity:1!important;transform:none!important}
+  .timeline li::after{display:none!important}
+  .wc-c,.wc-lab{opacity:1!important}
+  .hl,.hl-back,.hl-mid{stroke:var(--rule)!important;stroke-width:1.5!important}
+  .d-inst.lit{fill:var(--surface);stroke:var(--good);stroke-width:1.2}
+  .d-num:not(.active){opacity:1}
+  .steps li.active,.poc-list li.active{border-color:var(--rule);background:var(--surface)}
+}

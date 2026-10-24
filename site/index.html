@@ -1,0 +1,177 @@
+<%- include('partials/_head', {title:'', desc:'Add AI to your enterprise applications safely, while making them faster and token costs immaterial. Fractal provides a controlled path to AI applications that cost half as much and run ten times faster.'}) %>
+<body>
+<%- include('partials/_nav', {page:'home'}) %>
+
+<%# Home page: the business case. Built on the Enterprise AI executive brief
+    (fractal-computing.docs apps/docs/Fractal_Enterprise_AI_Exec_v1.html), with the
+    hidden-risk, comparison and production-results sections of the apps_12.01 home page.
+    The benefit and stage ids (b-*, stage-*) are link targets from how.html. -%>
+<main id="main" class="wrap">
+<header class="hero">
+  <h1 class="h1-logo"><img class="logo-l" src="/apps/images/fLogo-name-transparent.png" alt="Fractal" width="1821" height="1002"><img class="logo-d" src="/apps/images/fLogo-name-white-transparent.png" alt="Fractal" width="1821" height="1002"> is your AI workhorse</h1>
+  <video class="hero-img" src="/apps/images/Fractal_AI_workhorse_web.mp4" poster="/apps/images/Fractal_AI_workhorse.jpg" width="1280" height="720"
+         data-play-visible muted loop playsinline controls preload="metadata" aria-label="Fractal is your AI workhorse"></video>
+  <h2 class="h1-look">Unlock your existing compute power for AI</h2>
+  <h2 class="h2-look">Add AI to your enterprise applications safely, while making them faster and token costs immaterial</h2>
+  <p class="lede">Fractal lets your organization put AI to work on its core business systems without risking those systems, its data or its budget. Fractal provides a controlled path to AI applications that cost half as much and are ten times faster.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/contact">Schedule a call →</a>
+    <a class="btn btn-ghost" href="/how">How it works →</a>
+  </div>
+  <nav class="toc" aria-label="Contents">
+    <a href="#summary">The decision</a>
+    <a href="#risk">The hidden risk</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#compare">What changes</a>
+    <a href="#path">Migration path</a>
+    <a href="#results">Results</a>
+    <a href="#next">Next step</a>
+  </nav>
+</header>
+
+<!-- ============ THE DECISION ============ -->
+<section id="summary">
+  <h2>The decision</h2>
+  <div class="bluf">
+    <p>Every enterprise is under pressure to add AI to the applications that run the business. The usual approach connects an AI model directly to production systems and data. That approach is <strong>risky</strong>, because an AI model that makes a mistake can damage the records the business depends on. It is <strong>expensive</strong>, because AI providers charge for every piece of data the model reads. It also <strong>exposes sensitive data</strong> to the model.</p>
+    <p>Fractal takes a different approach. It builds a <strong>digital twin</strong>: a live, continuously updated copy of your existing systems, running on inexpensive hardware you control. AI works only on the twin, so your production systems cannot be harmed. The AI model only translates requests into instructions and turns results into plain-language summaries, so it never sees your private data and your AI costs stay small.</p>
+    <p>Starting with that first, low-risk step, Fractal can go on to provide a hot backup of your existing applications and, when you are ready, replace them with faster, lower-cost Fractal versions. <strong>The first step is a 90-day deployment at production scale that runs alongside your existing systems.</strong></p>
+  </div>
+  <div class="stats five">
+    <div class="stat"><div class="v">≤ 90 days</div><div class="l">to production scale, in parallel with existing systems</div></div>
+    <div class="stat"><div class="v">≥ 50%</div><div class="l">lower cost than the application it replaces</div></div>
+    <div class="stat"><div class="v">≥ 10×</div><div class="l">faster than the original application</div></div>
+    <div class="stat"><div class="v">1/10</div><div class="l">the cost of the existing system for a hot backup/failover</div></div>
+    <div class="stat"><div class="v">≈ 0</div><div class="l">AI token cost; it becomes immaterial</div></div>
+  </div>
+  <p class="fine">Performance and cost figures are minimums. Fractal-reported results from Fortune 500 production deployments in utilities, telecommunications and financial services are far larger (see the <a href="/benchmarks">benchmarks</a>).</p>
+</section>
+
+<!-- ============ THE HIDDEN RISK ============ -->
+<section id="risk">
+  <h2>The hidden risk: AI with access to your systems of record</h2>
+  <p class="intro">Enterprise AI applications such as billing automation, customer care and transaction processing need read/write access to databases and systems of record to do anything useful. That access is also the source of a critical, often overlooked risk.</p>
+  <div class="bluf warn">
+    <p>AI systems are complex and non-deterministic. Prompt injection, model hallucinations, conflicts between concurrent agents and unexpected edge cases can all corrupt, overwrite or destroy data. A single bad write to a billing database can mean wrong charges to millions of customers. The consequences can be immediate, widespread and career-ending.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="v good">Zero</div><div class="l">source-system corruption events across Fractal's production deployments</div></div>
+  </div>
+  <p class="xref"><span class="xl">More</span> <a href="/why#mechanism">How AI corrupts structured data →</a> <a href="/why#guardrails">Why guardrails and sandboxes aren't enough →</a></p>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section id="benefits">
+  <h2>What a Fractal deployment gives you</h2>
+  <p class="intro">Each benefit below links to the part of <a href="/how">How it works</a> that explains it.</p>
+  <div class="pillars three">
+    <div class="pillar" id="b-safe">
+      <h3>AI without risk to your systems</h3>
+      <p>AI works on the Fractal digital twin, never on the systems of record. Data flows only one way, into the twin. Nothing the AI does can corrupt your production data or applications.</p>
+      <a class="more" href="/how#heavy-lifting">How the digital twin works →</a>
+    </div>
+    <div class="pillar" id="b-reliable">
+      <h3>AI you can rely on</h3>
+      <p>The AI model writes a small program; Fractal runs it. The same question gives the same answer every time, and every number can be traced and audited, like any other enterprise software.</p>
+      <a class="more" href="/how#deterministic">Deterministic AI →</a>
+    </div>
+    <div class="pillar" id="b-sovereign">
+      <h3>Your data stays yours</h3>
+      <p>Private and sensitive data is never passed to an AI model. The model sees only the request and the summarized results. The data stays on hardware you control, which guarantees data sovereignty.</p>
+      <a class="more" href="/how#ai-edges">AI at the edges →</a>
+    </div>
+    <div class="pillar" id="b-tokens">
+      <h3>AI token costs become immaterial</h3>
+      <p>With the model at the center of the work, AI costs grow with every record it reads. With Fractal, cost depends only on how complex the question is, not on how much data is behind it. A large expense becomes a negligible one.</p>
+      <a class="more" href="/how#tokens">Token economics →</a>
+    </div>
+    <div class="pillar" id="b-failover">
+      <h3>Hot backup at a tenth of the cost</h3>
+      <p>The twin is a live copy of your applications and data, so it can serve as a hot backup and failover system. It costs about one-tenth as much as the systems it protects.</p>
+      <a class="more" href="/how#heavy-lifting">Live digital twin →</a>
+    </div>
+    <div class="pillar" id="b-anywhere">
+      <h3>Runs where you need it</h3>
+      <p>Fractal runs on-premise, in the cloud, or on devices distributed around the world, wherever you interact with customers, partners and the outside world. The same application runs unchanged on all of them.</p>
+      <a class="more" href="/how#deterministic">One stack, any platform →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT CHANGES ============ -->
+<section id="compare">
+  <h2>What changes when you add Fractal</h2>
+  <p class="intro">Same workloads, same data. This is what changes when AI runs on a Fractal digital twin instead of directly on your systems of record.</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Dimension</th><th>AI on source systems</th><th>Fractal digital twin</th></tr></thead>
+    <tbody>
+      <tr><td>Data corruption risk</td><td class="bad">Present: AI has direct write access</td><td class="good">Zero: AI never touches source systems</td></tr>
+      <tr><td>Deployment timeline</td><td>24 months</td><td>90 days</td></tr>
+      <tr><td>Team required</td><td>18 high-end consultants</td><td>1 programmer</td></tr>
+      <tr><td>Billing cycle runtime</td><td>90+ hours</td><td>9 minutes</td></tr>
+      <tr><td>Infrastructure cost</td><td>Data center: $ millions</td><td>10 small computers: about $20,000 in total</td></tr>
+      <tr><td>Software licensing</td><td>Database, virtualization and others</td><td>Eliminated</td></tr>
+      <tr><td>AI token cost</td><td>Grows with every record the model reads</td><td>Flat: depends only on how complex the question is</td></tr>
+      <tr><td>New feature delivery</td><td>1–6 months</td><td>Daily</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="fine">Measured across Fortune 500 production deployments in utilities, telecommunications and financial services.</p>
+  <p class="xref"><span class="xl">Detail</span> <a href="/benchmarks">All benchmarks →</a> <a href="/how#locality">Where the speed comes from →</a></p>
+</section>
+
+<!-- ============ MIGRATION PATH ============ -->
+<section id="path">
+  <h2>A safe, controlled path to enterprise AI</h2>
+  <p class="intro">You don't have to bet the business on a cutover. Each stage delivers value on its own, and your existing applications keep running until you decide to retire them.</p>
+  <ol class="path">
+    <li id="stage-1">
+      <span class="stage">Stage 1 · within 90 days</span>
+      <h3>Add AI on a digital twin</h3>
+      <p>Fractal builds a twin of your existing systems and adds AI capabilities to it. The twin runs in parallel with production and is measured against it every day.</p>
+      <span class="out">Result: safe AI capabilities, at production scale</span>
+    </li>
+    <li id="stage-2">
+      <span class="stage">Stage 2</span>
+      <h3>Use the twin as a hot backup</h3>
+      <p>Because the twin stays in sync with production, it can take over if an existing system fails. It provides resilience you would otherwise have to buy separately.</p>
+      <span class="out">Result: failover at 1/10 the cost</span>
+    </li>
+    <li class="last" id="stage-3">
+      <span class="stage">Stage 3 · on your timeline</span>
+      <h3>Replace with the Fractal version</h3>
+      <p>Once the Fractal version has proven itself against live data, move workloads to it and retire the original. There is no hard cutover date.</p>
+      <span class="out">Result: ≥ 50% lower cost, ≥ 10× faster</span>
+    </li>
+  </ol>
+  <p class="why"><b>Why it is low risk:</b> at every stage the existing applications remain in place and unchanged. Decisions to move forward are based on results measured against your own production data, not on projections.</p>
+  <p class="xref"><span class="xl">Technical detail</span> <a href="/how#start">The 90-day parallel proof of concept →</a> <a href="/how#heavy-lifting">How the digital twin stays in sync →</a> <a href="/how#locality">Where the cost and speed gains come from →</a></p>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section id="results">
+  <h2>Safe AI, real performance, at enterprise scale</h2>
+  <p class="intro">Production results from Fortune 500 deployments running Fractal digital twins. Each links to that industry's solution library.</p>
+  <div class="pillars five">
+    <a class="pillar" href="/markets/Electric_Utility"><span class="tag">Electric utilities</span><h3>10M customers billed on $20K of hardware</h3><p>Over 1,000× faster, with zero risk to the systems of record.</p></a>
+    <a class="pillar" href="/markets/Telecommunications"><span class="tag">Telecommunications</span><h3>Application runs over 1,000× faster</h3><p>90% less storage and zero downtime.</p></a>
+    <a class="pillar" href="/markets/Water_Utility"><span class="tag">Water utilities</span><h3>Rate validation across millions of customers</h3><p>$500K in consulting saved.</p></a>
+    <a class="pillar" href="/markets/Gas_Utility"><span class="tag">Gas utilities</span><h3>Real-time rate simulation</h3><p>Across the entire customer base, in minutes rather than months.</p></a>
+    <a class="pillar" href="/markets/Financial"><span class="tag">Financial services</span><h3>360-degree customer insight</h3><p>From every data source, in real time, with a full audit trail.</p></a>
+  </div>
+  <p class="xref"><span class="xl">More</span> <a href="/markets">Solutions for 11 industries →</a></p>
+</section>
+
+<!-- ============ THE ASK ============ -->
+<section id="next">
+  <h2>Recommended next step</h2>
+  <div class="ask">
+    <p><strong>Approve a 90-day Fractal deployment for one business application.</strong> Fractal will build the digital twin on commodity hardware, add AI capabilities, and run it at production scale alongside the existing system. At day 90 you will have measured performance, accuracy and cost data from your own operations, and a clear basis for deciding how far to go.</p>
+    <p class="fine"><a href="/how#start">How it works</a> describes the 90-day plan in detail.</p>
+  </div>
+</section>
+
+<%- include('partials/_cta') %>
+</main>
+<%- include('partials/_footer') %>

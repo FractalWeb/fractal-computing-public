@@ -1,0 +1,94 @@
+<%- include('partials/_head', {title:'Contact', desc:'Schedule a 30-minute call about your environment and your AI data safety, performance and cost concerns, or register your interest.'}) %>
+<body>
+<%- include('partials/_nav', {page:'contact'}) %>
+
+<%# Contact form. Field names are the ones index.mjs contactRequest() expects
+    (intent, firstName, lastName, title, company, email, phone, industry, message,
+    consent). preferredName is a hidden honeypot: a request that fills it in is ignored. -%>
+<main id="main" class="wrap">
+<header class="hero">
+  <h1>Schedule a call or register your interest</h1>
+  <p class="lede">A focused 30-minute conversation to understand your environment and your AI data safety, performance and cost concerns. No sales pitch, no obligation.</p>
+</header>
+
+<section id="form">
+  <div class="contact-grid">
+    <div>
+      <h2>What happens next</h2>
+      <p class="intro">Fill in the form and we will send a calendar link within one business day. If you are not ready for a call, use the form to register your interest and we will follow up by email.</p>
+      <ol class="next-steps">
+        <li><b>Intake form.</b> Tell us about your stack, your AI use cases and what you are trying to protect.</li>
+        <li><b>30-minute call.</b> We review your environment and give an honest assessment of where your structured-data AI risk is highest.</li>
+        <li><b>90-day deployment proposal.</b> If there is a fit, we scope a digital twin deployment that runs in parallel with your production systems.</li>
+        <li><b>Real numbers.</b> You compare cost, performance and data-safety posture before committing to anything.</li>
+      </ol>
+      <div class="stats three">
+        <div class="stat"><div class="v">≤ 90 days</div><div class="l">to production scale</div></div>
+        <div class="stat"><div class="v">≥ 10×</div><div class="l">faster</div></div>
+        <div class="stat"><div class="v good">Zero</div><div class="l">source-system corruption events</div></div>
+      </div>
+    </div>
+
+    <div class="form">
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <span class="lbl">I want to <span class="req">*</span></span>
+          <div class="intent" role="radiogroup" aria-label="I want to">
+            <label><input type="radio" name="intent" value="call" checked> Schedule a call</label>
+            <label><input type="radio" name="intent" value="info"> Get more info</label>
+            <label><input type="radio" name="intent" value="pilot"> Discuss a pilot</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="firstName">First name <span class="req">*</span></label><input id="firstName" name="firstName" autocomplete="given-name" required></div>
+          <div class="field"><label for="lastName">Last name <span class="req">*</span></label><input id="lastName" name="lastName" autocomplete="family-name" required></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="preferredName">Preferred name</label><input id="preferredName" name="preferredName" tabindex="-1" autocomplete="off"></div>
+        <div class="row">
+          <div class="field"><label for="title">Job title <span class="req">*</span></label><input id="title" name="title" autocomplete="organization-title" required></div>
+          <div class="field"><label for="company">Company <span class="req">*</span></label><input id="company" name="company" autocomplete="organization" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="email">Work email <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field">
+          <label for="industry">Industry <span class="req">*</span></label>
+          <select id="industry" name="industry" required>
+            <option value="" disabled selected>Select your industry…</option>
+            <option value="financial">Financial services</option>
+            <option value="government">Government / public sector</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="insurance">Insurance</option>
+            <option value="logistics">Logistics</option>
+            <option value="oil">Oil &amp; gas</option>
+            <option value="retail">Retail</option>
+            <option value="telecom">Telecommunications</option>
+            <option value="electric">Utility (electric)</option>
+            <option value="gas">Utility (gas)</option>
+            <option value="utility">Utility (multi)</option>
+            <option value="water">Utility (water)</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">What are you trying to solve?</label>
+          <textarea id="message" name="message" placeholder="For example: billing AI, customer care automation, transaction processing…"></textarea>
+        </div>
+        <label class="consent"><input type="checkbox" id="consent" name="consent" required> I agree to be contacted by Fractal Computing about my inquiry. We do not share or sell contact data.</label>
+        <button type="submit" class="btn btn-primary">Send message →</button>
+        <p class="fine form-note">We respond within one business day. Fields marked <span class="req">*</span> are required.</p>
+        <p class="form-msg" id="formMsg" role="alert" hidden></p>
+      </form>
+      <div class="form-done" id="formDone" role="status">
+        <div class="tick" aria-hidden="true">✓</div>
+        <h3>Message received</h3>
+        <p>Thank you. We will be in touch within one business day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script nonce="<%- env.nonce %>" src="/apps/_contact.js" defer></script>
+<%- include('partials/_footer') %>

@@ -1,0 +1,188 @@
+<%- include('partials/_head', {title:'Benchmarks', desc:'Measured results from Fortune 500 production deployments of Fractal: billing runs from 90 hours to 9 minutes, $20K of hardware in place of a data center, one programmer and 90 days instead of 18 consultants and 24 months.'}) %>
+<body>
+<%- include('partials/_nav', {page:'benchmarks'}) %>
+
+<%# Benchmarks: the eight slides of the apps_12.01 benchmarks page as sections,
+    plus the headline figures from the Enterprise AI technical overview. -%>
+<main id="main" class="wrap">
+<header class="hero">
+  <h1>Same workloads. Same data. Different architecture.</h1>
+  <p class="lede">Measured results from Fortune 500 production deployments of Fractal digital twins in utilities, telecommunications and financial services, over five years.</p>
+  <div class="stats three">
+    <div class="stat"><div class="v">≥ 10×</div><div class="l">runtime improvement vs. legacy systems, up to 1,000,000× measured</div></div>
+    <div class="stat"><div class="v">90 hr → 9 min</div><div class="l">production billing cycle (600×)</div></div>
+    <div class="stat"><div class="v">~$20K</div><div class="l">one-time hardware for 10M customers</div></div>
+    <div class="stat"><div class="v">~1 kW</div><div class="l">power vs. ~2,000 kW for the data center it replaced</div></div>
+    <div class="stat"><div class="v">−90%</div><div class="l">infrastructure cost</div></div>
+    <div class="stat"><div class="v">&lt;30 sec/yr</div><div class="l">downtime</div></div>
+  </div>
+  <nav class="toc" aria-label="Contents">
+    <a href="#runtime">Billing runtime</a>
+    <a href="#cost">Infrastructure cost</a>
+    <a href="#team">Team &amp; timeline</a>
+    <a href="#reliability">Reliability &amp; velocity</a>
+    <a href="#risk">Corruption risk</a>
+    <a href="#footprint">Footprint</a>
+    <a href="#macro">At scale</a>
+    <a href="#choice">The choice</a>
+  </nav>
+</header>
+
+<!-- ============ RUNTIME ============ -->
+<section id="runtime">
+  <p class="h1-look h1-logo"><img class="logo-l" src="/apps/images/fLogo-name-transparent.png" alt="Fractal" width="1821" height="1002"><img class="logo-d" src="/apps/images/fLogo-name-white-transparent.png" alt="Fractal" width="1821" height="1002"> is your AI workhorse</p>
+  <img class="hero-img" src="/apps/images/Fractal_AI_workhorse.jpg" alt="A robotic workhorse labeled AI Workhorse standing in a computer store" width="1408" height="768">
+  <h2>Billing cycle runtime</h2>
+  <p class="intro">10 million customers. One billing run. Same data, different architecture.</p>
+  <div class="vs">
+    <div class="before"><span class="lab">Before Fractal</span><div class="big">90 hours</div><div class="sub">Legacy database + middleware</div></div>
+    <div class="after"><span class="lab">After Fractal</span><div class="big">9 minutes</div><div class="sub">Digital twin + Locality Optimization</div></div>
+  </div>
+  <div class="stats three">
+    <div class="stat"><div class="v">600×</div><div class="l">faster billing cycle</div></div>
+    <div class="stat"><div class="v">$20K</div><div class="l">hardware after: 10 small computers in total</div></div>
+    <div class="stat"><div class="v good">Zero</div><div class="l">corruption risk: an architectural guarantee</div></div>
+  </div>
+  <p class="xref"><span class="xl">Why</span> <a href="/how#locality">Locality of Reference →</a></p>
+</section>
+
+<!-- ============ COST ============ -->
+<section id="cost">
+  <h2>Infrastructure cost</h2>
+  <p class="intro">Same workloads, same data: what you pay to run them.</p>
+  <div class="vs">
+    <div class="before"><span class="lab">Before Fractal</span><div class="big">$ millions</div><div class="sub">Per year: data center capex and opex, licensing, cloud</div>
+      <ul>
+        <li>Database licensing: $500K–$1M/yr</li>
+        <li>Virtualization stack: $150K–$300K/yr</li>
+        <li>Data center floor space, power and cooling: $1M+/yr</li>
+        <li>Cloud infrastructure layers: $500K–$2M/yr</li>
+        <li>18 high-end consultants: a $3M–$5M engagement</li>
+      </ul>
+    </div>
+    <div class="after"><span class="lab">After Fractal</span><div class="big">$20,000</div><div class="sub">Total hardware cost: one time, not per year</div>
+      <ul>
+        <li>10 commodity computers that fit on a shelf</li>
+        <li>Database licensing: eliminated</li>
+        <li>Virtualization stack: eliminated</li>
+        <li>Cloud infrastructure dependency: eliminated</li>
+        <li>1 programmer deploys in 90 days</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team">
+  <h2>Team size and deployment timeline</h2>
+  <p class="intro">What it takes to go from decision to production.</p>
+  <div class="pillars">
+    <div class="pillar bad"><span class="tag">Team · before Fractal</span><div class="num bad">18</div><p>High-end consultants to deploy and manage a traditional enterprise AI stack, plus ongoing vendor support contracts.</p></div>
+    <div class="pillar"><span class="tag">Team · after Fractal</span><div class="num good">1</div><p>One programmer. Fractal's onboarding team guides the twin setup, AI integration and deployment.</p></div>
+    <div class="pillar bad"><span class="tag">Timeline · before Fractal</span><div class="num bad">24 months</div><p>Typical for enterprise AI on legacy database architectures, with multi-vendor dependencies and custom integration work.</p></div>
+    <div class="pillar"><span class="tag">Timeline · after Fractal</span><div class="num good">90 days</div><p>A parallel deployment alongside existing systems. Nothing changes for current operations; real production numbers within 90 days.</p></div>
+  </div>
+</section>
+
+<!-- ============ RELIABILITY ============ -->
+<section id="reliability">
+  <h2>Reliability, licensing and velocity</h2>
+  <p class="intro">Measured results from Fortune 500 production deployments over five years.</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Dimension</th><th>Before Fractal</th><th>After Fractal</th></tr></thead>
+    <tbody>
+      <tr><td>System downtime</td><td>Hours per month, with scheduled outages</td><td class="good">Under 30 seconds per year</td></tr>
+      <tr><td>Software licensing</td><td>Database, virtualization and cloud-specific services, renewed annually</td><td class="good">Eliminated: runs on commodity hardware you own</td></tr>
+      <tr><td>Vendor lock-in</td><td>Deeply embedded in database, virtualization and hyperscaler ecosystems</td><td class="good">None: hardware-agnostic, with no external cloud dependency</td></tr>
+      <tr><td>New feature delivery</td><td>1–6 months per feature cycle, through multi-vendor approval chains</td><td class="good">Daily: the full application stack in every Fractal instance</td></tr>
+      <tr><td>AI performance ceiling</td><td>Constrained by database I/O and middleware latency</td><td class="good">≥ 10× faster, up to 1,000,000× measured, via Locality Optimization</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ RISK ============ -->
+<section id="risk">
+  <h2>Data corruption risk</h2>
+  <p class="intro">The question every enterprise AI architect must answer before going live.</p>
+  <div class="vs">
+    <div class="before"><span class="lab">Before Fractal</span><div class="big">Present</div><div class="sub">AI has direct read/write access to your production databases. Every operation is a potential corruption event.</div>
+      <ul>
+        <li>Prompt injection triggers unintended writes</li>
+        <li>Model hallucinations are written back to systems of record</li>
+        <li>Concurrent agent conflicts overwrite the same records</li>
+        <li>Model update drift silently rewrites stable data</li>
+        <li>Failures cascade across related systems</li>
+      </ul>
+    </div>
+    <div class="after"><span class="lab">After Fractal</span><div class="big">Zero</div><div class="sub">AI operates only on the digital twin. Your systems of record are never touched by AI operations. If an agent hallucinates, gets injected or behaves unexpectedly, the damage is contained to the twin.</div>
+      <ul>
+        <li>This is not a guardrail; it is an architectural guarantee</li>
+        <li>Zero corruption events across all Fortune 500 production deployments</li>
+      </ul>
+    </div>
+  </div>
+  <p class="xref"><span class="xl">Why</span> <a href="/why#mechanism">How AI corrupts structured data →</a></p>
+</section>
+
+<!-- ============ FOOTPRINT ============ -->
+<section id="footprint">
+  <h2>One enterprise's footprint</h2>
+  <p class="intro">The same AI workload, before and after: what actually lives in your building.</p>
+  <div class="vs">
+    <div class="before"><span class="lab">Before Fractal</span><div class="big">The data center</div>
+      <dl><dt>Physical space</dt><dd>5,000+ sq ft</dd><dt>Power draw (continuous)</dt><dd>~2,000 kW</dd><dt>Annual energy consumption</dt><dd>17,500 MWh/yr</dd><dt>Annual cost (infrastructure + licensing)</dt><dd>$3M–$5M+</dd></dl>
+    </div>
+    <div class="after"><span class="lab">After Fractal</span><div class="big">10 small computers</div><div class="sub">Fits on a desk. No data center, no cooling tower, no raised floor.</div>
+      <dl><dt>Physical space</dt><dd>~2 sq ft</dd><dt>Power draw (continuous)</dt><dd>~1 kW</dd><dt>Annual energy consumption</dt><dd>~9 MWh/yr</dd><dt>Hardware cost (total, once)</dt><dd>$20,000</dd></dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MACRO ============ -->
+<section id="macro">
+  <h2>The data center equation</h2>
+  <p class="intro">What happens when 1,000 enterprises replace legacy infrastructure with Fractal digital twins.</p>
+  <div class="pillars">
+    <div class="pillar"><span class="tag">Energy saved per year</span><h3 class="num">17.5 TWh</h3><p>From ~2 MW per enterprise down to ~1 kW, a 99.95% reduction in power draw per site, across 1,000 deployments: equivalent to powering 1.6 million U.S. homes for a year.</p><p class="fine">Based on a 2 MW average enterprise data center vs. a 1 kW Fractal footprint × 8,760 h/yr.</p></div>
+    <div class="pillar"><span class="tag">CO₂ avoided per year</span><h3 class="num">6.8M tons</h3><p>At the U.S. average grid intensity of 0.386 kg CO₂ per kWh, removing 17.5 TWh of data center load avoids 6.8 million metric tons of CO₂ a year: equivalent to taking 1.5 million cars off the road.</p><p class="fine">U.S. EPA grid emissions factor, 2024. Excludes cooling water and embodied carbon.</p></div>
+    <div class="pillar"><span class="tag">Infrastructure cost eliminated per year</span><h3 class="num">Over $4B</h3><p>Each enterprise saves $3M–$5M a year in data center capex and opex, database and virtualization licensing, and cloud fees: over $4B a year across 1,000 deployments, plus 15+ large data centers that never need to be built.</p><p class="fine">Conservative estimate. Actual savings vary by enterprise scale and licensing baseline.</p></div>
+  </div>
+</section>
+
+<!-- ============ CHOICE ============ -->
+<section id="choice">
+  <h2>The AI infrastructure choice</h2>
+  <p class="intro">Every enterprise deploying AI on structured data faces the same fork in the road.</p>
+  <div class="vs">
+    <div class="before"><span class="lab">The legacy path</span>
+      <ul>
+        <li>AI writes directly to production databases: corruption risk is always present</li>
+        <li>$ millions per year in data center, licensing and cloud costs</li>
+        <li>18 consultants, 24-month deployments, 1–6 month feature cycles</li>
+        <li>90-hour billing runs: slow, expensive, failure-prone</li>
+        <li>New data centers, power contracts and cooling infrastructure</li>
+        <li>17,500 MWh/yr per enterprise: carbon-intensive at scale</li>
+        <li>Locked into database, virtualization and hyperscaler ecosystems</li>
+      </ul>
+    </div>
+    <div class="after"><span class="lab">The Fractal path</span>
+      <ul>
+        <li>AI operates on a digital twin: zero risk to systems of record</li>
+        <li>$20K of hardware, once: no ongoing infrastructure spend</li>
+        <li>1 programmer, 90-day deployment, features delivered daily</li>
+        <li>9-minute billing runs: 600× faster, on commodity hardware</li>
+        <li>No new data centers: the entire stack fits on a shelf</li>
+        <li>~9 MWh/yr per enterprise: 99.95% less energy</li>
+        <li>No vendor lock-in: runs on any hardware, with no cloud dependency</li>
+      </ul>
+    </div>
+  </div>
+  <p class="why"><b>Same AI. Different architecture. Different world.</b></p>
+  <p class="fine">Figures are Fractal-reported results from Fortune 500 production deployments in utilities, telecommunications and financial services.</p>
+</section>
+
+<%- include('partials/_cta', {ctaLink:'/markets', ctaLinkText:'Solutions by industry →'}) %>
+</main>
+<%- include('partials/_footer') %>

@@ -1,0 +1,33 @@
+<%# Site navigation. Called as include('partials/_nav', {page}) where page is one of the keys below. -%>
+<%  const items = [['home','/','Home'], ['why','/why','Why Fractal'], ['how','/how','How It Works'], ['benchmarks','/benchmarks','Benchmarks'], ['markets','/markets','Markets'], ['working','/working','Collaborate'], ['about','/about','About']]
+    const cur   = k => (locals.page === k) ? ' aria-current="page"' : '' -%>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Fractal Computing home">
+      <img class="logo-l" src="/apps/images/fLogo-name-transparent.png"       alt="Fractal" width="73" height="40">
+      <img class="logo-d" src="/apps/images/fLogo-name-white-transparent.png" alt="Fractal" width="73" height="40">
+    </a>
+    <ul class="nav-links">
+<% items.forEach(function(it){ -%>
+      <li><a href="<%= it[1] %>"<%- cur(it[0]) %>><%= it[2] %></a></li>
+<% }) -%>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="/contact"<%- cur('contact') %>>Contact us</a>
+      <button type="button" class="icon-btn theme-btn" id="themeBtn" aria-label="Switch between light and dark mode">
+        <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="i-sun"  width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navDrawer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-drawer" id="navDrawer" aria-label="Site">
+<% items.forEach(function(it){ -%>
+    <a href="<%= it[1] %>"<%- cur(it[0]) %>><%= it[2] %></a>
+<% }) -%>
+    <a class="btn btn-primary" href="/contact">Contact us</a>
+  </nav>
+</header>
