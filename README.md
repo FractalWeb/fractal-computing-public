@@ -35,4 +35,8 @@ Then open <http://localhost:8080>. Edit the files in `site/` and reload the brow
 
 ## Sending changes
 
-Work on a branch and open a pull request. Please ask before changing figures, performance claims or legal wording.
+1. Fork this repository on GitHub (the **Fork** button), and clone your fork.
+2. Make your changes on a branch, previewing them as above.
+3. Push the branch to your fork and open a pull request against `main` here.
+
+Fractal reviews each pull request before anything is merged or published. Please ask before changing figures, performance claims or legal wording.
